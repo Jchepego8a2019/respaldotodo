@@ -1,0 +1,253 @@
+body
+{
+	border: 10px double #FF9300;
+}
+
+h1
+{
+	text-align: center;
+	color: blue;
+	font-size: 50px;
+}
+
+.contenedormonths table 
+{
+	margin: auto;
+}
+
+.contenedormonths table tr 
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contenedormonths th
+{
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	border-radius: 10px 10px 0 0 ;
+	padding: 20px;
+}
+
+.contenedormonths td
+{
+	border-radius: 10px;
+	padding: 20px;
+	background-color: grey;
+	text-align: center;
+	font-size: 20px;
+	transition: all 0.5s 0s linear;
+	color: transparent;
+}
+.contenedormonths tr td:nth-child(1){
+	background: linear-gradient( 0deg,  #FF9300, #E9EAF7, #FF9300 );  
+}
+.contenedormonths tr td:nth-child(2){
+	background: linear-gradient( 0deg, #FF9300, #E9EAF7, #FF9300 );
+}
+.contenedormonths tr td:nth-child(3){
+	background-color: #FFD090;
+	color: black;
+	clip-path: polygon(0% 50%, 0% 0%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0% 100%);
+	transition: all 0.5s 0s linear;
+}
+.contenedormonths tr:hover td:nth-child(3){
+	clip-path: polygon(0% 50%, 40% 0%, 30% 35%, 70% 40%, 70% 65%, 30% 68%, 40% 100%);
+	font-size: 0px;
+}
+.contenedormonths tr:hover > td{
+	color: black;
+	font-size: 25px;
+	background: linear-gradient( 90deg, #F7E37F, #48D7FA, #F7E37F );
+}
+
+
+
+
+
+
+
+.practicmonth table 
+{
+	margin: auto;
+}
+.practicmonth
+{
+	/*width: 40%;  probar para que la imagen no se vea tan ancha  de 0 a 768*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.practicmonth table tr 
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	height: 100vh;
+}
+
+.practicmonth table tr td
+{
+		text-align: center;
+		border: 10px solid;
+		border-color:  #A5FCF3 #A5FCF3  #91C0BB #91C0BB ; 
+		font-size: 40px;
+		background-color: #DBF0F5;
+}
+
+.practicmonth  input
+{
+		text-align: center;
+		width: 100%;
+		height: 75%;
+		border: 0px;
+		font-weight: bold;
+		font-size: inherit;
+}
+
+.btn
+{
+	width: 20%;
+	background-color: #48D7FA;
+	font-size: 50px;
+	margin: auto;
+	padding: 30px;
+	text-align: center;
+	transition: all 0.3s 0s linear;
+	clip-path: polygon(0% 50%,  
+					   0%  50%, 
+					   0% 50%, 
+					   50% 0%, 
+					   100% 50%, 
+					   100% 50%, 
+					   100% 50%, 
+					   100% 50%,
+					   50% 100%,
+					   50% 100%,
+					   50% 100%, 
+					   0% 50%);
+}
+
+.btn:hover
+{
+	clip-path: polygon(0% 50%, 
+				       20% 0%,  
+				       20% 25%, 
+				       50% 0%, 
+				       80% 30%, 
+				       80%  0%,  
+				       100% 50%, 
+				       80% 100%,
+				       80% 75%,
+				       50% 100%,
+				       20% 75%,
+				       20% 100%);
+}
+
+.contienepreguntas
+{
+	padding: 5%;
+	background: linear-gradient( 0deg, #FF9300, #E9EAF7); 
+}
+.sb
+{
+	padding: 1%;
+	background-color: #FBD8AD;
+	font-size: 50px;
+}
+
+.nm
+{
+	filter: opacity(0);
+	overflow: hidden;
+	height: 0px;
+}
+.Answer
+{
+	color: red;
+}
+.Question
+{
+	color: #8228F1;
+}
+.Answer::after
+{
+	content: "\025bc";
+	position: relative;
+}
+.Answer:hover > .nm
+{
+	background: linear-gradient( 90deg, #F7E37F, #48D7FA, #F7E37F );
+	transition: all 1.5s 0s linear;
+	filter: opacity(1);
+	height: auto;
+
+}
+.Answer:hover::after
+{
+	content: "";
+}
+
+
+
+.divhome
+{
+	content: url(../imgproyectoingles/h.png);
+}
+.aregreso::after
+{
+	content: url(../imgproyectoingles/regresar.jpg);
+}
+.asiguiente::after
+{
+	content: url(../imgproyectoingles/siguiente.jpg);
+}
+
+@media (min-width: 1024px) {
+  	.practicmonth table tr,  .contenedormonths table tr,
+	{
+		width: 1000px;
+	}
+	.practicmonth input, .practicmonth table tr td, .contenedormonths tr td:nth-child(1), .contenedormonths tr td:nth-child(2), .contenedormonths tr td:nth-child(3)
+	{
+		font-size: 50px;
+	}
+	h1
+	{
+		font-size: 50px;
+	}
+}
+@media (min-width: 1440px) {
+  	.practicmonth
+	{
+		margin: auto;
+		width: 69%;
+		height: 100vh;
+	}
+}
+@media (min-width: 2560px) {
+  	.practicmonth
+	{
+		margin: auto;
+		width: 50%;
+		height: 100vh;
+	}
+	.practicmonth table tr,  .contenedormonths table tr,
+	{
+		width: 1000px;
+	}
+	.practicmonth input, .practicmonth table tr td, .contenedormonths tr td:nth-child(1), .contenedormonths tr td:nth-child(2), .contenedormonths tr td:nth-child(3), .contenedormonths th
+	{
+		font-size: 60px;
+	}
+	h1
+	{
+		font-size: 80px;
+	}
+	.sb
+	{
+		font-size: 70px;
+	}
+}
+

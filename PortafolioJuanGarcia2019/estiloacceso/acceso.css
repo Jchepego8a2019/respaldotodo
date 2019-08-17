@@ -1,0 +1,125 @@
+.bg
+{
+	border: 1px solid black;
+	padding: 20px;
+	font-size: 40px;
+	font-family: 'Black Ops One', cursive;
+}
+body
+{
+	perspective: 800px;
+	perspective-origin: ;	
+}
+.contenededor_acceso
+{
+	width: 60%;
+	margin: 40px auto 0 auto;
+	border-color: transparent;
+	box-shadow: 5px -5px 20px 3px black inset;
+	border-radius: 5%;
+	transition: all 1s 0s ease-out;
+}
+
+.dergira
+{
+	transform: rotateY(10deg);
+	box-shadow: 8px 5px 20px 5px black inset;
+}
+.izqgira
+{
+	transform: rotateY(-10deg);
+	box-shadow: -8px 5px 20px 5px black inset;
+}
+
+.pinizq , .pinder
+{
+	background-color: black;
+	position: relative;
+	top: 10%;
+	border-radius: 10px; 
+	background-image: url("../imagenes/engra.gif");	
+	background-size: cover;
+}
+
+.alinear_piv
+{
+	display: grid;
+  	grid-template-columns: 0.4fr 1fr 0.4fr;
+  	grid-gap: 5px;
+  	justify-content:space-around;	
+}
+#vidrio
+{
+	height: 50px;
+	background-color: #696767;
+	color: #F8DB1A;
+	border-radius: 10%;
+	position: relative;
+	top: 10%;
+	z-index: 9999;
+}
+.placacceso
+{
+	background-color: #e2dff8;
+	position: relative;
+	border-radius: 0 0 4% 4%;
+}
+.teclado
+{
+	display: grid;
+  	grid-template-columns: repeat(3 , 1fr);
+  	grid-gap: 10px;
+  	justify-content:space-around;	
+  	align-content:space-around;
+  	text-align: center;
+  	border-top: ;
+  	border-bottom: ;
+  	border-width: 0.1px;
+  	box-shadow: 5px -5px 20px 3px black inset;
+  	border-radius: 5%;
+}
+.anch
+{
+	background-color: #F5F099;
+	height: 50px;
+	border-radius: 10%;
+	color: green;
+	font-size: 40px;
+}
+.frente
+{
+	position: relative;
+	z-index: 99;
+	background-color: 
+}
+
+.baselector
+{
+	position: relative;
+	top: 0px;
+	border-width: 20px;	 
+	padding: 0;
+	border-radius: 20%;
+}
+.lector
+{
+	background-color: #EBF6FB;
+	opacity: 0.2;
+	height: 50px;
+	background-image: url("../imagenes/resolvercontra.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.teclado div:nth-child(1n)
+{
+	box-shadow: 5px -5px 20px 3px black inset;
+}
+
+/*-------------------------------------------------------------------*/
+.h
+{
+	width: 400px;
+	height: 400px;
+	background-color: pink;
+}

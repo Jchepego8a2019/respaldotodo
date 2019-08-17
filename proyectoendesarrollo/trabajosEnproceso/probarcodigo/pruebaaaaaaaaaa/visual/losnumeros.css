@@ -1,0 +1,236 @@
+body
+{
+	border: 10px double #FF9300;
+}
+h1
+{
+	text-align: center;
+	color: blue;
+	font-size: 40px;
+}
+
+.practiceWithNumbers table 
+{
+	margin: auto;
+}
+
+.practiceWithNumbers table tr 
+{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+
+.practiceWithNumbers table tr td
+{
+		text-align: center;
+		border: 10px solid;
+		border-color:  #A5FCF3 #A5FCF3  #91C0BB #91C0BB ; 
+		font-size: 40px;
+}
+
+.practiceWithNumbers  input
+{
+		text-align: center;
+		width: 70%;
+		border: 0px;
+		font-weight: bold;
+		font-size: inherit;
+}
+.columna3Cambiodecolor
+{
+	background: linear-gradient( 0deg, #FF9300, #E9EAF7, #FF9300);
+}
+
+.btn
+{
+	width: 20%;
+	background-color: #48D7FA;
+	font-size: 50px;
+	margin: 1% 0% 1% 15.5%;
+	padding: 30px;
+	text-align: center;
+	transition: all 0.3s 0s linear;
+	clip-path: polygon(0% 50%,  
+					   0%  50%, 
+					   0% 50%, 
+					   50% 0%, 
+					   100% 50%, 
+					   100% 50%, 
+					   100% 50%, 
+					   100% 50%,
+					   50% 100%,
+					   50% 100%,
+					   50% 100%, 
+					   0% 50%);
+	display: inline-block;
+}
+
+.btn:hover
+{
+	clip-path: polygon(0% 50%, 
+				       20% 0%,  
+				       20% 25%, 
+				       50% 0%, 
+				       80% 30%, 
+				       80%  0%,  
+				       100% 50%, 
+				       80% 100%,
+				       80% 75%,
+				       50% 100%,
+				       20% 75%,
+				       20% 100%);
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+.theNumbers table 
+{
+	margin: auto;
+}
+
+.theNumbers th
+{
+	background-color: black;
+	color: white;
+	font-size: 40px;
+	border-radius: 10px 10px 0 0 ;
+	padding: 20px;
+}
+
+.theNumbers td
+{
+	border-radius: 10px;
+	border-width: medium;
+	padding: 40px;
+	text-align: center;
+	font-size: 40px;
+	transition: all 0.5s 0s linear;
+	color: transparent;
+}
+
+
+.theNumbers tr td:nth-child(1){
+	background: linear-gradient( 0deg, #FF9300, #E9EAF7, #FF9300);  
+}
+
+.theNumbers tr td:nth-child(2){
+	background: linear-gradient( 0deg, #FF9300, #E9EAF7, #FF9300);  
+}
+
+.theNumbers tr td:nth-child(3){
+	background-color: #FFD090;
+	color: black;
+	clip-path: polygon(0% 50%, 0% 0%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0% 100%);
+	transition: all 0.5s 0s linear;
+}
+
+.theNumbers tr:hover td:nth-child(3){
+	clip-path: polygon(0% 50%, 40% 0%, 30% 35%, 70% 40%, 70% 65%, 30% 68%, 40% 100%);
+	color: black;
+	font-size: 0px;
+}
+
+.theNumbers tr:hover > td{
+	color: black;
+	font-size: 40px;
+	background: linear-gradient( 90deg, #F7E37F, #48D7FA, #F7E37F );
+}
+.ok::after
+{
+	content: url("../imgproyectoingles/palomita.jpg");
+	font-size: 30px;
+	background-color: #2BFF0E;
+	border-radius: 50%;	
+}
+
+.aregreso::after
+{
+	content: url(../imgproyectoingles/regresar.jpg);
+}
+.asiguiente::after
+{
+	content: url(../imgproyectoingles/siguiente.jpg);
+}
+.divhome
+{
+	content: url(../imgproyectoingles/h.png);
+}
+
+.contienepreguntas
+{
+	padding: 5%;
+	background: linear-gradient( 0deg, #FF9300, #E9EAF7); 
+}
+.sb
+{
+	padding: 1%;
+	background-color: #FBD8AD;
+	font-size: 50px;
+}
+
+.nm
+{
+	filter: opacity(0);
+	overflow: hidden;
+	height: 0px;
+}
+.Answer
+{
+	color: red;
+}
+.Question
+{
+	color: #8228F1;
+}
+.Answer::after
+{
+	content: "\025bc";
+	position: relative;
+}
+.Answer:hover > .nm
+{
+	background: linear-gradient( 90deg, #F7E37F, #48D7FA, #F7E37F );
+	transition: all 1.5s 0s linear;
+	filter: opacity(1);
+	height: auto;
+
+}
+.Answer:hover::after
+{
+	content: "";
+}
+
+@media (min-width: 1440px) {
+	.contienepreguntas
+	{
+	  	width: 65%;
+		margin: auto;
+	}
+}
+@media (min-width: 2560px) {
+  	.practiceWithNumbers table tr,  .theNumbers table tr,
+	{
+		width: 1500px;
+	}
+	.practiceWithNumbers input, .practiceWithNumbers table tr td, .theNumbers tr td:nth-child(1), .theNumbers tr td:nth-child(2), .theNumbers tr td:nth-child(3)
+	{
+		font-size: 70px;
+	}
+	h1
+	{
+		font-size: 90px;
+	}
+	.btn
+	{
+		margin: 1% 0% 1% 18.5%;
+	}
+	.contienepreguntas
+	{
+		width: 43%;
+		margin: auto;
+	}
+	.sb
+	{
+		font-size: 70px;
+	}
+}

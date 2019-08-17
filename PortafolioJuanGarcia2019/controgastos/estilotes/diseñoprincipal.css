@@ -1,0 +1,295 @@
+/*actualizado 20/07 11:40*/
+*
+{
+	padding: 0;
+	margin: 0;
+	color: black;
+	outline: none;
+}
+/*-----------------------------GIRA ELEMENTO CONTIENE TODO---------*/
+a
+{
+	font-size: 45px;
+}
+body
+{
+	perspective:900px;
+	background: linear-gradient(to top, #F5FB92, #f06d06);
+}
+
+.contenedorPerpectiva
+{
+	background-color: #93ac8e;
+	border-radius: 50px;
+	transition:transform 1s 0s linear;
+	width: 80%;
+	margin: 50px auto auto auto;
+	perspective:800px;
+	transform:rotate3D(0, 0, 0, 0deg) translate3D(0px, 0px, 0px);
+}
+
+.contenedorPerpectiva:hover
+{
+	transform:rotate3D(1, 0, 0, 5deg) translate3D(0px, 0px, -50px);
+}
+
+header div
+{
+	font-size: 70px;  
+	color: white;
+	margin-left: 30px
+}
+
+
+/*----------------------GIRA CADA PESTAÑA------------------*/
+h2
+{
+	font-size: 53px;  
+}
+
+.elemento1 { grid-area: elemento; }
+.botoningresar { grid-area: elementoaa; }
+.botonEgresar { grid-area: elementobb; }
+.elemento1 { grid-area: elementoa; }
+.elemento2 { grid-area: elementob; }
+.elemento3 { grid-area: elementoc; }
+.elemento4 { grid-area: elementod; }
+.elemento5 { grid-area: elementoe; }
+.elemento6 { grid-area: elementof; }
+.elemento7 { grid-area: elementog; }
+.elemento8 { grid-area: elementoh; }
+.elemento9 { grid-area: elementoi; } 
+
+.contenedorIngresos
+{
+	background-color: #eae0ea;
+	border-radius: 30PX 30px  0 0;
+	padding: 20px;
+	margin: 0 30px; 
+	transition:transform 1s 0.3s linear;
+	transform-origin: bottom left;
+	height: 700px;      
+	display: grid;
+	grid-template-areas:  'elemento elemento elementoaa '
+	 					  'elementoa elementob elementob'
+	 					  'elementoc elementod elementod'
+	 					  'elementoe elementof elementof'
+	 					  'elementog elementoh elementoh'
+	 					  'elementoi elementoi elementoi'
+                      ;
+  grid-gap: 1px;
+}
+.contenedortodo
+{
+	padding-bottom: 30px;
+}
+.contenedorEgresos
+{
+	background-color: #eae0ea;
+	border-radius: 0 0 30PX 30px;
+	padding: 20px;
+	margin: 0 30px; 
+	transition:transform 1s 0.3s linear;
+	transform-origin: bottom left;
+	height: 700px;     
+	display: grid;
+	grid-template-areas: 'elemento elemento elementobb'
+	 					  'elementoa elementob elementob'
+	 					  'elementoc elementod elementod'
+	 					  'elementoe elementof elementof'
+	 					  'elementog elementoh elementoh'
+	 					  'elementoi elementoi elementoi'
+                      ;
+  grid-gap: 1px;
+}
+
+.ingre25
+{
+	transform:rotate3D(1, 0, 0, -15deg);
+}
+
+.ingre15
+{
+	transform:rotate3D(1, 0, 0, -15deg);
+}
+
+
+/*-------------------CAMBIA TAMAÑO TEXTO, INPUT Y BOTONES-----------------*/
+.contenedorIngresos > label, .contenedorIngresos > input, .contenedorIngresos > select, .contenedorIngreso > .elemento8, .contenedorEgresos > label, .contenedorEgresos > input, .contenedorEgresos > select
+{
+	font-size: 45px;   
+	margin: 0; 
+	padding: 0;
+	width: 100%;
+}
+
+.bntingresar, .bntegresar
+{
+	border-radius: 0px 0px 50px 50px 
+	width: 100%;
+	background-color: #ADDCB8;
+}
+
+/*--------------------------------------*/
+
+nav > [type="button"]
+{
+	background: linear-gradient(to top right, #ddd9f4, #9f92ea, #6952ea);
+	width: 90%;
+	height: 70px;
+	margin: 5%;      
+	font-size: 50px;
+	border-radius: 20px 90px;
+	box-shadow: 0px 10px 10px 10px #555;
+}
+nav > [type="button"]:hover
+{
+	background: linear-gradient(to bottom left, #ddd9f4, #9f92ea, #6952ea);
+	box-shadow: 0px 5px 5px 5px #555;
+}
+
+
+/* -----------------------MOSTRAR LOS DATOS DE LA BASE DE DATOS----------------------- */
+.contenedorMostarDatos
+{
+	background-color: #e7e6ea;
+	margin: 0px auto 20px auto;
+	transition: transform 1s 0.3s linear;
+	padding: 3px;
+}
+
+.contenedormostrardatos
+{
+	margin-top: 10px;
+	font-size: 20px;
+	perspective: 10000000px;
+}
+
+
+.car-holder, .card
+{
+	width: 90%;
+	margin: 0 5%;
+	transform-origin: 50% 50%;
+	font-size: 50px;
+	/*overflow-wrap: break-word;*/
+}
+
+.girar
+{
+	transform: rotateY(180deg);
+}
+
+.regresar
+{
+	transform: rotateY(0deg);
+}
+
+.card
+{
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.3s linear;
+}
+
+.tabla
+{
+	padding: 1%;
+	padding-bottom: 5%;
+	font-size: 40px;
+	text-align: center;
+}
+
+td
+{
+	padding: 0.5%;
+}
+#subtotalingresos, #subtotalegresos
+{
+	color: white;
+	font-size: 70px;
+	text-shadow: 0px 10px 40px red, 0px -10px 40px green, 10px 0px 40px red, -10px 0px 40px green;
+}
+
+.card .front,
+.card .back
+{
+	width: 100%;
+	backface-visibility: hidden;
+	background-color: white;
+	margin-bottom: 300px
+}
+
+.card .back
+{
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+}
+
+.borrar
+{
+	font-size: 50px;
+	margin: 4%;
+	padding: 2%;
+	box-shadow: 10px 0px 20px 3px black;
+	transition: box-shadow 0.1s linear;
+	border-radius: 15%;
+}
+.borrar:hover
+{
+	box-shadow: 1px -1px 1px 1px black, 10px 10px 50px 3px grey inset;
+	color: grey;
+}
+
+
+/* ----------------------------RESPONSIVE----------------------------------------------------------  */
+@media all and (min-width: 1024px) {
+	nav > [type="button"]
+	{
+	  margin: 5%;
+	  margin-left: 6%;      
+	  font-size: 40px;
+	}
+ 
+}
+
+@media all and (min-width: 1440px) {
+	nav > [type="button"]
+	{
+	  margin-left: 6%      
+	  font-size: 50px;
+	}
+	.tabla
+	{
+		font-size: 53px;
+	}
+}
+
+
+@media all and (min-width: 2560px) {
+  nav > [type="button"]
+  {
+    margin: 1%;     
+    margin-left: 5.5%; 
+    height: 90px;	
+    font-size: 70px;
+  }
+  .contenedorIngresos > label, .contenedorIngresos > input, .contenedorIngresos > select, .contenedorIngreso > .elemento8, .contenedorEgresos > label, .contenedorEgresos > input, .contenedorEgresos > select
+  {
+	font-size: 90px;  
+  }
+  header div
+  {
+	font-size: 120px; 
+  }
+  .tabla
+  {
+	font-size: 80px;
+  }
+  td
+  {
+	border-width: medium;
+  }
+}
+

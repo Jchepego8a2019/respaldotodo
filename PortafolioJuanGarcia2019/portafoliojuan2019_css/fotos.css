@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0; 
+}
+
+body{
+	background:;
+	height: auto;	
+	position: relative;
+	padding-top: 30%;
+	padding-left: 13%; 
+}
+
+.botones{
+	position: absolute;
+	border-radius: 100px;
+	padding: 10px;
+	background-color: transparent;
+	color: white;
+	margin: 0;
+	top: 50%;
+	width: 20px;
+	height: 20px;
+}
+
+.atras{
+	left: 2%;
+	background-image: url(../portafoliojuan2019_images/izquierda.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.adelante{
+	right: 2%;
+	background-image: url(../portafoliojuan2019_images/derecha.gif);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.img{
+	width: 85%;
+	height: 300px;
+	border-radius: 10%;
+	margin-bottom: 30%;
+} 
+
+
+/*============================RESPONSIVE=====================================*/
+@media (min-width: 308px){
+  body {
+    padding-top: 10%;
+  }
+  .img{
+  	border: 3px solid yellow;
+  }
+
+}
+
+@media (min-width: 728px) {
+	.img{
+	margin-bottom: 10%;
+	}
+	.botones{
+    	width: 60px;
+		height: 60px;
+    }
+}
+
+
+@media (min-width: 1000px){
+ body {
+  	font-size: 25px;
+   }
+ .img{
+	height: 400px;
+   } 
+   .botones{
+    	width: 80px;
+		height: 80px;
+    }
+}
+
+@media (min-width: 1400px){
+	body {
+  	padding-top: 5%;
+   }
+   .img{
+	height: 480px;
+   } 
+   .botones{
+    	width: 100px;
+		height: 100px;
+    }
+}
+
+@media (min-width: 2520px){
+  body {
+  	padding-top: 7%;
+  	font-size: 55px;
+   }
+   .img{
+	height: 900px;
+   } 
+   .botones{
+    	width: 200px;
+		height: 200px;
+    }
+}
+

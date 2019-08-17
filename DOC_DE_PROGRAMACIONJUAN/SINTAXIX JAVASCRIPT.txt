@@ -1,0 +1,2081 @@
+-------------------------------------------------------------------------VARIABLES
+variable local: solo se puede utilizar dentro de una funcion
+variables globales son las que son accesibles dentro y fuera de las funciones
+
+si dentro de una funcion colocamos variable con un valor esta seria una variable global y no local 
+//ejemplo 
+function H(){
+	variable_no_declarada = "valor";
+	console.log(variable_no_declarada);
+}
+H();//llama la funcion y crea la variable global que puede ser accedida por el alert
+
+alert(variable_no_declarada);
+
+
+var x = 5;
+var y = 6;
+var z = x + y;
+let  w = 1000   //nueva manera de crear variables cuando usar var y let es por su alcance en el ambito
+const  pi = "constante";
+
+//ejemplos:
+var x = prompt("ingrese texto");
+var person = "John Doe", carName = "Volvo", price = 200;
+var variableSinValor ;    //toma por defecto el valor de undefined.
+var y = 123e5;      // 12300000
+var z = 123e-5;     // 0.00123
+
+//scope  global: se puede acceder desde cualquier lugar
+//local se puede acceder desde una funcion anidada
+==============================================================================================
+-------------------------------------------------------------------------METODOS PARA LAS CADENAS DE TEXTO
+
+
+var x = "palabra1 palabra2 palabra2 PALABRA3 palabra4 palabra5 palabra6";
+
+var iniciaCadenaDesdeDondeIndicamos =  x.substring(8);//indicamos donde queremos que inicie la cadena de texto
+var loQueQueremosExtraerDesdeHasta = x.substr(0, 18);//colocamos lo posicion que queremos extraer
+var determinaLaPosicionDeElCaracter = x.indexOf("1") + 1;//nos devuelve en que posicion esta determinada letra
+var determinaPosicionDeLaultimaCoincidencia = x.lastIndexOf("bra2");//encuentra la posicion de la ultima coincidencia
+var remplazaLaPalabra = x.replace("palabra6","palabra7");//remplaza la palabra
+var aMayusculas = x.toUpperCase();//pasa la palabra a mayusculas
+var aMinusculas = x.toLowerCase();//pasa la palabra a minuscula
+// x.split();
+// x.charAt();
+// x.search();
+// x.slice();
+// x.toLocaleLowerCase();
+// x.toLocaleUpperCase();
+// x.toString();
+// x.valueOf()   ;
+document.write(aMinusculas);
+==============================================================================================
+-------------------------------------------------------------------------OUTPUT
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+
+document.getElementById("demo5").innerHTML = 5 + 1;
+document.write(5 + 2);
+window.alert(5 + 3);
+console.log(5 + 4);
+
+<p id="demo5">sin cambiar</p>
+==============================================================================================
+-------------------------------------------------------------------------ARREGLOS
+
+//creamos un arreglo
+var arregloA = ["palabraA","palabraB","palabraC","palabraD"];
+document.write(arregloA[0]+" accedemos al elemento por su indice<br>");
+
+var y = arregloA.length;// cuenta la cantidad de elementos
+document.write(y+" cuenta la cantidad de elementos del array <br>");
+
+arregloA.push("palabraE"); //sirve para agregar elementos en la ultima posicion en el arrays
+document.write(arregloA[arregloA.length-1]+" esta fue agregada con el metodo push<br>");//vemos el ultimo elemento del arreglo
+arregloA.pop();
+document.write(" ultima palabra fue eliminada con el metodo pop que seria palabaE y nos queda "+arregloA[arregloA.length-1]+"<br>");
+
+//concatenar dos arreglos ó mas
+var personas = ["A","B","C","D"];
+var puntos = [1,2,3,4];
+var unirArreglos = personas.concat(puntos);
+document.write(unirArreglos+"<br>");
+
+//agregar un espaciado entre cada elemento del arreglos este puede ser un espacio hasta cualquier simbolo
+var score = [1000,2000,3000,4000];
+document.write(score.join(" => ")+"<br>");
+
+//ordenar un arreglo alfabeticamente
+var palbordenadas = ["b","d","h","e","g","a","c","f"];
+palbordenadas.sort();// tambien esta .reverse
+for(var i = 0; i < 8; i++){
+document.write(palbordenadas[i]);
+}
+
+no es muy recomendable utilizarla por que istanciamos del objeto nativo array
+var otraFormaArray = new Array(2);
+otraFormaArray[0] = "valor1";
+otraFormaArray[1] = "valor2";
+
+// array asociativo no existe asi que se utiliza un objeto
+var arregloAsociativo = [];
+arregloAsociativo["parametro1"] = "valor1";
+arregloAsociativo["parametro2"] = "valor2";
+arregloAsociativo["parametro3"] = "valor3";
+
+==============================================================================================
+-------------------------------------------------------------------------CONDICIONALES
+
+if (true) {
+  //codigo
+}else if (false) {
+  //codigo
+}else {
+  //codigo
+}
+//....................
+//se utiliza mayormente para un arreglo
+for (var i = 0; i < array.length; i++) {
+  array[i]
+}
+
+tambien podemos hacer esto
+for(m = 0,n = 10; m < 10, n > 1; m++, n--)
+{
+	console.log(m);
+	console.log(n);
+}
+
+var obj = {a: 1, b: 2, c: 3};//solo se ocupa para iterar objetos
+
+for let prop in obj) 
+{
+  console.log(prop + obj[prop]);
+}
+
+let iterable = [10, 20, 30];
+
+for (let value of iterable) 
+{
+  console.log(value);
+}
+//....................
+var i = 0;
+while (i = 3) {
+  //codigo
+  i++;
+}
+
+var i = 0;
+do {
+  //codigo
+  i++;
+} while (i = 3);
+//....................
+switch (expression) {
+  case expression:
+
+    break;
+  default:
+
+}
+==============================================================================================
+-------------------------------------------------------------------------FUNCIONES
+
+// The code inside the function will execute when "something" invokes (calls) the function:
+//
+// -When an event occurs (when a user clicks a button)
+// -When it is invoked (called) from JavaScript code
+// -Automatically (self invoked)
+
+
+//p1 y p2 son conocidos como parametros y cuando llamamos la funcion y le colocamos un valor son conocidos como argumentos
+function myFunction(p1, p2) {
+return p1 * p2;// The function returns the specific product of p1 and p2
+}
+
+document.write(myFunction(2,5)) + "<br>";//aqui invocamos la funcion y le pasamos los argumentos  2 y 5
+
+ejemplo:
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+document.getElementById("demo6").innerHTML = toCelsius(10);
+  <p id="demo6">sin cambiar</p>
+
+//funcion auto invocada sirve para proteger las variables
+(function(){
+   //todo el codigo
+}())
+---------------------------------------------otramanera de definir funciones flecha en ES6
+
+var x = document.getElementById("eee");
+
+const oracion = (letras) =>
+{
+  return x.innerHTML += letras;
+}
+oracion(" esta es otra oracion mas");
+
+<h1 id="eee">esto es un texto</h1>
+==============================================================================================
+FUNCION ANONIMA
+
+var anonima =  function (par, par2){
+   var resultado = par + par2;
+}
+
+aninima(2, 5);
+
+EN QUE CONSISTE EL CONSTRUCTOR FUNCTION
+var miFuncion = new function ("a", "b","return a+b");
+var resultado = miFuncion(5, 7);
+
+FUNCION ANONIMA AUTO INVOCADA dentro de unos parentesis para que sea una expresion y al final de la llave de cierre se ponen () con esto se esta autollamando
+
+(function () {alert("hola!";) })();
+
+
+
+nota: arguments  es un array que almacena los argumentos de una funcion
+==============================================================================================
+-------------------------------------------------------------------------SELECTORES DEL DOM
+
+var numero1 = parseFloat(document.getElementById("num1"));
+
+var numero2 = parseFloat(document.getElementById("num2"));
+
+var elementos_portag = document.getElementsByTagName("a")[2].href = "https://www.google.com";//busca por viñeta html
+
+var elemetos_pornombre = document.getElementsByName("parrafo")[0].tagName;//buscar por atributo name
+
+var xyz = document.getElementsByClassName("claseNombre")[0];
+xyz.style.fontSize = "35px";
+
+
+document.querySelector(".selector").style.color = "red";//solo encuentra al primer elemento que contenga esa clase
+document.querySelector("#selector").style.color = "yellow";//solo encuentra al primer elemento que contenga esa clase
+
+var selectall = document.querySelectorAll("div[class='claseNombre']");
+for(var i = 0; i < selectall.length; i++){
+  selectall[i].style.fontSize = "7px";
+}
+
+
+<input type="text" class="num1">
+<input type="text" class="num2">
+<a href="#">enlace1</a>
+<a href="#">enlace2</a>
+<a href="#">enlace3</a>
+<p name="parrafo">parrafo1</p>
+<p name="parrafo">parrafo2</p>
+<p name="parrafo">parrafo3</p>
+<div class="claseNombre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, earum.</div>
+<div class="claseNombre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, earum.</div>
+<div class="claseNombre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, earum.</div>
+<div class="selector">et, consectetur adipisicing elit. Quidem, earum.</div>
+<div class="selector">et, consectetur adipisicing elit. Quidem, earum.</div>
+<div id="selector">et, consectetur adipisicing elit. Quidem, earum.</div>
+<div id="selector">et, consectetur adipisicing elit. Quidem, earum.</div>
+==============================================================================================
+-------------------------------------------------------------------------CREANDO NODOS EN EL DOM
+
+//1- crear el elemento
+var elemento = document.createElement("h2");
+//2- crear un nodo de texto
+var contenido = document.createTextNode("este es el contenido");
+//3- añadir el nodo de texto al elemento
+elemento.appendChild(contenido);
+//4- agrgar atributo al elemento
+elemento.setAttribute("align","center");
+//5- agregar el elemento al documento
+document.getElementById("subtirulo").appendChild(elemento);
+
+// <div id="subtirulo">Lorem ipsum.</div>
+
+
+//agregar un nodo o elemento antes o despues hay 2 formas
+ var elementoNuevo = document.createElement("li");
+ var contenidoNuevo = document.createTextNode("AAAAAA");
+ elementoNuevo.appendChild(contenidoNuevo);
+
+ //forma1 para obtener el padre usando el elmento y .parentNode
+ // var padre = document.getElementsByTagName("li")[0].	;
+
+ //forma2 usando un id
+ // var padre = document.getElementById("lista");
+
+//agregando el elemento o nodo al final usando appendChild
+// padre.appendChild(elementoNuevo);
+
+//agregando el nodo al principio usando insertBefore(elemento agregar, referenciaDeElemento);
+var padre = document.getElementById("lista");
+var referencia = document.getElementsByTagName("li")[0];
+padre.insertBefore(elementoNuevo, referencia);
+
+// <ol id="lista">
+//   <li>BBBBB</li>
+//   <li>CCCCC</li>
+// </ol>
+
+
+
+//modificar el contenido de un elemento del DOM hay 2formas
+
+var elem = document.getElementsByTagName("li")[0];
+//forma1
+elem.innerHTML = "Lorem ipsum dolor sit amet, consectetur <b>adipisicing</b> elit. <i>Quia</i>, sapiente!";//cambiamos el contenido y ejecuta los tag-html
+//forma2
+// elem.textContent = "Lorem ipsum dolor sit amet, consectetur <b>adipisicing</b> elit. <i>Quia</i>, sapiente!";//cambiamos el contenido pero no ejecuta los tag-html
+
+//para remplazar un elemento del DOM
+var nuevotag = document.createElement("li");
+var contenidonuevotag = document.createTextNode("nuevo contenido desde javascript");
+nuevotag.appendChild(contenidonuevotag);
+var padrecontenedor = document.getElementsByTagName("li")[2];
+var refCambiar = document.getElementsByTagName("span")[0];
+padrecontenedor.replaceChild(nuevotag, refCambiar);
+
+//eliminar un elemento del DOM
+var padredelhijoaeliminar = document.getElementsByTagName("li")[2].parentNode;
+var hijoaeliminar = document.getElementsByTagName("li")[5];
+padredelhijoaeliminar.removeChild(hijoaeliminar);
+
+<ol id="list">encabezadoA
+  <li>AAAAAAAAAAAA</li>
+  <li>BBBBBBBBBBBB</li>
+</ol>
+
+<ol>encabezadoB
+  <li><span>texto en html</span></li>
+  <li>mas texto</li>
+  <li>eliminado</li>
+</ol>
+
+
+//para remplazar el valor de los atributos como ide, class, href, etc
+var cambiaValorAtributo = document.getElementsByTagName("div")[0];
+//forma1
+cambiaValorAtributo.setAttribute("class", "secambioclase1 agregueotroclase2");
+
+var cambiaValorAtrib = document.getElementsByTagName("a")[0];
+//forma2
+cambiaValorAtrib.href = "secambiolshref";
+
+<div class="clase1"></div>
+<div id="id1"></div>
+<a href="www.google.com"></a>
+=============================================================================================
+-------------------------------------------------------------------------FORMULARIO
+accesar a los elementos del formulario
+//para acesar a cada elemento dentro de el formulario como si fuera un array no se recomienda mucho esta forma
+//forma1
+var formulario = document.getElementsByTagName("form")[0];
+formulario.elements[2];
+//forma2 es la mas recomendada usando el name="nombre" pero se coloca el valor
+document.formulario.nombre.style.backgroundColor = "red";
+document.formulario.name;//nos devuelve la palabra que tiene el atributo name=""
+document.formulario.nombre.type;//nos devuelve de que tipo es el input en su propiedad type=""
+document.formulario.sexo[0].value;//nos devuelve el tipo de valor que tiene el input en su propiedad value=""
+
+atributos para los input
+// Attribute	   Description
+// disabled	   Specifies that the input element should be disabled
+// max	       Specifies the maximum value of an input element
+// min         Specifies the minimum value of an input element
+// required	   Specifies that the input field requires an element
+// type 	     Specifies the type of an input element
+//readonly     solo lectura
+// autocomplete
+// autofocus
+// formnovalidate
+// list
+// multiple
+// placeholder
+// step   indica los intervalos ejemplo:
+// autocomplete="on"
+// novalidate
+// pattern(patrones)	     Specifies the value pattern of an input element
+
+para el atributo pattner="   "
+// .	        Punto	Comodín	Cualquier carácter (o texto de tamaño 1)
+// A|B	      Pipe	Opciones lógicas	Opciones alternativas (o A o B)
+// C(A|B)	    Paréntesis	Agrupaciones	Agrupaciones alternativas (o CA o CB)
+// [0-9]	    Corchetes	Rangos de carácteres	Un dígito (del 0 al 9)
+// [A-Z]	    Una letra mayúscula de la A a la Z
+// [^A-Z]	^   en corchetes	Rango de exclusión	Una letra que no sea mayúscula de la A a la Z
+// [0-9]*	    Asterisco	Cierre o clausura	Un dígito repetido 0 ó más veces (vacío incluido)
+// [0-9]+	    Signo más	Cierre positivo	Un dígito repetido 1 ó más veces
+// [0-9]{3}	  Llaves	Coincidencia exacta	Cifra de 3 dígitos (dígito repetido 3 veces)
+// [0-9]{2,4}	Coincidencia (rango)	Cifra de 2 a 4 dígitos (rep. de 2 a 4 veces)
+// b?	        Interrogación	Carácter opcional	El carácter b puede aparecer o puede que no
+// \.	        Barra invertida	Escape	El carácter . literalmente (no como comodín)
+
+      //ejemplo1 solo puede contener 3 letras mayusculas o minusculas
+      var input = document.forms[0].elements;
+      input[0].pattern = "[A-Za-z]{3}";
+      input[1].pattern = "[0-9]{2}";
+      input[2].pattern = "[a-z]{1,8}";
+      // <form action="j8asoul2014@gmail.com" method="get">
+      // <input type="text" name="usu" title="ejemplo:abc">
+      // <input type="text" name="edad" title="ejemplo:10">
+      // <input type="text" title="ejemplo:abcdefgh">
+      // <input type="number" name="points">
+      // </form>
+
+      input[3].step =  step="3";
+      //<input type="number" name="points">
+
+
+==============================================================================================
+-------------------------------------------------------------------------VALIDAR FORMULARIO
+
+var formulario = document.forms[0];
+var elmentos = document.forms[0].elements;
+
+var verificaRadioCheckbox = function(e)
+{
+  if (document.forms[0].circleboxcheced[0].checked || document.forms[0].circleboxcheced[1].checked || document.forms[0].circleboxcheced[2].checked)
+  {
+
+  }
+  else
+  {
+    e.preventDefault();
+  }
+
+  if (document.forms[0].circlechec[0].checked || document.forms[0].circlechec[1].checked || document.forms[0].circlechec[2].checked)
+  {
+
+  }
+  else
+  {
+    e.preventDefault();
+  }
+
+}
+
+// ----------------------------------------------------------------------------
+var correcto = function()
+{
+  for (var k = 0; k < elmentos.length; k++)
+  {
+    if (elmentos[k].value != 0)
+    {
+      elmentos[k].style.border = "1px solid rgba(19, 186, 106)";
+      elmentos[k].style.backgroundColor = "rgba(19, 186, 106, 0.4)";
+    }
+  }
+}
+formulario.addEventListener("change", correcto);
+
+// // ----------------------------------------------------------------------------
+var verificarCadaElemento = function(e)
+{
+  for (var i = 0; i < elmentos.length; i++)
+  {
+      if (elmentos[i].value == 0)
+      {
+        console.log(i + "-" + elmentos[i].type + elmentos[i].value + elmentos[i].checked);
+        e.preventDefault();
+        elmentos[i].style.border = "5px double red";
+        elmentos[i].style.backgroundColor = "white";
+        elmentos[i].focus();
+        break;
+      }
+  }
+}
+var validarformulario = function(e)
+{
+verificarCadaElemento(e);
+verificaRadioCheckbox(e);
+}
+formulario.addEventListener("submit",validarformulario);
+
+// -----------------------------------------------------------------------------
+<form action="#" method="get" id="formu">
+
+      <input type="text" name="nombre" placeholder="Ingrese nombres">
+      <hr>
+      <input type="password" name="contra" placeholder="password"></input>
+      <hr>
+      <input type="datetime-local" name="horalocal"></input>
+      <hr>
+      <input type="file" name="adjuntararchivo"></input>
+      <hr>
+      <input type="month" name="mes"></input>
+      <hr>
+      <input type="search" name="buscar"></input>
+      <hr>
+      <input type="tel" name="tel" placeholder="telefono celular" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="ejemplo: 503-7676-7676"></input>
+      <hr>
+      <input type="time" name="time"></input>
+      <hr>
+      <input type="url" name="url" placeholder="url"></input>
+      <hr>
+      <input type="week" name="semana"></input>
+      <hr>
+      <textarea id="comentario" name="comentario" rows="5" cols="30"></textarea>
+      <hr>
+      <input type="date" name="date"></input>
+      <hr>
+      <input type="number" id="b" name="numero" min="1" max="50">
+      <hr>
+      <input list="browsers" name="listanavegadores">
+      <datalist id="browsers">
+        <option value="">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist><br>
+      <hr>
+      <select name="seleccioncuerpo">
+        <optgroup label="cabeza">
+          <option value=""></option>
+          <option value="nariz">nariz</option>
+          <option value="ojos">ojos</option>
+          <option value="boca" >boca</option>
+          <option value="orejas">orejas</option>
+        </optgroup>
+        <optgroup label="tronco">
+          <option value="torax">torax</option>
+          <option value="brazos">brazos</option>
+        </optgroup>
+      </select>
+      <hr>
+      <input type="checkbox" name="circleboxcheced" value="condiciones1">acepta las condiciones1</input>
+      <input type="checkbox" name="circleboxcheced" value="condiciones2">acepta las condiciones2</input>
+      <input type="checkbox" name="circleboxcheced" value="condiciones3">acepta las condiciones3</input>
+      <hr>
+      <p>Empleo actual:<br>
+      <input type="radio" name="circlechec" value="tiempocompleto"> Tiempo completo</input>
+      <input type="radio" name="circlechec" value="mediodia"> Medio día</input>
+      <input type="radio" name="circlechec" value="sinempleo"> Sin empleo</input>
+      </p>
+      <hr>
+      <input type="reset" name="reset" value="reset">
+      <input type="submit" name="enviardatos" value="Submit">
+    </form>
+
+==============================================================================================
+-------------------------------------------------------------------------KEYWORD
+
+Keyword		Description
+break		Terminates a switch or a loop
+continue		Jumps out of a loop and starts at the top
+debugger		Stops the execution of JavaScript, and calls (if available) the debugging function
+do ... while	Executes a block of statements, and repeats the block, while a condition is true
+for		Marks a block of statements to be executed, as long as a condition is true
+function		Declares a function
+if ... else		Marks a block of statements to be executed, depending on a condition
+return		Exits a function
+switch		Marks a block of statements to be executed, depending on different cases
+try ... catch	Implements error handling to a block of statements
+var		Declares a variable
+==============================================================================================
+-------------------------------------------------------------------------SIGNOS DE OPERACION
++	Addition
+-	Subtraction
+*	Multiplication
+**	Exponentiation (ES2016)
+/	Division
+%	Modulus (Division Remainder)
+++	Increment
+--	Decrement
+
+Operator	Example	Same As
+=	x = y	x = y
++=	x += y	x = x + y
+-=	x -= y	x = x - y
+*=	x *= y	x = x * y
+/=	x /= y	x = x / y
+%=	x %= y	x = x % y
+**=	x **= y	x = x ** y
+
+
+Operator	Description
+==	equal to
+===	equal value and equal type
+!=	not equal
+!==	not equal value or not equal type
+>	greater than
+<	less than
+>=	greater than or equal to
+<=	less than or equal to
+?	ternary operator
+
+&&	logical and
+||	logical or
+!	logical not
+
+
+Operator	Description
+typeof	Returns the type of a variable
+instanceof	Returns true if an object is an instance of an object type
+==============================================================================================
+-------------------------------------------------------------------------ARITMETICA
+
+Operator	Description
++	Addition
+-	Subtraction
+*	Multiplication
+**	Exponentiation (ES2016)
+/	Division
+%	Modulus (Remainder)
+++	Increment
+--	Decrement
+
+var x = 5;
+var z = Math.pow(x,2);   // result is 25
+
+
+Value	Operator	Description	Example
+20	( )	Expression grouping	(3 + 4)
+ 	 	 	 
+19	.	Member	person.name
+19	[]	Member	person["name"]
+19	()	Function call	myFunction()
+19	new	Create	new Date()
+ 	 	 	 
+17	++	Postfix Increment	i++
+17	--	Postfix Decrement	i--
+ 	 	 	 
+16	++	Prefix Increment	++i
+16	--	Prefix Decrement	--i
+16	!	Logical not	!(x==y)
+16	typeof	Type	typeof x
+ 	 	 	 
+15	**	Exponentiation (ES2016)	10 ** 2
+ 	 	 	 
+14	*	Multiplication	10 * 5
+14	/	Division	10 / 5
+14	%	Division Remainder	10 % 5
+ 	 	 	 
+13	+	Addition	10 + 5
+13	-	Subtraction	10 - 5
+ 	 	 	 
+12	<<	Shift left	x << 2
+12	>>	Shift right	x >> 2
+12	>>>	Shift right (unsigned)	x >>> 2
+ 	 	 	 
+11	<	Less than	x < y 
+11	<=	Less than or equal	x <= y
+11	>	Greater than	x > y
+11	>=	Greater than or equal	x >= y
+11	in	Property in Object	"PI" in Math
+11	instanceof	Instance of Object	instanceof Array
+ 	 	 	 
+10	==	Equal	x == y
+10	===	Strict equal	x === y
+10	!=	Unequal	x != y
+10	!==	Strict unequal	x !== y
+ 	 	 	 
+9	&	Bitwise AND	x & y
+8	^	Bitwise XOR	x ^ y
+7	|	Bitwise OR	x | y
+6	&&	Logical AND	x && y
+5	||	Logical OR	x || y
+4	? :	Condition	? "Yes" : "No"
+ 	 	 	 
+3	+=	Assignment	x += y
+3	/=	Assignment	x /= y
+3	-=	Assignment	x -= y
+3	*=	Assignment	x *= y
+3	%=	Assignment	x %= y
+3	<<=	Assignment	x <<= y
+3	>>=	Assignment	x >>= y
+3	>>>=	Assignment	x >>>= y
+3	&=	Assignment	x &= y
+3	^=	Assignment	x ^= y
+3	|=	Assignment	x |= y
+ 	 	 	 
+2	yield	Pause Function	yield x
+1	,	Comma	5 , 6
+
+
+Operator	Example	Same As
+=	x = y	x = y
++=	x += y	x = x + y
+-=	x -= y	x = x - y
+*=	x *= y	x = x * y
+/=	x /= y	x = x / y
+%=	x %= y	x = x % y
+<<=	x <<= y	x = x << y
+>>=	x >>= y	x = x >> y
+>>>=	x >>>= y	x = x >>> y
+&=	x &= y	x = x & y
+^=	x ^= y	x = x ^ y
+|=	x |= y	x = x | y
+**=	x **= y	x = x ** y
+==============================================================================================
+-------------------------------------------------------------------------TIPOS DE DATOS
+
+var x;           // Now x is undefined
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var x = {firstName:"John", lastName:"Doe"};    // Object
+var h = null;  //Object
+var x = 100;
+document.write(typeof(x));
+
+var person = null;
+document.write(typeof(person));// object
+==============================================================================================
+-------------------------------------------------------------------------OBJETOS
+objetos nativos no dependen del navegador estos son:
+data, math, regExp (expresiones regulares), arrays, function, object
+
+objetos del alto nivel que dependen del navegador son:
+windows, screen, Navigator, Location, History, 
+
+objetos del alto nivel depende modelo de objetos
+Document
+
+//funcion anonima auto ejecutable
+(function(){
+  'use strict' 
+  //codigo
+})()
+
+//POO 2 conceptos
+// 1- clases (llamados prototipos son modelos a seguir)
+// 2- objetos (instancias de las clase)
+
+// 1- creando el objetos literales
+var movie_forma1 = {
+  title:'batman y superman ',
+  year:2016 ,
+  genres:"action,aventura ",
+  pouster:'urldelaimagenbatman ',
+  getinfo:function(){
+    return this.title+this.genres+this.year+"<br>";
+  }
+};
+document.write(movie_forma1.getinfo());
+
+//2- funcion constructora
+function perro(nomb,ed,viv)
+{
+  this.nombre = nomb;
+  this.edad = ed;
+  this.vivo = viv;
+}
+var perro1 = new perro("roadwailer",2,true);
+document.write(perro1.nombre + perro1.edad + perro1.vivo + "<br>");
+var perro1 = new perro("remberto",5,false);
+document.write(perro1.nombre + perro1.edad + perro1.vivo);
+
+
+
+//forma crear objeto simple usando la palabra new instanciando de un objeto global
+var persona2 = new Object();
+persona2.genero = "femenino";
+persona2.edad = "1/2 año";
+persona2.raza = "dinosor";
+
+for (var propiedades in persona2)
+{
+	console.log(persona2[propiedades]);
+}
+
+
+
+==============================================================================================
+-------------------------------------------------------------------------EVENTOS
+
+//modelo de eventos standart
+var botonEvento = document.getElementById("button");
+var inputEvento = document.getElementById("input");
+
+var saludo = function(){
+  document.write("se agrego un evento al boton");
+};
+var saludo2 = function(){
+  document.write("se agrego un evento al input");
+};
+botonEvento.addEventListener("click", saludo);
+inputEvento.addEventListener("focus", saludo2);
+//podemos eliminar un evento
+inputEvento.removeEventListener("focus", saludo2);
+//podemos saber de que tipo es el evento y aquien se le esta aplicando
+document.write(botonEvento.type);
+document.write(botonEvento.target);
+//cambiar el comportamiento predeterminado
+var desactiva = function(){
+  window.event.preventDefault();
+}
+
+<button type="button" id="button">aceptar</button>
+
+<input type="text" id="input">
+
+<a href="https://www.google.com" onclick="desactiva()">ir a google</a>
+
+
+Event			Description											Belongs To
+abort			The event occurs when the loading of a media is aborted							UiEvent, Event
+afterprint			The event occurs when a page has started printing, or if the print dialogue box has been closed					Event
+animationend		The event occurs when a CSS animation has completed	AnimationEvent
+animationiteration		The event occurs when a CSS animation is repeated	AnimationEvent
+animationstart		The event occurs when a CSS animation has started	AnimationEvent
+beforeprint		The event occurs when a page is about to be printed	Event
+beforeunload		The event occurs before the document is about to be unloaded	UiEvent, Event
+blur			The event occurs when an element loses focus	FocusEvent
+canplay			The event occurs when the browser can start playing the media (when it has buffered enough to begin)	Event
+canplaythrough		The event occurs when the browser can play through the media without stopping for buffering	Event
+change			The event occurs when the content of a form element, the selection, or the checked state have changed (for <input>, <select>, and <textarea>)	Event
+click			The event occurs when the user clicks on an element	MouseEvent
+contextmenu		The event occurs when the user right-clicks on an element to open a context menu	MouseEvent
+copy			The event occurs when the user copies the content of an element	ClipboardEvent
+cut			The event occurs when the user cuts the content of an element	ClipboardEvent
+dblclick			The event occurs when the user double-clicks on an element	MouseEvent
+drag			The event occurs when an element is being dragged	DragEvent
+dragend			The event occurs when the user has finished dragging an element	DragEvent
+dragenter			The event occurs when the dragged element enters the drop target	DragEvent
+dragleave			The event occurs when the dragged element leaves the drop target	DragEvent
+dragover			The event occurs when the dragged element is over the drop target	DragEvent
+dragstart			The event occurs when the user starts to drag an element	DragEvent
+drop			The event occurs when the dragged element is dropped on the drop target	DragEvent
+durationchange		The event occurs when the duration of the media is changed	Event
+ended			The event occurs when the media has reach the end (useful for messages like "thanks for listening")	Event
+error			The event occurs when an error occurs while loading an external file	ProgressEvent, UiEvent, Event
+focus			The event occurs when an element gets focus	FocusEvent
+focusin			The event occurs when an element is about to get focus	FocusEvent
+focusout			The event occurs when an element is about to lose focus	FocusEvent
+fullscreenchange		The event occurs when an element is displayed in fullscreen mode	Event
+fullscreenerror		The event occurs when an element can not be displayed in fullscreen mode	Event
+hashchange		The event occurs when there has been changes to the anchor part of a URL	HashChangeEvent
+input			The event occurs when an element gets user input	InputEvent, Event
+invalid			The event occurs when an element is invalid	Event
+keydown			The event occurs when the user is pressing a key	KeyboardEvent
+keypress			The event occurs when the user presses a key	KeyboardEvent
+keyup			The event occurs when the user releases a key	KeyboardEvent
+load			The event occurs when an object has loaded	UiEvent, Event
+loadeddata		The event occurs when media data is loaded	Event
+loadedmetadata		The event occurs when meta data (like dimensions and duration) are loaded	Event
+loadstart			The event occurs when the browser starts looking for the specified media	ProgressEvent
+message			The event occurs when a message is received through the event source	Event
+mousedown		The event occurs when the user presses a mouse button over an element	MouseEvent
+mouseenter		The event occurs when the pointer is moved onto an element	MouseEvent
+mouseleave		The event occurs when the pointer is moved out of an element	MouseEvent
+mousemove		The event occurs when the pointer is moving while it is over an element	MouseEvent
+mouseover		The event occurs when the pointer is moved onto an element, or onto one of its children	MouseEvent
+mouseout		The event occurs when a user moves the mouse pointer out of an element, or out of one of its children	MouseEvent
+mouseup			The event occurs when a user releases a mouse button over an element	MouseEvent
+mousewheel		Deprecated. Use the wheel event instead	WheelEvent
+offline			The event occurs when the browser starts to work offline	Event
+online			The event occurs when the browser starts to work online	Event
+open			The event occurs when a connection with the event source is opened	Event
+pagehide			The event occurs when the user navigates away from a webpage	PageTransitionEvent
+pageshow		The event occurs when the user navigates to a webpage	PageTransitionEvent
+paste			The event occurs when the user pastes some content in an element	ClipboardEvent
+pause			The event occurs when the media is paused either by the user or programmatically	Event
+play			The event occurs when the media has been started or is no longer paused	Event
+playing			The event occurs when the media is playing after having been paused or stopped for buffering	Event
+popstate			The event occurs when the window's history changes	PopStateEvent
+progress			The event occurs when the browser is in the process of getting the media data (downloading the media)	Event
+ratechange		The event occurs when the playing speed of the media is changed	Event
+resize	The event occurs when the document view is resized	UiEvent, Event
+reset	The event occurs when a form is reset	Event
+scroll	The event occurs when an element's scrollbar is being scrolled	UiEvent, Event
+search	The event occurs when the user writes something in a search field (for <input="search">)	Event
+seeked	The event occurs when the user is finished moving/skipping to a new position in the media	Event
+seeking	The event occurs when the user starts moving/skipping to a new position in the media	Event
+select	The event occurs after the user selects some text (for <input> and <textarea>)	UiEvent, Event
+show	The event occurs when a <menu> element is shown as a context menu	Event
+stalled	The event occurs when the browser is trying to get media data, but data is not available	Event
+storage	The event occurs when a Web Storage area is updated	StorageEvent
+submit	The event occurs when a form is submitted	Event
+suspend	The event occurs when the browser is intentionally not getting media data	Event
+timeupdate	The event occurs when the playing position has changed (like when the user fast forwards to a different point in the media)	Event
+toggle	The event occurs when the user opens or closes the <details> element	Event
+touchcancel	The event occurs when the touch is interrupted	TouchEvent
+touchend	The event occurs when a finger is removed from a touch screen	TouchEvent
+touchmove	The event occurs when a finger is dragged across the screen	TouchEvent
+touchstart	The event occurs when a finger is placed on a touch screen	TouchEvent
+transitionend	The event occurs when a CSS transition has completed	TransitionEvent
+unload	The event occurs once a page has unloaded (for <body>)	UiEvent, Event
+volumechange	The event occurs when the volume of the media has changed (includes setting the volume to "mute")	Event
+waiting	The event occurs when the media has paused but is expected to resume (like when the media pauses to buffer more data)	Event
+wheel	The event occurs when the mouse wheel rolls up or down over an element	WheelEvent
+
+HTML DOM Event Properties and Methods
+Property/Method	Description	Belongs To
+altKey	Returns whether the "ALT" key was pressed when the mouse event was triggered	MouseEvent
+altKey	Returns whether the "ALT" key was pressed when the key event was triggered	KeyboardEvent, TouchEvent
+animationName	Returns the name of the animation	AnimationEvent
+bubbles	Returns whether or not a specific event is a bubbling event	Event
+button	Returns which mouse button was pressed when the mouse event was triggered	MouseEvent
+buttons	Returns which mouse buttons were pressed when the mouse event was triggered	MouseEvent
+cancelable	Returns whether or not an event can have its default action prevented	Event
+charCode	Returns the Unicode character code of the key that triggered the onkeypress event	KeyboardEvent
+changeTouches	Returns a list of all the touch objects whose state changed between the previous touch and this touch	TouchEvent
+clientX	Returns the horizontal coordinate of the mouse pointer, relative to the current window, when the mouse event was triggered	MouseEvent, TouchEvent
+clientY	Returns the vertical coordinate of the mouse pointer, relative to the current window, when the mouse event was triggered	MouseEvent, TouchEvent
+clipboardData	Returns an object containing the data affected by the clipboard operation	ClipboardData
+code	Returns the code of the key that triggered the event	KeyboardEvent
+composed	Returns whether the event is composed or not	Event
+createEvent()	Creates a new event	Event
+ctrlKey	Returns whether the "CTRL" key was pressed when the mouse event was triggered	MouseEvent
+ctrlKey	Returns whether the "CTRL" key was pressed when the key event was triggered	KeyboardEvent, TouchEvent
+currentTarget	Returns the element whose event listeners triggered the event	Event
+data	Returns the inserted characters	InputEvent
+dataTransfer	Returns an object containing the data being dragged/dropped, or inserted/deleted	DragEvent, InputEvent
+defaultPrevented	Returns whether or not the preventDefault() method was called for the event	Event
+deltaX	Returns the horizontal scroll amount of a mouse wheel (x-axis)	WheelEvent
+deltaY	Returns the vertical scroll amount of a mouse wheel (y-axis)	WheelEvent
+deltaZ	Returns the scroll amount of a mouse wheel for the z-axis	WheelEvent
+deltaMode	Returns a number that represents the unit of measurements for delta values (pixels, lines or pages)	WheelEvent
+detail	Returns a number that indicates how many times the mouse was clicked	UiEvent
+elapsedTime	Returns the number of seconds an animation has been running	AnimationEvent
+elapsedTime	Returns the number of seconds a transition has been running	 
+eventPhase	Returns which phase of the event flow is currently being evaluated	Event
+getTargetRanges()	Returns an array containing target ranges that will be affected by the insertion/deletion	InputEvent
+getModifierState()	Returns an array containing target ranges that will be affected by the insertion/deletion	MouseEvent
+inputType	Returns the type of the change (i.e "inserting" or "deleting")	InputEvent
+isComposing	Returns whether the state of the event is composing or not	InputEvent, KeyboardEvent
+isTrusted	Returns whether or not an event is trusted	Event
+key	Returns the key value of the key represented by the event	KeyboardEvent
+key	Returns the key of the changed storage item	StorageEvent
+keyCode	Returns the Unicode character code of the key that triggered the onkeypress event, or the Unicode key code of the key that triggered the onkeydown or onkeyup event	KeyboardEvent
+location	Returns the location of a key on the keyboard or device	KeyboardEvent
+lengthComputable	Returns whether the length of the progress can be computable or not	ProgressEvent
+loaded	Returns how much work has been loaded	ProgressEvent
+metaKey	Returns whether the "META" key was pressed when an event was triggered	MouseEvent
+metaKey	Returns whether the "meta" key was pressed when the key event was triggered	KeyboardEvent, TouchEvent
+MovementX	Returns the horizontal coordinate of the mouse pointer relative to the position of the last mousemove event	MouseEvent
+MovementY	Returns the vertical coordinate of the mouse pointer relative to the position of the last mousemove event	MouseEvent
+newValue	Returns the new value of the changed storage item	StorageEvent
+newURL	Returns the URL of the document, after the hash has been changed	HasChangeEvent
+offsetX	Returns the horizontal coordinate of the mouse pointer relative to the position of the edge of the target element	MouseEvent
+offsetY	Returns the vertical coordinate of the mouse pointer relative to the position of the edge of the target element	MouseEvent
+oldValue	Returns the old value of the changed storage item	StorageEvent
+oldURL	Returns the URL of the document, before the hash was changed	HasChangeEvent
+onemptied	The event occurs when something bad happens and the media file is suddenly unavailable (like unexpectedly disconnects)	 
+pageX	Returns the horizontal coordinate of the mouse pointer, relative to the document, when the mouse event was triggered	MouseEvent
+pageY	Returns the vertical coordinate of the mouse pointer, relative to the document, when the mouse event was triggered	MouseEvent
+persisted	Returns whether the webpage was cached by the browser	PageTransitionEvent
+preventDefault()	Cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur	Event
+propertyName	Returns the name of the CSS property associated with the animation or transition	AnimationEvent, TransitionEvent
+pseudoElement	Returns the name of the pseudo-element of the animation or transition	AnimationEvent, TransitionEvent
+region		MouseEvent
+relatedTarget	Returns the element related to the element that triggered the mouse event	MouseEvent
+relatedTarget	Returns the element related to the element that triggered the event	FocusEvent
+repeat	Returns whether a key is being hold down repeatedly, or not	KeyboardEvent
+screenX	Returns the horizontal coordinate of the mouse pointer, relative to the screen, when an event was triggered	MouseEvent
+screenY	Returns the vertical coordinate of the mouse pointer, relative to the screen, when an event was triggered	MouseEvent
+shiftKey	Returns whether the "SHIFT" key was pressed when an event was triggered	MouseEvent
+shiftKey	Returns whether the "SHIFT" key was pressed when the key event was triggered	KeyboardEvent, TouchEvent
+state	Returns an object containing a copy of the history entries	PopStateEvent
+stopImmediatePropagation()	Prevents other listeners of the same event from being called	Event
+stopPropagation()	Prevents further propagation of an event during event flow	Event
+storageArea	Returns an object representing the affected storage object	StorageEvent
+target	Returns the element that triggered the event	Event
+targetTouches	Returns a list of all the touch objects that are in contact with the surface and where the touchstart event occured on the same target element as the current target element	TouchEvent
+timeStamp	Returns the time (in milliseconds relative to the epoch) at which the event was created	Event
+total	Returns the total amount of work that will be loaded	ProgressEvent
+touches	Returns a list of all the touch objects that are currently in contact with the surface	TouchEvent
+transitionend	The event occurs when a CSS transition has completed	TransitionEvent
+type	Returns the name of the event	Event
+url	Returns the URL of the changed item's document	StorageEvent
+which	Returns which mouse button was pressed when the mouse event was triggered	MouseEvent
+which	Returns the Unicode character code of the key that triggered the onkeypress event, or the Unicode key code of the key that triggered the onkeydown or onkeyup event	KeyboardEvent
+view	Returns a reference to the Window object where the event occurred	UiEvent
+
+
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo7").innerHTML = "You selected: " + x;
+}
+
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+
+function myFunction() {
+  alert("realmente quieres ver el video");
+}
+
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+    <p id="demo"></p>
+<hr>
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+    <p></p>
+<hr>
+    <select id="mySelect" onchange="myFunction()">
+      <option value="Audi">Audi</option>
+      <option value="BMW">BMW</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Volvo">Volvo</option>
+    </select>
+
+<p id="demo7"></p>
+
+<img src="nombre_images/cara.jpg" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"  alt="Smiley" width="32" height="32">
+
+<hr>
+<labe>ingrese su nombre</labe>
+<input type="text" id="fname" onblur="myFunction()">
+<!-- onblur verifica si se salio del elemento y ejecutara la funcion  -->
+<hr>
+<video src="videoperfil.mp4" autoplay controls muted poster="posterimage.jpg" oncanplay="myFunction()">
+</video>
+<!--ejecutara codigo javascript cuando el el video esta apunto de reproducirse  -->
+==============================================================================================
+-------------------------------------------------------------------------SETTIMEOUT Y SET INTERVAL
+
+var tagH = document.getElementById('h1');
+var cont = 0;
+var contar = function()
+{
+  cont = cont+1;
+  tagH.innerHTML = cont;
+  if (cont == 10)
+  {
+    clearInterval(intervalo);
+  }
+}
+var intervalo = setInterval(contar, 1000);
+//--------------------------------------------------------------------
+
+var contar = function()
+{
+  cont = cont+1;
+  tagH.innerHTML = cont;
+}
+setTimeout(saludo, 5000);//1000 = 1segundo
+==============================================================================================
+-------------------------------------------------------------------------FECHA Y HORA
+var fecha = new Date();
+
+console.log(fecha);
+
+console.log(fecha.getHours());//hora
+console.log(fecha.getMinutes());//minuto
+console.log(fecha.getSeconds());//segundo
+console.log(fecha.getMilliseconds());//segundo
+
+console.log(fecha.getDay());//dia semana o domingo y 6 sabado como un arreglocomienza
+console.log(fecha.getDate());//dia del mes
+console.log(fecha.getMonth());//mes o enero 11 diciembre como un arreglocomienza
+console.log(fecha.getFullYear());//año
+==============================================================================================
+CAMBIAR TODAS LAS CLASES CON UNA O MAS 
+
+document.getElementById("MyElement").className = "MyClass";
+1
+document.getElementById("MyElement").className = "MyClass";
+(Puedes agregar más clases separándolas con un espacio)
+
+Agregar clases adicionales sin afectar las existentes:
+
+document.getElementById("MyElement").className += " MyClass";
+1
+document.getElementById("MyElement").className += " MyClass";
+Eliminar una clase, sin afectar las existentes:
+
+document.getElementById("MyElement").className =document.getElementById("MyElement").className.replace( /(?:^|\s)MyClass(?!\S)/g , '' )
+1
+document.getElementById("MyElement").className =document.getElementById("MyElement").className.replace( /(?:^|\s)MyClass(?!\S)/g , '' )
+Verificar si una clase ya ha sido aplicada a un elemento:
+
+if ( document.getElementById("MyElement").className.match(/(?:^|\s)MyClass(?!\S)/) )
+1
+if ( document.getElementById("MyElement").className.match(/(?:^|\s)MyClass(?!\S)/) )
+Asignar estas acciones a eventos:
+
+<script type="text/javascript">// <![CDATA[
+    function changeClass()
+    {
+        // code examples from above
+    }
+
+    window.onload = function()
+    {
+        document.getElementById("MyElement").addEventListener( 'click' , changeClass );
+    }
+// ]]></script>... <button id="MyElement">My Button</button>
+1
+==============================================================================================
+para acceder a un pseudoelemento
+
+var elemetoul = document.getElementsByTagName("ul")[0];
+var pseudoelemto = window.getComputedStyle(elemetoul,':before').content;
+==============================================================================================
+RETARDO CON JAVASCRIPT
+window.setTimeout(expression/function, milliseconds)
+==============================================================================================
+SWITCH
+switch () 
+	{
+		case '0':
+		  console.log("0");
+		break;
+		case '1':
+		  console.log("1");
+		break;
+		case '2':
+		
+		break;
+		case '3':
+		
+		break;
+		case '4':
+		
+		break;
+		case '5':
+		
+		break;
+		case '6':
+		
+		break;
+		default:
+	}
+==============================================================================================
+OPERADOR TERNARIO
+
+var variable = condicion ? resultado_cierto : resultado_falso
+
+var edad = 18;
+var puedeVotar = (edad > 18) ? "puede votar" : "no puede votar";
+
+==============================================================================================
+FOR IN   sirve para iterar en las propiedades se un objeto
+
+var animal = {nombre:"lola", tipos:"hamster", raza:"ruso",edad:1};
+for (var propiedades in animal)
+{
+	console.log(animal[propiedades]);
+}
+==============================================================================================
+CANVAS
+DETECTAR EVENTOS DEL TECLADO
+<!-- <canvas  width="300" height="300" id="dibujito" style="border: double;"></canvas>
+    <script>
+      var d = document.getElementById('dibujito');
+      var lienzo = d.getContext("2d");//3d
+      document.addEventListener("keydown",dibujarTeclado);// se crea un evento al document donde obtenemos cuando presionamos cualquier tecla del teclado
+      //este objeto tiene los keyCode que obtubimos al hacer console.log al ObjetoEvento
+      var teclas = {
+        UP: 38,
+        DOWN: 40,
+        LEFT: 37,
+        RIGHT: 39
+      };
+      var x = 150;//guardan la posicion en x
+      var y = 150;//guardan la posicion en y
+
+      function dibujarTeclado(ObjetoEvento)//se crea un evento automatico que se crea al ejecutar addEventListener()
+      {
+        var colorcito = "blue";
+        var movimiento = 10;
+         if (ObjetoEvento.keyCode == teclas.UP) 
+        {
+           dibujar_linea(colorcito, x, y, x, y - movimiento);
+            y = y - movimiento;
+        }
+        
+        if (ObjetoEvento.keyCode == teclas.DOWN) 
+        {
+           dibujar_linea(colorcito, x, y, x, y + movimiento);
+            y = y + movimiento;
+        }
+        if (ObjetoEvento.keyCode == teclas.LEFT) 
+        {
+           dibujar_linea(colorcito, x, y, x - movimiento, y);
+            x = x - movimiento;
+        }
+        if (ObjetoEvento.keyCode == teclas.RIGHT) 
+        {
+           dibujar_linea(colorcito, x, y, x + movimiento, y);
+            x = x + movimiento;
+        }
+
+        // switch(ObjetoEvento.keyCode)
+        // {
+        //   case teclas.UP:
+        //     dibujar_linea(colorcito, x, y, x, y - movimiento);
+        //     y = y - movimiento;
+        //      console.log(y);
+        //   break;
+        //   case teclas.DOWN:
+        //    dibujar_linea(colorcito, x, y, x, y + movimiento);
+        //     y = y + movimiento;
+        //      console.log(y);
+        //   break;
+        //   case teclas.LEFT:
+        //    dibujar_linea(colorcito, x, y, x - movimiento, y);
+        //     x = x - movimiento;
+        //      console.log(x);
+        //   break;
+        //   case teclas.RIGHT:
+        //   dibujar_linea(colorcito, x, y, x + movimiento, y);
+        //     x = x + movimiento;
+        //      console.log(x);
+        //   break;
+        // }
+      }
+      dibujar_linea("red", 149, 149, 151, 151) //establecemos el punto de inicio
+      function dibujar_linea(color, xinicial, yinicial, xfinal, yfinal)
+      {
+        lienzo.beginPath();
+        lienzo.strokeStyle = color;
+        lienzo.linewidth = 5;
+        lienzo.moveTo(xinicial, yinicial);
+        lienzo.lineTo(xfinal, yfinal);
+        lienzo.stroke();
+        lienzo.closePath();
+      }
+
+    </script>
+
+==============================================================================================
+CANVAS
+DETECTAR EVENTOS DEL MOUSE
+clientX Devuelve la coordenada horizontal del puntero del mouse, relativa a la ventana actual, cuando se activó el evento del mouse
+    
+offsetX Devuelve la coordenada horizontal del puntero del mouse relativa a la posición del borde del elemento objetivo
+  
+pageX Devuelve la coordenada horizontal del puntero del mouse, relativa al documento, cuando se activó el evento del mouse
+    
+screenX Devuelve la coordenada horizontal del puntero del mouse, relativa a la pantalla, cuando se activó un evento 
+       
+layerX / layerY:   navegadores basados ​​en Gecko (Firefox et al.). Algunos dicen que son sustitutos de offsetX / offsetY, no lo son. Son la 
+
+x/y:               que la propiedad y recupera la posición del mouse en tamaño de píxel físico en Internet Explorer anterior a la versión 8, mientras   
+       //                     que a partir de la versión 8, devuelve la posición en tamaño de píxel lógico.
+
+
+var d = document.getElementById("dibujo");
+var trazo = d.getContext("2d");
+var xinic, yinic, xfinal, yfinal;
+var estado = false;
+var color = "black";
+
+canvasLimites=d.getBoundingClientRect(); // obtenemos los limites del canvas
+console.log(canvasLimites);
+
+document.addEventListener("mousedown", dibujoMouse);//paso1: cuando presionamos el boton del mause
+function dibujoMouse(evento)
+{
+    estado = true;//paso1: la variable estado cambia a true
+    xinic = evento.offsetX;//paso1: le asigna la posicion donde se dio el click en x
+    yinic = evento.offsetY;//paso1: le asigna la posicion donde se dio el click en y
+ console.log("clientX "+evento.clientX+" clientY "+evento.clientY); 
+ console.log("layerX "+evento.layerX+" layerY "+evento.layerY); 
+ console.log("offsetX "+evento.offsetX+" offsetY "+evento.offsetY); 
+ console.log("pageX "+evento.pageX+" pageY "+evento.pageY); 
+ console.log("screenX "+evento.screenX+" screenY "+evento.screenY); 
+ console.log("x "+evento.x+" y "+evento.y); 
+ console.log("--------------------------"); 
+}
+
+d.addEventListener("mousemove", dibujoMouseMove);//paso2: arrastramos el mause
+function dibujoMouseMove(evento)
+{
+ 
+    if (estado == true)//paso2: como el estado es igual a true se ejecuta el bloque de codigo 
+    {
+      dibujarLinea(color, xinic, yinic, evento.offsetX , evento.offsetY , trazo);//paso2: se ejecuta la funcion dibujarLinea
+    }
+
+    xinic = evento.offsetX;//paso2: al mover el mause asigna esa posicion en x 
+    yinic = evento.offsetY;//paso2: al mover el mause asigna esa posicion en y
+    console.log(xinic+"*-*"+yinic);
+}
+
+function dibujarLinea (color, xinic, yinic, xfinal, yfinal, trazo)//paso2: es llamada en la funcion dibujoMouseMove
+{
+  trazo.beginPath();
+  trazo.strokeStyle = color;
+  trazo.lineWidth = 2;
+  trazo.moveTo(xinic, yinic);
+  trazo.lineTo(xfinal, yfinal);
+  trazo.closePath();
+  trazo.stroke();
+}
+
+
+document.addEventListener("mouseup", dibujoMouseFinal);//paso3: cuando se suelta el boton del mause
+function dibujoMouseFinal(evento)
+{
+    estado = false;//paso3: estado cambia nuevamente a false para iniciar un nuevo trazo
+    xinic = evento.offsetX;//paso3: le asigna la posicion donde se dio el click en x
+    yinic = evento.offsetY;//paso3: le asigna la posicion donde se dio el click en x
+}
+==============================================================================================
+AUTO EJECUTAR FUNCION FLECHA ANONIMA
+(
+  ()=>{
+    //CODIGO A EJECUTARSE
+  }
+)()
+
+==============================================================================================
+PARA SABER QUE TEXTO CONTIENE UN ELENETO
+
+document.getElementById("elemento1").innerText;
+document.getElementById("elemento1").innerHTML;
+==============================================================================================
+LOCAL STORAGE
+
+localStorage.setItem('miGato', 'Juan');
+var cat = localStorage.getItem('miGato');
+localStorage.removeItem('miGato');
+localStorage.clear();
+==============================================================================================
+Para acceder a los objetos nativos del navegador se usa lo siguiente
+navigator.--metodos--: se utiliza para manipular el navegador
+window.--metodos--: se usa para manipular pestañas
+document.--metodos--: se usa para manipular el documento html
+
+organizacion fanzi
+
+==============================================================================================
+AJAX (asynchronous javascript and XML) 
+
+// Por razones de seguridad, los navegadores modernos no permiten 
+// el acceso entre dominios. Esto significa que tanto la página web como el 
+// archivo XML que intenta cargar, deben estar ubicados en el mismo servidor. 
+// Todos los ejemplos en W3Schools abren archivos XML ubicados en el 
+// dominio.
+
+// El objeto XMLHttpRequest se utiliza para intercambiar datos con un servidor
+//y tiene los siguientes metodos
+
+// Method               Description
+// new XMLHttpRequest()         Creates a new XMLHttpRequest object
+// abort()                Cancels the current request
+// getAllResponseHeaders()        Returns header information
+// getResponseHeader()          Returns specific header information
+// open(method, url, async, user, psw)  Specifies the requestbmethod: the request type GET or POST url: the file location async: true (asynchronous) or false (synchronous) user: optional user name psw: optional password
+// send()               Sends the request to the server Used for GET requests
+// send(string)             Sends the request to the server. Used for POST requests
+// setRequestHeader()         Adds a label/value pair to the header to be sent
+
+// Method               Description
+// open(method, url, async)     Specifies the type of request method: the type of request: GET or POST url: the server (file) location async: true (asynchronous) or false (synchronous)
+// send()               Sends the request to the server (used for GET)
+// send(string)           Sends the request to the server (used for POST)
+
+
+//valores del readyState
+  // 0: request not initialized 
+  // 1: server connection established
+  // 2: request received 
+  // 3: processing request 
+  // 4: request finished and response is ready
+  // responseText Returns the response data as a string
+  // responseXML  Returns the response data as XML data
+
+//valores del status
+  // status Returns the status-number of a request
+  // 200: "OK"
+  // 403: "Forbidden"
+  // 404: "Not Found"
+  // For a complete list go to the Http Messages Reference
+  // statusText Returns the status-text (e.g. "OK" or "Not Found")
+
+
+====================================api indexedID  base de datos local======================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body onload="startDB();">
+  <input type="text" id="dni" placeholder="enterdni">
+  <input type="text" id="name" placeholder="enter name">
+  <input type="text" id="apelldo" placeholder="enter apellido">
+  <button type="button" onclick="add();">save</button><hr>
+  <div class="elemnts">
+  <button type="button" onclick="loadAll();">obtener los datos por el id</button>
+  <button type="button" onclick="ordenar();">ordenar por nombre</button>
+
+  <script>
+  //pasos
+  //1- crear la DB 
+    //a- usando atributos indexedDB
+    //b- metodo open
+  //2- crear el objeto
+    //a- usando createObjectStore
+  //3- crear transacciones
+    //a- metodo transaction
+  //4- agregar elementos
+    //a- metodo add
+  //5- mostrar elementos 
+    //a- abrir el cursor con el metodo openCursor
+
+
+    //se crea el objeto indexedDB segun en el navegador donde estamos 
+    var base_indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB|| window.msIndexedDB;//paso1
+
+    var dataBase = null;
+
+    function startDB()
+    {
+      //abre la base de datos y si no existe la crea el primer parametro es el nombre y el segundo es la version de almacen
+      dataBase = base_indexedDB.open("nombrebasededatos_object", 1); //paso2
+
+      // este es parametro del objeto indexedDB solo se ejecuta si se crea por primera vez la base de datos o si cambiamos la version del almacen solo asi se ejecutara onupgradeneeded
+      dataBase.onupgradeneeded = function(e)  //paso3
+      {
+        alert("secreo o cambio base de datos o se cambio version");
+        //creamos un objeto donde por obligacion tiene que llevar estos dos prametrso que no son más que la llave primaria 
+        var options = { 
+          keyPath : 'id', //keyprimary
+          autoIncrement : true  //se auto incremente
+        };
+        //con esta sentencia obtenemos la conexion activa a la base de datos      (nota:  en el almacen se almacenan objetos)
+        var active = dataBase.result;    //paso4
+        //creamos el almacen primer parametro es el nombre y el segundo un objeto que lleva las especificaciones del almacen
+        var object = active.createObjectStore('peaple', options); //paso4
+        // crea un indice by_name y un name donde la propiedad unique false indica que no es unico y se podra epetir
+        object.createIndex('by_apellido', 'apellido', { unique : false });  //paso5
+        object.createIndex('by_name', 'name', { unique : false });  //paso5
+        // crea un indice by_dni y un dni donde la propiedad unique true indica que si es unico y no se  podra epetir
+        object.createIndex('by_dni', 'dni', { unique : true }); //paso5
+        };
+
+        //si se crea la base de datos y no hay un error se ejecutara onsuccess
+        dataBase.onsuccess = function(e)
+        {
+          alert("se creo el almacen con su index");
+        };
+
+        //si no se  crea la base de datos y  hay  errores se ejecutara onerror
+        dataBase.onerror = function(e)  //paso6
+        {
+          alert("no se cargo base de datos");
+        };
+    }
+
+    //---------------------------INGRESAR DATOS --------------
+    function add()
+    {
+      //obtenemos el resultado de la base de datos
+      var active = dataBase.result;//paso1
+      //creamos la transaccion para ingresar los datos, los modos so:  readonly(lectura),  readwrite(lectura y escritura)      ["peaple"] este parametro es un array
+      var data = active.transaction(["peaple"], "readwrite"); //paso2
+      //vamos a darle instruciones
+      var objetc_instruccion = data.objectStore('peaple'); //paso3
+      //un put es la actualizacion de datos
+        var request_ = objetc_instruccion.put({  //paso4
+          dni : document.querySelector('#dni').value,
+          name : document.querySelector('#name').value,
+          apellido : document.querySelector('#apelldo').value
+        });
+        
+        request_.onerror = function(e)
+        {
+          alert(request_.error.name + '/n/n' + request_.error.massage);
+        };
+
+        data.oncomplete = function(e)
+        {
+          document.querySelector('#dni').value = '';
+          document.querySelector('#name').value = '';
+          document.querySelector('#apelldo').value = '';
+          alert('se completo todas las instruciones');
+        };
+    }
+    
+    //----------------------------------EXTRAER LOS DATOS DE LA BASE DE DATOS----------------------------------------------   
+    function loadAll()
+    {
+      var active = dataBase.result;
+      var data = active.transaction(['peaple'], 'readonly');
+      var object = data.objectStore('peaple');
+      var elements = [];
+      //ejecutamos un metodo de indexedDB y abre el almacen peaple y coloca el puntero en la posicion inicial que es 0
+      object.openCursor().onsuccess = function(e)
+      {
+
+        //asignamos el resultado del evento que es el un objeto IDBCursorWithValue ose la posicion del cursor
+        var result = e.target.result;
+        //este if controla un bug que se genera cuando result es null
+        if (result === null) 
+        {
+          return;
+        }
+        //para extraer los objetos que estan almacenados en result y los guardaremos en un arrys
+        elements.push(result.value);
+        //el cursor continua
+        result.continue();
+      };
+
+      data.oncomplete = function()
+      {
+        for (var key in elements)
+        {
+          console.log(elements[key].dni+ "  " +elements[key].name+ "  " +elements[key].apellido);         
+        }
+      }
+    }
+
+
+    function ordenar()
+    {
+      var active = dataBase.result;
+      var data = active.transaction(['peaple'], 'readonly');
+      var object = data.objectStore('peaple');
+      //con este codigo estamos accediendo a una especie de subindice y se obtienen ordenadolo los datos apartir de ahi
+      var subindice = object.index('by_apellido');//podemos usar el indice que necesitamos 'by_name' 'by_apellido'
+      var elements = [];
+      subindice.openCursor().onsuccess = function(e)
+      {
+
+        //asignamos el resultado del evento que es el un objeto IDBCursorWithValue ose la posicion del cursor
+        var result = e.target.result;
+        //este if controla un bug que se genera cuando result es null
+        if (result === null) 
+        {
+          return;
+        }
+        //para extraer los objetos que estan almacenados en result y los guardaremos en un arrys
+        elements.push(result.value);
+        //el cursor continua
+        result.continue();
+      };
+
+      data.oncomplete = function()
+      {
+        for (var key in elements)
+        {     
+          console.log(elements[key].dni+ "  " +elements[key].name+ "  " +elements[key].apellido);         
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+
+====================================MANUPULAR UN ELEMENTO CON EL MAUSE==========================================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #a{
+      background-color: red;
+      width: 600px;
+      height: 600px;  
+      position: relative;   
+    }
+    #b{
+      background-color: yellow;
+      width: 300px;
+      height: 300px;  
+      position: relative; 
+      left: 300px;
+      top: 300px;         
+    }
+    #c{
+      background-color: pink;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      left: 200px;
+      top: 30px;  
+    }
+  </style>
+</head>
+<body>
+  <div id="monitor"></div>
+  <div id="a">
+    <!-- <div id="c"></div> -->
+    <div id="b">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, molestiae!</div>
+  </div>
+<script>
+  var monitor = document.getElementById("monitor"); 
+
+  var a = document.getElementById("a"); 
+  var b = document.getElementById("b"); 
+    a.addEventListener("mousemove", moververtical, false);
+    function moververtical(e)
+  {
+    var w = b.clientWidth / 2;
+    var h = b.clientHeight / 2;
+    var x = e.pageX - w;
+    var y = e.pageY - h;
+    monitor.innerHTML = "x"+x + "y"+y + "w"+w + "h"+h;
+    b.style.top = y + "px";
+    b.style.left = x + "px";
+  }
+</script>
+</body>
+</html>
+=================================obtener limites=============================================================
+      console.log("Div en posición: elemento " + tecla4.offsetTop);
+      console.log("Div en posición: elemento " + tecla7.offsetLeft);
+===============================obtener los limites===============================================================
+// var limitetecla1 = tecla1.getBoundingClientRect();
+      // var limitetecla4 = tecla4.getBoundingClientRect();
+      // var limitetecla7 = tecla7.getBoundingClientRect();
+      // var limitetecla10 = tecla10.getBoundingClientRect();
+      // var limitetecla13 = tecla13.getBoundingClientRect();
+      // limite.top;
+=====================================getElementsByName=========================================================
+<!DOCTYPE html>
+<html>
+<body>
+
+Cats:  <input name="animal" type="checkbox" value="Cats">
+Dogs:  <input name="animal" type="checkbox" value="Dogs">
+
+<p>Click the button to check all checkboxes that have a name attribute with the value "animal".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByName("animal");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    if (x[i].type == "checkbox") {
+      x[i].checked = true;
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
+==================================getElementsByClassName============================================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="example">
+A div element with class="example"
+</div>
+
+<div class="example">
+Another div element with class="example"
+</div>
+
+<p class="example">A p element with class="example"</p>
+
+<p>Click the button to find out how many elements with class "example" there are in this document.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> The getElementsByClassName() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("example");
+  document.getElementById("demo").innerHTML = x.length;
+}
+</script>
+
+</body>
+</html>
+
+========================================RELOJ ANALOGO==================================================
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+ 
+  <style>
+/* estilos para el contenedor */
+  .contenedorTodo {
+      position: relative;
+      width: 400px; 
+      height: 400px; 
+      border-radius: 50%; 
+      background: white;
+      box-shadow: inset 0 0 10px gray;
+      border: 10px solid gray; 
+      }
+ /* seda estilos los spudoelementos de contenedor y divhijos */
+  .contenedorTodo::before, .contenedorTodo::after, .contenedorTodo .divhijos { 
+      content: "";
+      position: absolute;
+      width: 8px; 
+      height: 100%;
+      background: black;
+      z-index: 0;
+      left: 50%;
+      margin-left: -4px;
+      top: 0
+      }
+/* se rota los spudoelementos del contenedor */
+  .contenedorTodo::after {
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg)
+      }
+/* estilo para  cada divhijo -->*/
+  .contenedorTodo .divhijos {
+      background: gray;
+      width: 6px; 
+      margin-left: -3px;
+      }
+ 
+ /* se rota cada divhijo -->*/
+  .contenedorTodo .divhijos.oneseven {
+      -moz-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      -webkit-transform: rotate(30deg);
+      transform: rotate(30deg)
+      }
+ 
+  .contenedorTodo .divhijos.twoeight {
+      -moz-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      -webkit-transform: rotate(60deg);
+      transform: rotate(60deg)
+      }
+ 
+  .contenedorTodo .divhijos.fourten {
+      -moz-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+      -webkit-transform: rotate(120deg);
+      transform: rotate(120deg)
+      }
+ 
+  .contenedorTodo .divhijos.fiveeleven {
+      -moz-transform: rotate(150deg);
+      -ms-transform: rotate(150deg);
+      -webkit-transform: rotate(150deg);
+      transform: rotate(150deg)
+      }
+ /* se posiciona este elemento que cubrira todo los divhijos */ 
+  .platoContieneMinuteraSegunderaHorariaYCubreSPeudoElementos {
+      position: relative;
+      width: 88%;
+      height: 88%;
+      background: #FDFFCC;
+      -moz-border-radius: 1000px;
+      -webkit-border-radius: 1000px;
+      border-radius: 100%;
+      z-index: 1000;
+      left: 6%; /* set this value of 1/2 width value*/
+      top: 6% /* set this value of 1/2 height value*/
+      }
+/* creamos el punto de el centro con el spudoelemento before */ 
+  .platoContieneMinuteraSegunderaHorariaYCubreSPeudoElementos::before {
+      content: "";
+      width: 18px; 
+      height: 18px;
+      border-radius: 18px;
+      margin-left: -9px; 
+      margin-top: -9px; 
+      background: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      box-shadow: 0 0 30px blue;
+      }
+/* creamos el nombre de la marca con el spudoelemento after */  
+  .platoContieneMinuteraSegunderaHorariaYCubreSPeudoElementos::after {
+      content: "QUARTZ";
+      position: absolute;
+      width: 100%;
+      font: normal 0.8em Arial;
+      color: gray;
+      text-align: center;
+      top: 85%
+      }
+/* estilos basicos para los hijos de platoContieneMinuteraSegunderaHorariaYCubreSPeudoElementos */   
+  .hand {
+      position: absolute;
+      width: 4px; 
+      height: 30%; 
+      top: 20%; 
+      left: 50%;
+      margin-left: -2px; 
+      background: black;
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -moz-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+      -webkit-transform-origin: bottom;
+      transform-origin: bottom;
+      z-index: -1;
+      -moz-box-shadow: 0 0 3px gray;
+      -webkit-box-shadow: 0 0 3px gray;
+      box-shadow: 0 0 3px gray
+      }
+ 
+  .minute {
+      height: 45%;
+      top: 5%; 
+      width: 5px;
+      margin-left: -2.5px;
+      }
+ 
+  .second {
+      height: 50%; /* height of sec hand */
+      width: 2px; /* width of sec hand */
+      margin-left: -1px; /* set this value to 1/2 width */
+      top: 0;
+      background: red
+      }
+  </style>
+</head>
+ 
+<body>
+ 
+<div id="IDcontenedorTodo" class="contenedorTodo">
+  <div class="divhijos oneseven"></div>
+  <div class="divhijos twoeight"></div>
+  <div class="divhijos fourten"></div>
+  <div class="divhijos fiveeleven"></div>
+ 
+  <div class="platoContieneMinuteraSegunderaHorariaYCubreSPeudoElementos">
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>   
+  </div>
+</div>
+ 
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 
+<script>
+//elemento con jquery
+var $hands = $('#IDcontenedorTodo div.hand')
+
+// informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.
+var request =      window.requestAnimationFrame           || window.mozRequestAnimationFrame
+                || window.webkitRequestAnimationFrame     || window.msRequestAnimationFrame
+                || function(f){ setTimeout(f, 1000); };                    
+ 
+function updateclock(){
+  var curdate = new Date()
+  var hour_as_degree = ( curdate.getHours() + curdate.getMinutes()/60 ) / 12 * 360;
+  var minute_as_degree = curdate.getMinutes() / 60 * 360;
+  var second_as_degree = ( curdate.getSeconds() + curdate.getMilliseconds()/1000 ) /60 * 360;
+  $hands.filter('.hour').css({transform: 'rotate(' + hour_as_degree + 'deg)' })
+  $hands.filter('.minute').css({transform: 'rotate(' + minute_as_degree + 'deg)' })
+  $hands.filter('.second').css({transform: 'rotate(' + second_as_degree + 'deg)' })
+  request(updateclock)
+}
+
+request(updateclock)
+</script>
+ 
+</body>
+</html>
+========================================Ecmascript 6 CLASES===================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>Pass a parameter into the "present()" method.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present(x) {
+    return x + ", I have a " + this.carname;
+  }
+}
+
+mycar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = mycar.present("Hello");
+</script>
+
+</body>
+</html>
+===================================Ecmascript 6 metodos STATIC===========================================================
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+mycar = new Car("Ford");
+
+//Call 'hello()' on the class Car:
+document.getElementById("demo").innerHTML = Car.hello();
+
+//solo puedo llamar este metodo de la clase Car  pero no lo puedo llamar desde un pobjeto creado de esta clase por ejemplo mycar no podra llamarlo
+document.getElementById("demo").innerHTML = mycar.hello();
+</script>
+
+</body>
+</html>
+=====================================Ecmascript 6 metodos STATIC=======================================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Static Methods</h2>
+
+<p>To use the "mycar" object inside the static method, you can send it as parameter.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  static hello(x) {
+    return "Hello " + x.carname;
+  }
+}
+
+//podemos utilizar el metodo static de la clase Car pasandole como argumento el objeto instaciado de esa clase
+mycar = new Car("Ford");
+document.getElementById("demo").innerHTML = Car.hello(mycar);
+</script>
+
+</body>
+</html>
+
+===================================Ecmascript 6 metodos STATIC   extends===super================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Inheritance</h2>
+
+<p>Use the "extends" keyword to inherit all methods from another class.</p>
+<p>Use the "super" method to call the parent's constructtor function.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = mycar.show();
+</script>
+
+</body>
+</html>
+
+==========================Ecmascript 6 Getters and Setters  (encapsulamiento)==========================================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Setter</h2>
+
+<p>When using a setter to set a property value, you do not use parantheses.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this._carname = brand;
+  }
+  set carname(x) {
+    this._carname = x;
+  }
+  get carname() {
+    return this._carname;
+  }
+}
+
+mycar = new Car("Ford");
+//Al usar un setter para establecer un valor de propiedad, no usa paréntesis.
+mycar.carname = "Volvo";
+document.getElementById("demo").innerHTML = mycar.carname;
+</script>
+
+</body>
+</html>
+
+
+============================callback==========================================  
+son funciones que se pasan a una funcion como argumentos para completar alguna tarea o rutina
+
+function main(callback)
+    {
+      alert("primero ejecuto el codigo y luego  ejecuto el callbak");
+      callback();
+    }
+
+    function greeting()
+    {
+      alert("yo soy la funcion callback");
+    }
+
+    main(greeting);
+===================================PROMISE asinconamente=======================================================
+
+new Promise( /* ejecutor */ function(resolver, rechazar) { ... } );
+
+
+????? ???? ??? ???? ???? ????? ???? ?? ???? ???? ?????? ???? ??????? ?? ??? ???
+
+=================================map()===================================================
+var serie = [1,2,3,4,5,6,7,8];
+//map recibe dos parametros 
+var resultado = serie.map(function(elements, index){
+  return index * 2 ;
+});
+
+console.log("map()   devuelve un nuevo array con el resultado "+resultado);
+
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+==============================================================================================
+JSON (java script object notacion)
+que hace? formato de intercambio de datos ligeros normalmente se usa con AJAX y este lo que hace es hacer consultas al servidor sin que tu pagina se actualice
+
+tipos de datos que soporta number , string, boolean, arrays, object, null
+
+reglas de json 
+usa pares clave: valor
+
+la extencion de los archivos es .json
+
+

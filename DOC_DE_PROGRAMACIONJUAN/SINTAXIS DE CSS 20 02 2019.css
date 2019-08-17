@@ -1,0 +1,2828 @@
+﻿<!DOCTYPE html><!--documento html 5 -->
+<html lang="es"><!--indica el idioma -->
+<head><!--cabecera de la pag web provee inf de todo el documento -->
+	<base href="http://www.sitio-de-imagenes-de-ejemplo.com/imagenes/naturaleza/flores/"><!--base: se establece para simplificar todos los URL que esten en una carpeta en comun al insertar la imagen solo tendriamos que poner su nombre y extencion. -->
+	<meta charset="utf-8"><!--juego de caracteres -->
+	<meta name="nombre-aplicacion" content="texto"><!--nombre de la aplicacion -->
+	<meta name="author" content="texto"><!--nombre del autor de la web -->
+	<meta name="description" content="texto"><!--descripcion de la pagina web -->
+	<meta name="generator" content="texto"><!--programas con los que se creo la web -->
+	<meta name="keywords" content="texto"><!--palabras claves para los motores de busqueda -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--diseño responsable adapte a cualquier tipo de viewport -->
+	<link rel="author" href="" media="screen" title="no title" charset="utf-8"><!--autor del documento que se ajunta -->
+	<link rel="icon" href="" media="screen" title="no title" charset="utf-8"><!--adjuntar un icono -->
+	<link rel="lisence" href="" media="screen" title="no title" charset="utf-8"><!--insertar uan licencia -->
+	<link rel=StyleSheet href="estilo.css" type="text/css" media=screen> <!--insertar hojas de estilo -->
+</head>
+
+<body><!--es el cuerpo de nuestra pag es la parte visible en el navegador -->
+
+<main></main><!-- debe ser exclusivo del documento. No debe contener ningún contenido que se repita no debe de estar dentro de ninguna viñeta-->
+
+<header></header><!--para contenido introductorio como titulo, subtitulo, logos, etc. -->
+
+<nav></nav><!--se colocan los enlaces o botones de el menu principal -->
+
+<pre></pre><!-- texto pre formateado -->
+
+<section></section><!--Una sección es una agrupación temática de contenido, generalmente con un encabezado se puede dividir en secciones para la troducción, el contenido y la información de contacto. -->
+
+
+<article>
+	<hgroup></hgroup><!--agrupa elementos dentro de un article y se usa con los h1 a h6 -->
+
+	<figure><!--colocan foto que hacen referencia al article y podemos mover  con CSS sin afectar el flujo del article -->
+	<img src="" alt=""> <!-- ó --> <blockquote> Lorem ipsum dolor sit amet, consectetur </blockquote>
+	<figcaption></figcaption><!--agregar una explicación visual a una imagen. -->
+	</figure>
+
+</article><!--contenido independiente y autónomo como Forum, post, Blog post, News story, Comment-->
+
+	<fieldset><legend><!-- leyenda--></legend></fieldset><!-- fielset genera un recuadro para organizar elemento de un formulario -->
+
+	<a href="#abajo">Ir abajo</a><!--enlace en una parte de la misma pagina -->
+	<a name="abajo"></a><!-- este es el destino del enlace en la misma pagina -->
+
+	<cite></cite><!-- Defina el título de un trabajo  o pintura etc -->
+
+	<label for="uneeltexto">texto</label><input type="text" id="uneeltexto">
+	<!--sirve para enlazar el texto con un elemento de formulario -->
+
+	<audio src=""></audio><!--incrusta audio sin la necesidad de pluying -->
+
+	<video src=""></video><!--incrusta video sin la necesidad de pluying -->
+
+	<embed src="" type=""><!--incrusta audio y video que es traido de diversos pluying -->
+
+	<source></source><!--permite especificar varias fuentes diferntes cuando se inserta en audio y video -->
+
+	<track></track><!--permite especificar varias pistas de sonido y video cuando se inserta en audio y video -->
+
+	<meter></meter><!--para trabajar con medidas y escalas -->
+
+	<progress></progress><!--barra de progreso -->
+
+	<mark></mark><!-- define el texto marcado -->
+
+	<time></time><!-- define una fecha / hora legible por humanos. -->
+
+	<details><!-- se puede usar para crear un widget interactivo que el usuario puede abrir y cerrar.-->
+	 	<summary>Copyright 1999-2014.</summary><!-- define un encabezado visible para el elemento details -->
+	</details>
+
+	<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p><!-- define una abreviatura o un acrónimo. -->
+
+	<bdo dir="rtl">texto al revez</bdo><!-- define la anulación bidireccional -->
+
+	<abbr title="HyperText Markup Language">HTML</abbr>/<!-- abreviaciones o acronimos-->
+	<dfn title="Dog">canine</dfn><!-- abreviaciones o acronimos-->
+
+	<bdo dir="rtl">juan jose garcia ochoa</bdo><!--  se puede usar para mostrar los idiomas que se leen de derecha a izquierda -->
+
+	<blockquote cite="http://www.htmldog.com/guides/html/intermediate/text/"><!--  blockquote generalmente se usa para citas independientes
+	de varias líneas, ,cite atributo se puede usar para señalar su origen. -->
+    <p>blockquote and q are used for quotations. blockquote is generally used for standalone often multi-line</p>
+	</blockquote>
+
+	<q></q><!-- se utiliza para citas mas cortas -->
+
+	<p>I have decided to <del datetime="2013-01-26">decrease</del> <!-- generalmente se muestra con un tachado . -->
+	<ins cite="http://www.icecreamforall.com/changeofpolicy/">increase</ins><!-- generalmente se muestra subrayado -->
+	the amount of free ice cream that the State will provide for its citizens.</p>
+
+	<article>
+    <section id="intro">
+    <p>[An introduction]</p>
+    </section>
+    <section id="main_content">
+    <p>[Content]</p>
+    </section>
+    <section id="related">
+    <ul>
+    <li><a href="that.html">That related article</a></li>
+    <li><a href="this.html">This related article</a></li>
+    </ul>
+    </section>
+	</article>
+
+	<video src="" controls autoplay  loop mediagroup="" muted poster="" preload="">
+    <source src="foo.ogg" type="video/ogg">
+    <source src="foo.mp4" type="video/mp4">
+    /* source sirve para especificar otros recursos de soporte de el mismo video */
+  </video>
+
+	<picture>
+  	<source media="(min-width: 1280px)" srcset="../../../images/isaac-newton-l.jpg">
+  	<source media="(max-width: 520px)" srcset="../../../images/isaac-newton-s.jpg">
+  	<img class="flr" src="../../../images/isaac-newton.jpg" alt="Sir Isaac Newton">
+	</picture>
+
+<aside></aside><!--contenido debe estar relacionado con el contenido circundante se coloca redes sociales, widget, gadget, publicidad -->
+
+<footer><address><!--la direccion de la institucion o su url --></address></footer>	<!--autor del documento, información de copyright,
+enlaces a términos de uso, información de contacto, etc. -->
+<p>Written by Doctor Who on <time datetime="2052-11-21">Thursday 21st November 2052</time>.</p>
+</body>
+</html>
+
+<!--los valores para la etiqueta form son:  accept-charset="" autocomplete="" enctype="" name=""  novalidate action="" method=""  target=""  -->
+<!--valores  para el atributo target son: _self _blank _parent _top  -->
+<!--valores  para el atributo method son:  get post, Se utiliza GET, los datos visibles en la url-->
+<!--valores  para el atributo action son:  url de la pagina donde se envia la informacion  -->
+<!--valores  para el atributo enctype son: multipart/form-data,  text/plain.  Especifica la codificación de los datos enviados-->
+<!--valores  para el atributo  novalidate: Especifica que el navegador no debe validar el formulario. -->
+<!--valores  para el atributo accept-charset son:  Especifica el conjunto de caracteres utilizado -->
+<form action="" method="post">
+
+<!-- fieldset Agrupar datos relacionados en un formulario. -->
+<fieldset>
+<legend>Personal information:</legend>
+
+<!-- caja de texto. Si se omite el atributo de nombre, los datos de ese campo se enviarán-->
+<input type="text" placeholder="Ingrese su nombre" name="">
+
+<!-- caja de texto para correo  multiple sirve para:     ????????????????????????    -->
+<input type="email" value="@gmail" name=""  multiple></input>
+
+<!--grupo de radio el atributo name debe ser el mismo  -->
+<input type="radio" name="genero" value="male" checked> Male
+<input type="radio" name="genero" value="female"> Female
+<input type="radio" name="genero" value="other"> Other
+</fieldset>
+
+<!-- seleccion de opciones -->
+<br>
+<select name="cars">
+	<option value="volvo">Volvo</option>
+	<option value="saab">Saab</option>
+	<option value="fiat" selected>Fiat</option>
+	<option value="audi">Audi</option>
+</select>
+
+<select name="formaDeVida" size="4" multiple>
+	<option value="forma" selected>forma de vida</option>
+	<option value="humana">humano</option>
+	<option value="aliens">aliens</option>
+	<option value="bestia">Bestia</option>
+	<option value="reptiliana">reptiliana</option>
+</select>
+
+<br>
+<textarea name="message" rows="10" cols="30">este es un textarea con 10 filas y 30 columnas</textarea>
+
+<input type="date" name=""></input>
+<!--boton de envio de el formulario  -->
+<input type="submit">
+<!-- boton normal -->
+<button type="button" onclick="alert('este es un boton usando atributo on click de javascript')">Click Me!</button>
+
+</form>
+
+
+<hr>
+<!--elementos especificos de una lista predefinida -->
+<form action="/action_page.php">
+<input list="browsers">
+<datalist id="browsers">
+	<option value="Internet Explorer">
+	<option value="Firefox">
+	<option value="Chrome">
+	<option value="Opera">
+	<option value="Safari">
+</datalist>
+</form>
+
+<hr>
+
+<!-- oninput y output -->
+<form action="" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+0<input type="range" id="a" name="a" value="50">100
++
+<input type="number" id="b" name="b" value="50">
+=
+<output name="x" for="a b"></output>
+<br><br>
+<input type="submit">
+</form>
+
+<hr>
+
+<!-- seleccion de opciones por grupo  -->
+<select>
+<optgroup label="Swedish Cars">
+	<option value="volvo">Volvo</option>
+	<option value="saab">Saab</option>
+</optgroup>
+<optgroup label="German Cars">
+	<option value="mercedes">Mercedes</option>
+	<option value="audi">Audi</option>
+</optgroup>
+</select>
+<hr>
+<!-- tipos de input --> <br>
+<input type="button" value="ok"></input>
+<input type="checkbox">checkbox</input>
+<input type="color"></input>
+<input type="date"></input>
+<input type="datetime-local"></input>
+<input type="email"></input>
+<input type="file"></input>
+<input type="hidden">oculto</input>
+<input type="image"></input>
+<input type="month"></input>
+<input type="number" placeholder="numero"></input>
+<input type="password" placeholder="password"></input>
+<input type="radio"></input>
+<input type="range"></input>
+<input type="reset"></input>
+<input type="search"></input>
+<input type="submit"></input>
+<input type="tel" placeholder="telefono celular"></input>
+<input type="text" placeholder="Ingrese texto"></input>
+<input type="time"></input>
+<input type="url" placeholder="url"></input>
+<input type="week"></input>
+
+<hr>
+
+<form action="">
+First name:<br>
+<!-- atributos
+readonly: atributo especifica que el campo de entrada está deshabilitado
+disabled: atributo especifica que el campo de entrada está deshabilitado.
+minlength="4" and maxlength="10": atributo especifica la longitud minima y máxima permitida para el campo de entrada.
+tambien estan autocomplete, autofocus, multiple, placeholder, required, step="3" -->
+<input type="number" name="" minlength="2" maxlength="5">
+<input type="text" name="firstname" value="John" readonly>
+<input type="number" name="points" step="3">
+<input type="text" name="" value="desabilitado" disabled>
+<input type="text" name="" value="solo_lectura" readonly>
+</form>
+<hr>
+<!--nuevos tag en html5  -->
+<!-- <article>	Defines an article in a document</article>
+<aside>	Defines content aside from the page content
+<bdi>	Isolates a part of text that might be formatted in a different direction from other text outside it
+<details>	Defines additional details that the user can view or hide
+<dialog>	Defines a dialog box or window
+<figcaption>	Defines a caption for a <figure> element
+<figure>	Defines self-contained content
+<footer>	Defines a footer for a document or section
+<header>	Defines a header for a document or section
+<main>	Defines the main content of a document
+<mark>	Defines marked/highlighted text
+<meter>	Defines a scalar measurement within a known range (a gauge)
+<nav>	Defines navigation links
+<progress>	Represents the progress of a task
+<rp>	Defines what to show in browsers that do not support ruby annotations
+<rt>	Defines an explanation/pronunciation of characters (for East Asian typography)
+<ruby>	Defines a ruby annotation (for East Asian typography)
+<section>	Defines a section in a document
+<summary>	Defines a visible heading for a <details> element
+<time>	Defines a date/time
+<wbr>	Defines a possible line-break
+<audio>	Defines sound content
+<embed>	Defines a container for an external (non-HTML) application
+<source>	Defines multiple media resources for media elements (<video> and <audio>)
+<track>	Defines text tracks for media elements (<video> and <audio>)
+<video>	Defines video or movie
+<article> element specifies independent, self-contained content.
+<section> element defines section in a document. -->
+
+<hr>
+<!--elements with class .form-control have a width of 100%.  -->
+<form action="/action_page.php">
+<div class="form-group"> <!-- Wrap labels and form controls in <div class="form-group"> (needed for optimum spacing)  -->
+<label for="email">Email address:</label>
+<input type="email" class="form-control" id="email">
+</div>
+<div class="form-group">
+<label for="pwd">Password:</label>
+<input type="password" class="form-control" id="pwd">
+</div>
+<div class="checkbox">
+<label><input type="checkbox"> Remember me</label>
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<hr>
+<!--Add class .form-inline to the <form> element
+creates an inline form with two input fields(campos)  -->
+<form class="form-inline" action="/action_page.php">
+<div class="form-group">
+<!--si no incluye una etiqueta para cada entrada, los lectores de pantalla tendrán problemas con sus formularios. Puede ocultar las etiquetas para todos los dispositivos, excepto los lectores de pantalla, utilizando la clase .sr-only:  -->
+<label for="email" class="sr-only">Email address:</label>
+<input type="email" class="form-control" id="email">
+</div>
+<div class="form-group">
+<label for="pwd">Password:</label>
+<input type="password" class="form-control" id="pwd">
+</div>
+<div class="checkbox">
+<label><input type="checkbox"> Remember me</label>
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<hr>
+
+<!--A horizontal form means that the labels are aligned next to the input field (horizontal) on large and medium screens. On small screens (767px and below), it will transform to a vertical form (labels are placed on top of each input).  -->
+
+<form class="form-horizontal" action="/action_page.php">
+<div class="form-group">
+<label class="control-label col-sm-2" for="email">Email:</label>
+<div class="col-sm-10">
+	<input type="email" class="form-control" id="email" placeholder="Enter email">
+</div>
+</div>
+<div class="form-group">
+<label class="control-label col-sm-2" for="pwd">Password:</label>
+<div class="col-sm-10">
+	<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+</div>
+</div>
+</form>
+
+<hr>
+
+<div class="form-group">
+<label for="comment">Comment:</label>
+<textarea class="form-control" rows="5" id="comment"></textarea>
+</div>
+
+<hr>
+<div class="checkbox">
+<label><input type="checkbox" value="">Option 1</label>
+</div>
+<div class="checkbox">
+<label><input type="checkbox" value="">Option 2</label>
+</div>
+<div class="checkbox disabled">
+<label><input type="checkbox" value="" disabled>Option 3</label>
+</div>
+<hr>
+
+<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+<label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+<label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+
+<hr>
+<div class="radio">
+<label><input type="radio" name="optradio" checked>Option 1</label>
+</div>
+<div class="radio">
+<label><input type="radio" name="optradio">Option 2</label>
+</div>
+<div class="radio disabled">
+<label><input type="radio" name="optradio" disabled>Option 3</label>
+</div>
+
+
+<hr>
+<label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+<label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+<label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
+
+<hr>
+<div class="form-group">
+<label for="sel1">Select list:</label>
+<select class="form-control" id="sel1">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+</div>
+
+<hr>
+
+<form class="form-horizontal">
+<div class="form-group">
+<label class="control-label col-sm-2" for="email">Email:</label>
+<div class="col-sm-10">
+	<p class="form-control-static">someone@example.com</p>
+</div>
+</div>
+</form>
+
+<hr>
+<form>
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input id="email" type="text" class="form-control" name="email" placeholder="Email">
+</div>
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+<input id="password" type="password" class="form-control" name="password" placeholder="Password">
+</div>
+<div class="input-group">
+<span class="input-group-addon">Text</span>
+<input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+</div>
+</form>
+
+<hr>
+
+<form>
+<div class="input-group">
+<input type="text" class="form-control" placeholder="Search">
+<div class="input-group-btn">
+	<button class="btn btn-default" type="submit">
+		<i class="glyphicon glyphicon-search"></i>
+	</button>
+</div>
+</div>
+</form>
+
+<hr>
+<form class="form-horizontal">
+<div class="form-group">
+<label class="col-sm-2 control-label">Focused</label>
+<div class="col-sm-10">
+	<input class="form-control" id="focusedInput" type="text" value="Click to focus">
+</div>
+</div>
+<div class="form-group">
+<label for="disabledInput" class="col-sm-2 control-label">Disabled</label>
+<div class="col-sm-10">
+	<input class="form-control" id="disabledInput" type="text" disabled>
+</div>
+</div>
+<fieldset disabled>
+<div class="form-group">
+	<label for="disabledTextInput" class="col-sm-2 control-label">Fieldset disabled</label>
+	<div class="col-sm-10">
+		<input type="text" id="disabledTextInput" class="form-control">
+	</div>
+</div>
+<div class="form-group">
+	<label for="disabledSelect" class="col-sm-2 control-label"></label>
+	<div class="col-sm-10">
+		<select id="disabledSelect" class="form-control">
+			<option>Disabled select</option>
+		</select>
+	</div>
+</div>
+</fieldset>
+<div class="form-group has-success has-feedback">
+<label class="col-sm-2 control-label" for="inputSuccess">
+Input with success and icon</label>
+<div class="col-sm-10">
+	<input type="text" class="form-control" id="inputSuccess">
+	<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+</div>
+</div>
+<div class="form-group has-warning has-feedback">
+<label class="col-sm-2 control-label" for="inputWarning">
+Input with warning and icon</label>
+<div class="col-sm-10">
+	<input type="text" class="form-control" id="inputWarning">
+	<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+</div>
+</div>
+<div class="form-group has-error has-feedback">
+<label class="col-sm-2 control-label" for="inputError">
+Input with error and icon</label>
+<div class="col-sm-10">
+	<input type="text" class="form-control" id="inputError">
+	<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+</div>
+</div>
+</form>
+
+<hr>
+
+<form class="form-inline">
+<div class="form-group">
+<label for="focusedInput">Focused</label>
+<input class="form-control" id="focusedInput" type="text">
+</div>
+<div class="form-group">
+<label for="inputPassword">Disabled</label>
+<input class="form-control" id="disabledInput" type="text" disabled>
+</div>
+<div class="form-group has-success has-feedback">
+<label for="inputSuccess2">Input with success</label>
+<input type="text" class="form-control" id="inputSuccess2">
+<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+</div>
+<div class="form-group has-warning has-feedback">
+<label for="inputWarning2">Input with warning</label>
+<input type="text" class="form-control" id="inputWarning2">
+<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+</div>
+<div class="form-group has-error has-feedback">
+<label for="inputError2">Input with error</label>
+<input type="text" class="form-control" id="inputError2">
+<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+</div>
+</form>
+
+<hr>
+<form>
+<div class="form-group">
+<label for="inputsm">Small input</label>
+<input class="form-control input-sm" id="inputsm" type="text">
+</div>
+<div class="form-group">
+<label for="inputdefault">Default input</label>
+<input class="form-control" id="inputdefault" type="text">
+</div>
+<div class="form-group">
+<label for="inputlg">Large input</label>
+<input class="form-control input-lg" id="inputlg" type="text">
+</div>
+</form>
+
+<hr>
+<div class="form-group form-group-lg">
+
+<hr>
+<div class="form-group">
+<label for="pwd">Password:</label>
+<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+<span class="help-block">This is some help text...</span>
+</div>
+
+<hr>
+
+
+BASE DE DATOS CON HTML5
+
+IndexedDB(base de datos indexada)
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/*********************************************************************************************/
+/********************color de fondo******************************** */
+.backgroundcolor
+{
+  background-color: lightblue;
+}
+<div class="backgroundcolor">background color</div><br>
+
+/********************imagen de fondo******************************** */
+.backgroundimage
+{
+  width:99%;/*ancho*/
+  height:100px;/*altura*/
+  background-color: white;/*es una buena practica poner el mismo color que el de la iamgen*/
+
+  background-image: url(../imagenesprueba/abeja.jpg);
+  background-repeat:repeat-x;/*se repite la imagen solo en el eje x*/
+  background-repeat:repeat-y;/*se repite la imagen solo en el eje y*/
+  background-repeat: no-repeat;/*que no se repita la imagen*/
+  background-position: left top;/*indica la posicion en el eje "X" y el eje
+  valores:left, top, bottom, right, 10% 20%*/
+  background-attachment:fixed;/*local(es para posicional referente a su contenedor),fixed indica la imagen queda fija al hacer scroll*/
+}
+/*shorthand(ó taquigráfica) de lo anterior */
+.shorthand
+{
+  width:99%;
+  height:100px;
+  background:image color repeat  attachment position;
+}
+<div class="backgroundimage">background image</div><br>
+
+/*******************imagen de fondo propiedades avanzadas**************************** */
+.imagendefondopropiedadesavanzadas
+{
+  border: 1px dashed black;
+  width: 600px;
+  height: 450px;
+  /*esta es la manera de agregar varias imagenes al background*/
+  background-image: url(../imagenesprueba/img1.jpg), url(../imagenesprueba/img2.jpg), url(../imagenesprueba/img3.jpg);
+  background-repeat:    no-repeat,         no-repeat,          no-repeat;
+  background-position: bottom right,        bottom left,       top left;
+  background-size:     300px 300px,         200px 200px,       100% ;
+  /*otros valores que background-size puede tener son: cover(tratara de cubrir todo su contenedor pero sin deformar la imagen),
+  contain(tratara de cubrir todo su contenedor pero sin sobrepasar su width y su height)*/
+}
+/*shorthand(ó taquigráfica) de lo anterior */
+.shorthandimagendefondopropiedadesavanzadas
+{
+  border: 1px dashed black;
+  width: 600px;
+  height: 450px;
+  background:url('marvel.gif')  no-repeat bottom right,
+             url('marve1.gif')  no-repeat bottom left,
+             url('paisaje.gif') no-repeat top left;
+  background-size: 600px 600px, 200px 200px, 100%;
+}
+<div class="imagendefondopropiedadesavanzadas"></div><br>
+
+/* ************background-origin y background-clip*************************** */
+.backgroundoriginybackgroundclip
+{
+  border: 10px dashed black;
+  padding: 30px;
+  width: 300px;
+  height: 150px;
+  background-image:url(../imagenesprueba/paisaje.jpg);
+  background-repeat: no-repeat;
+
+  background-origin:border-box;
+  /*La propiedad background-origin especifica el área de origen de un fondo los valores son:
+  padding-box(valor por defecto establece el background en relacion al pading del contenedor),
+  border-box(establece el background en relacion desde adentro del border del contenedor).
+  content-box(establece el valor en relacion al contenido)*/
+  background-clip: border-box;/*Especifique cuánto debe extenderse desde afuera del border
+  los valores son border-box, padding-box, content-box*/
+}
+<div class="backgroundoriginybackgroundclip">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe dolorum, sapiente iste iusto amet
+explicabo eveniet fuga ex ratione, nobis ullam deserunt eos eaque nulla porro repellendus rem, itaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis enim necessitatibus error minus tempora dicta numquam, perferendis obcaecati, ratione, itaque quaerat blanditiis qui assumenda consequatur! Hic sequi non laborum quidem.
+</div><br>
+
+/* tipos de border******************************** */
+.dotted {border-style: dotted;}
+.dashed {border-style: dashed;}
+.solid {border-style: solid;}
+.double {border-style: double;}
+.groove {border-style: groove;}
+.ridge {border-style: ridge;}
+.inset {border-style: inset;}
+.outset {border-style: outset;}
+.none {border-style: none;}
+.hidden {border-style: hidden;}
+.mix {border-style: dotted dashed solid double;}
+<div class="dotted ">dotted</div>
+<div class="dashed ">dashed</div>
+<div class="solid ">solid</div>
+<div class="double ">double</div>
+<div class="groove ">groove</div>
+<div class="ridge ">ridge</div>
+<div class="inset ">inset</div>
+<div class="outset ">outset</div>
+<div class="none ">none</div>
+<div class="hidden ">hidden</div>
+<div class="mix ">mix</div><br>
+
+/* ********************ancho de el borde******************************** */
+.borderwidth
+{
+  border-style: solid;
+  border-width: medium; /*medium,thin,thick,length,initial,inherit*/
+}
+<div class="borderwidth">border width</div><br>
+
+/* **********************color del borde******************************** */
+.bordercolor
+{
+  border-style: solid;
+  border-width: 1px 10px 6px 20px;
+  border-color: #a1b2c3;/*rgb(red, green, blue) #a1b2c3*/
+}
+<div class="bordercolor">border-color</div><br>
+
+/* ******************border top bottom left right******************************** */
+.bordertopbottomleftright
+{
+  border-top-style: dotted;
+  border-right-style: ridge;
+  border-bottom-style: groove;
+  border-left-style: solid;
+  border-radius: 5px;/*otorga un radio al borde*/
+}
+/*shorthand (ó taquigráfica) de lo anterior */
+.border
+{
+  border-style: dotted solid;
+}
+<div class="bordertopbottomleftright">border-top-right-bottom-left</div><br>
+
+/* *****************margin(margen) y padding(relleno)******************************** */
+.marginpadding{  border-style: solid;}
+.margin
+{
+  border-style: solid;
+  margin-top: 100px;
+  margin-bottom: 70px;
+  margin-right: 10px;
+  margin-left: 50px;
+  margin:auto;/*auto: margen autamatico, inherit: hereda el margen de el padre*/
+}
+.padding
+{
+  border:1px solid red;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+<div class="marginpadding">
+  <div class="margin">margin: separa el elemento de otro elemento</div>
+  <div class="padding">padding: es el espacio entre el contenido y el borde en el siguiente ejemplo esta representado de color verde</div>
+</div><br>
+
+/* *********************modelo de cajas******************************** */
+.contenedormodelocaja
+{
+  border: 2px solid red;
+  background-color: grey;
+}
+.modelocajas
+{
+  background-color: pink;
+  border: 90px solid green;/* lo que esta en verde representa el padding */
+  padding: 5% 5% 5% 40%;
+  margin: 29px 39px 11px 12px;
+}
+<div class="contenedormodelocaja">MARGIN
+<div class="modelocajas">C O N T E N I D O </div>
+</div><br>
+
+/* *********************min-width y max-width******************************** */
+.minwidthymaxwidth
+{
+  border: 1px solid yellow;
+  margin: auto;
+  background-color: blue;
+  /* hagamas pequeña la pagina del navegador*/
+  min-width:10px;/*el minimo de ancho de la caja*/
+  max-width:1000px;/*el maximo de ancho de la caja*/
+
+}
+.ancho
+{
+  border: 1px double red;
+  min-height: 110px;/*minimo altura de la caja*/
+}
+<div class="minwidthymaxwidth">
+<div class="ancho">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, tempora, voluptatum! Voluptatum, similique, dolor. Ut qui ab nisi, praesentium corrupti assumenda eveniet nostrum tempora inventore pariatur aliquam sunt consequuntur voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, tempora, voluptatum! Voluptatum, similique, dolor. Ut qui ab nisi, praesentium corrupti assumenda eveniet nostrum tempora inventore pariatur aliquam sunt consequuntur voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, tempora, voluptatum! Voluptatum, similique, dolor. Ut qui ab nisi, praesentium corrupti assumenda eveniet nostrum tempora inventore pariatur aliquam sunt consequuntur voluptatem. </div>
+</div><br>
+
+/* *****************************box-sizing*** esta propiedad sirve tambien para cuando le apliquemos un padin en conetido no se expanda demaciado***** */
+.boxsizing
+{
+  border: 12px solid yellow;
+  margin: 50px auto;
+  width: 600px;
+  overflow: hidden;
+}
+.parrafoboxsizing
+{
+  background-color: silver;
+  color: blue;
+  display: block;
+  float:left;
+  margin:10;
+  padding:30px;
+  border:10px solid red;
+  width: 50%;
+  box-sizing:border-box;/*cambia la forma como los
+  navegadores interpretan el modelo de caja
+  los valores pueden ser content-box(este es el valor por defecto en los navegadores)
+  border-box(con este indicamos que ajuste el width tomando encuenta el valor del border )
+  padding-box(con este indicamos que ajuste el width tomando encuenta el valor del padding no tiene soporte actualmente)*/
+}
+<div class="boxsizing">
+<p class="parrafoboxsizing">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, tempora, voluptatum! Voluptatum, similique, dolor. Ut qui ab nisi, praesentium corrupti assumenda eveniet nostrum tempora inventore pariatur aliquam sun
+</p>
+<p class="parrafoboxsizing">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, tempora, voluptatum! Voluptatum, similique, dolor. Ut qui ab nisi, praesentium corrupti assumenda eveniet nostrum tempora inventore pariatur aliquam sun
+</p>
+</div><br>
+
+/* ****************dibuja una linea fuera del borde******************************** */
+.outlinecolor
+{
+  border: 4px solid yellow;
+  outline: 5px dotted green;/*dibuja una linea fuera del elemento*/
+}
+
+<div class="outlinecolor">outline color:</div><br>
+
+/* ****************************formato al texto******************************** */
+.formatoaltexto
+{
+  font-size: 200px;
+  color: red;
+  letter-spacing: 10px;/*especifica el espacio entre los caracteres los valores son normal,inherit,px,em etc.*/
+  text-align: justify;/*tambien se puede utilizar center,justify,left,right,inherit*/
+  text-align-last: center;/*center,justify,left,right,inherit para darle formato diferente a la ultima linea solo es soportado por mozilla*/
+  text-decoration: underline;/*none, inherit, overline, line-through, underline*/
+  text-decoration-color:red;/*da un color a la decoracion*/
+  text-decoration-style:double;/*estilo de borde ver tipos de bordes*/
+  text-indent: 50px;/*especifica la sangria del la primera linea del texto, el vaor puede ser negativo*/
+  text-transform: capitalize;/*none, inherit, uppercase(convierte en mayusculas), lowercase(convierte en minusculas), capitalize*/
+  white-space:normal ;/*se controlan los espacion en blanco de un bloque te texto valores son: normal, nowrap, pre, pre-line, inherit*/
+  word-spacing: 10px;/*se utiliza para dar espacio entre palabras*/
+  word-wrap:break-word;/*romper palabras largar para evitar que se salgan de su contenedor*/
+  text-shadow: 3px 2px 2px blue;/*primer valor 3px es el desplazamiento horizpntal(h-shadow)
+  segundo valor 2px es el desplazamiento vertical(v-shadow)
+  el tercer valor de desenfoque(blur)
+  el cuarto valor es el color(color)*/
+  line-height: 0.8;/*especifica el espacio entre lineas*/
+  direction: rtl;/*se utiliza para cambiar la direccion de un texto o elemento*/
+  cursor: crosshair; /*tipos de puntero default, crosshair, pointer, nw-resize, ne-resize, n-resize, e-resize, help, text, wait*/
+  text-overflow: clip;/*corta la palabra y lo demas lo esconde*/
+  text-overflow: ellipsis;/*parte la palabra y agrega ......*/
+}
+.labelformatoaltexto
+{
+  background-color: black;
+  color: white;
+  text-shadow: -20px 0px 0px red, 20px 0px 0px red, 0px 20px 0px red, 0px -20px 0px red;
+}
+<label class="formatoaltexto">>TextO1000<</label><br>
+<label class="labelformatoaltexto">palabras</label><br><br>
+
+/* ***************************(fuentes)******************************** */ */
+.FuentesCSS
+{
+  font-style: italic;/*normal, italic, oblique*/
+  font-weight: bolder;/*Peso o gruesor de  sus valores son: normal,bold,bolder(un groso mas que el heredado),lighter(un grosor menor que el heredado),number(100 a 900),initial,inherit*/
+  font-variant: small-caps;/*semuestra en una letra mayusculamaspequeña de lo normal*/
+  font-size: 40px;/*tamaño de la fuente son: medium,xx-small,x-small,small,large,x-large,xx-large,smaller,larger,length,initial,inherit,%,px,em*/
+  font-family: "Times New Roman", Times, serif;
+}
+/* este es el orde en forma shorthand  de lo anterior*/
+.Fuentes
+{
+  font: font-style font-weight font-variant font-size font-family;
+}
+<div class="FuentesCSS">Fuentes_CSS    abcdefghijklmnopqrstuvwxyz</div><br>
+
+/* *************************pseudo elementos******************************** */
+a:link /* link sin visitar */
+{
+  color: red;
+}
+a:visited /*link visitado */
+{
+    color: black;
+}
+a:hover /*link cuando se posiciona el mouse */
+{
+    color: hotpink;
+}
+a:active /* selecciona el click */
+{
+    color: blue;
+}
+<a href="#">links</a><br><br>
+
+/* ****************************************listas******************************** */
+.ul
+{
+  list-style-image: url(../imagenesprueba/vineta.png); /*usar una imagen como viñetas*/
+  list-style-type:square;/*none, disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman,
+  lower-greek, lower-latin, upper-latin, armenian, georgian, lower-alpha, upper-alpha*/
+  list-style-position: inside;/*viñetas dentro y fuera   inside,  outside*/
+}
+/* shorthand(ó taquigráfica) de lo anterior */
+.shorthandUL
+{
+  /*list-style: type position image;*/
+  list-style: disc         inside      url(../imagenesprueba/vineta.png);
+            /*tipo        posicion                 imagen */
+}
+<ul class="ul">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul><br>
+
+/* ********************************formato de tablas******************************** */
+.tabla
+{
+  margin : 150px  auto ;
+  width : 600px ;
+}
+table
+{
+  background-color: white ;
+  text-align : left ;
+  border-collapse : collapse ;/*colapsan las filas y columnas*/
+  width:  100% ;
+}
+th , td
+{
+  padding: 20px ;
+  height: 50px;
+  vertical-align: bottom;
+}
+thead
+{
+  background-color:  #246355 ;
+  border-bottom: solid  5px  #0F362D ;
+  color : white ;
+}
+tr:nth-child(even)/*pseudo clase toma los hijos pares  even=pares ,  odd=impares  3n+0=formulas*/
+{
+  background-color: #ddd ;
+}
+tr:hover td /*hace hover menos a los td*/
+{
+  background-color: #369681 ;
+  color : white ;
+}
+<div class="tabla" >
+<table >
+<thead >
+<tr >
+<th > Descripcion </th > <th > Mes </th > <th > Costo </th >
+</tr >
+</thead >
+<tr>
+<td > Agua </td > <td > Enero </td > <td > $ 3,000 </td >
+</tr >
+<tr >
+<td > Luz </td > <td > Febrero </td > <td > $ 5,500 </td >
+</tr >
+<tr >
+<td > Coche </td > <td > Marzo </td > <td > $ 10,100 </td >
+</tr >
+<tr >
+<td > Internet </td > <td > Abril </td > <td > $ 450 </td >
+</tr >
+</table >
+</div ><br>
+
+/*********overflow (rebosante )no permite que el contenido se salga de su padre******** */
+.overflow
+{
+  border:1px solid red;
+  width: 200px;
+  height: 200px;
+  overflow: scroll;/*scroll, hidden */
+  overflow-x: scroll; /*sirve para ocultar o hacer scroll en el eje de las x los valores son scroll,hidden */
+  overflow-y: scroll; /*sirve para ocultar o hacer scroll en el eje de las y los valores son scroll,hidden */
+}
+<div class="overflow">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div><br>
+
+/*****************************pseudo elementos**************************************** */
+.parrafopseudoelemento::first-line /*pseudo elemento solo se le pueden aplicar a elementos de nivel de bloque y afecta a la primera linea del elemento*/
+{
+    color: tomato;
+    font-variant: small-caps;
+}
+
+.parrafopseudoelemento::first-letter /*pseudo elemento solo se le pueden aplicar a elementos de nivel de bloque y afecta la primera letra del elemento*/
+{
+     background-color: white;
+     color: tomato;
+     float: left;
+     font-size: 70px;
+     margin: 10px;
+     padding: 10px;
+}
+p class="parrafopseudoelemento">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqu
+Loremlorem Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+
+/*************************pseudo elementos******************************** */
+
+.pseudobeforeafter::before, .pseudobeforeafter::after /*modifica la parte anterior y posterior al contenido*/
+{
+  content: "@";
+}
+.pseudobeforeafter::-moz-selection
+{
+  color: red;
+  background-color: yellow;
+}
+<p class="pseudobeforeafter">   selecciona este texto   </p><br>
+
+/* *******************************display (monitor)******************************** */
+.display
+{
+  visibility: visible;; /* hidden El elemento estará oculto,pero mantendra su espacio, visible ,collapse , inherit*/
+  display: inline; /*inline(los elementos en bloque se mostraran en linea), block(los elementos en linea se mostraran en bloque),
+  inline-block(hace que los elementos se muestren en linea pero que a la vez se les pueda aplicar un width y un heigth),
+  none(desaparece el elemento con su contenido),list-item(que los elementos se comporten como una lista),table(que se comporte como una tabla)*/
+
+  /*elementos en linea son:b,blg,i,small,tt,abbr,acronym,cite,code,dfn,em,kbd,strong,samp,var,a,bdo,br,img,map,
+  object,q,script,span,sub,sup,button,input,label,select,textarea*/
+}
+<h1 class="display">texto</h1>
+<p class="visibility">
+Lorem ipsum dolor sit amet, consectetur adipisicin
+</p>
+<h2>texto</h2><br>
+
+/* *******selector de desendencia como que es una ruta p/seleccionar elemento ********** */
+.selectordistancia
+{
+  color: red
+}
+<div>
+<div class="selectordistancia">este es un elemento</div>
+<div class="selectordistancia">este es un elemento</div>
+<div class="selectordistancia">este es un elemento</div>
+<div><p>Lorem ipsum dolor sit amet,</p></div>
+</div><br>
+
+/* *************************(>) selector de hijos******************************** */
+.selectorHijos > p
+{
+  color: pink;
+}
+<div class="selectorHijos">
+<p>este es un hijo</p>
+<p>este es un hijo</p>
+<p>este es un hijo</p>
+<div><p>este arrafo es hijo de otro div</p></div>
+</div><br>
+
+/******(+) selector de hermano adjacente (o el elemento hermano siguiente)*********/
+h1 + .selectorhermanoadyacente
+{
+  color: green;
+}
+
+<div>
+<h1>Lorem</h1>
+<p class="selectorhermanoadyacente">este es un el hermano adjacente</p>
+<p class="selectorhermanoadyacente">este es un hermano</p>
+<p class="selectorhermanoadyacente">este es un hermano</p>
+<div><br>
+
+/* *********************(~)selector de hermanos general******************************** */
+.selectorhermanogeneral ~ p
+{
+  color: blue;
+}
+<h1 class="selectorhermanogeneral">Lorem</h1>
+  <p>este si es un hermano descendiente</p>
+  <p>este si es un hermano descendiente</p>
+  <p>este si es un hermano descendiente</p>
+  <p>este si es un hermano descendiente</p><br>
+
+/*****************selector con atributo exacto******************************** */
+[rel="externo"]
+{
+  background-color: yellow;
+}
+<a rel="externo">enlace 1</a>
+<a rel="interno">enlace 2</a>
+<a rel="externo">enlace 3</a>
+<a rel="externo">enlace 4</a>
+<a rel="no especifico">enlace 5</a>
+<a rel="interno">enlace 6</a><br><br>
+
+/* ***********selector con lista de valosres separados con espacio*************** */
+[name~="palabra1"]
+{
+  background-color: pink;
+}
+<a name="palabra palabra1 palabra2">enlace 1</a>
+<a name="palabra1 palabra2 palabra2">enlace 2</a>
+<a name="palabra palabra5 palabra2">enlace 3</a>
+<a name="palabra1 palabra palabra6">enlace 4</a>
+<a name="palabra palabra1 palabra9">enlace 5</a>
+<a name="palabra palabra4 palabra55">enlace 6</a><br><br>
+
+/* **********selector con lista de valosres separados por un guion (no funciona??)**** */
+[value|="palabra2"]
+{
+  background-color: red;
+  font-size: 10px;
+}
+a href="" value="palabra-palabra1-palabra2">enlace 1</a>
+<a href="" value="palabra1-palabra0-palabra2">enlace 2</a>
+<a href="" value="palabra-palabra5-palabra2">enlace 3</a>(no funciona)<br><br>
+
+/* **************selector  de atributo comienza con******************************** */
+[href^="http"]
+{
+  background-color: blue;
+}
+<a href="http://google.">enlace 1</a>
+<a href="http://google.">enlace 2</a>
+<a href="google.co">enlace 3</a>
+<a href="http://google.">enlace 4</a>
+<a href="http://google.">enlace 5</a>
+<a href="google.co">enlace 6</a><br><br>
+
+/******************selector  de atributo termina con************************** */
+a[href$="om"]
+{
+  background-color: red;
+  color:blue;
+  margin: 2px;
+}
+<a href="//google">enlace 1</a>
+<a href="//google.com">enlace 2</a>
+<a href="google.com">enlace 3</a>
+<a href="//google">enlace 4</a>
+<a href="//google.com">enlace 5</a>
+<a href="google.com">enlace 6</a><br>
+
+/**************selector  de atributo con un valor especificado******************* */
+p[name*="valor1"]
+{
+  background-color: red;
+  color:blue;
+  margin: 2px;
+}
+<p name="valor-es el seleccionado">valor especifico</p>
+<p name="-es el seleccionado  valor1">valor especifico</p>
+<p name="es el seleccionado">valor especifico</p><br>
+
+/********************pseudo clases estructurales******************************** */
+nav p:first-child/*selecciona el primer hijo */
+{
+     background-color: red;
+     color:blue;
+     margin: 2px;
+}
+nav p:last-child/*selecciona el ultimo hijo */
+{
+     background-color: yellow;
+     color:orange;
+     margin: 2px;
+}
+<nav>
+<p>primer hijo</p>
+<p>segundo hijo</p>
+<p>ultimo hijo</p>
+</nav><br>
+
+/**************elecciona donde elemento indicado es unico ********************** */
+.onlychild span:only-child
+{
+     background-color: orange;
+}
+<div class="onlychild">
+<span>texto1</span><br>
+<span>texto2</span>
+<p>texto3</p>
+<p>texto4
+<span>es la unica etiqueta indicada</span>
+</p>
+<p>texto5</p>
+</div><br>
+
+/****selecciona la posicion indicada por el valor entre parentesis (de arriba hacia abajo)*** */
+.lista:nth-child(3) /* un numero , even(par), odd(impar), 3n+3(formula matematica) */
+{
+  background-color: red;
+  color:white;
+  margin: 10px;
+}
+<ul>
+<li class="lista">Item #1</li>
+<li class="lista">Item #2</li>
+<li class="lista">Item #3</li>
+<li class="lista">Item #4</li>
+<li class="lista">Item #5</li>
+</ul><br>
+
+/* selecciona la posicion indicada por el valor entre parentesis (de abajo hacia arriba) */
+.lista:nth-last-child(1) /*un numero , even(par), odd(impar), 3n+3(formula matematica) */
+{
+  background-color: pink;
+}
+<ul>
+<li class="lista">Item #1</li>
+<li class="lista">Item #2</li>
+<li class="lista">Item #3</li>
+<li class="lista">Item #4</li>
+<li class="lista">Item #5</li>
+</ul><br>
+
+/****selecciona la posicion indicada en numeros tomando de base el elemento indicado en este caso es li**** */
+.lasoftype li:nth-of-type(4) /* un numero , even(par), odd(impar), 3n+3(formula matematica) */
+{
+  background-color: red;
+  color:white;
+  margin: 10px;
+}
+/* ***selecciona la posicion indicada en numeros tomando  de base el ultimo elemento en este caso es li*** */
+.lasoftype li:nth-last-of-type(3) /* un numero , even(par), odd(impar), 3n+3(formula matematica) */
+{
+  background-color: orange;
+  color:black;
+  margin: 10px;
+}
+<div class="lasoftype">
+<li>li</li>
+<li>li</li>
+<div>div</div>
+<li>li selecciona este por que es el 3 li que encuentra de abajo hacia arriba</li>
+<div>div</div>
+<li>li   selecciona este por que es el 4 li que encuentra de arriba hacia abajo</li>
+<div>div</div>
+<li>li</li>
+</div><br>
+
+/* **********pseudo clases******************************** */
+.oftype span:first-of-type /*el primer hijo del tipo especificado un numero , even(par), odd(impar), 3n+3(formula matematica) */
+{
+  background-color: blue;
+  margin: 10px;
+}
+
+.oftype span:last-of-type /*el ultimo hijo del tipo especificado un numero , even(par), odd(impar), 3n+3(formula matematica) */
+{
+  background-color: blue;
+  margin: 10px;
+}
+
+b:only-of-type/*un unico hijo del tipo especificado un numero , even(par), odd(impar), 3n+3(formula matematica) */
+{
+  background-color: blue;
+  margin: 10px;
+}
+<div class="oftype">
+<p>texto6</p>
+<span>etxto1</span>
+<span>etxto2</span>
+<b>texto7</b>
+<span>etxto3</span>
+<p>texto8</p>
+<span>etxto4</span>
+<span>etxto5</span>
+</div>  <br><br>
+
+/* ********aplica al elemento raiz del documento en este caso a la etiqueta html************* */
+/* body */
+{
+     margin: auto;
+     height: 700px;
+     width: 85%;
+     background-color: blue;
+     padding: 60px;
+}
+/* :root */ /*toca la raiz del documento en este caso la viñeta html*/
+{
+     background-color: red;
+}
+
+/* *********cualquier elemento que no tenga contenido en su interior************** */
+:empty /*le aplica estilos a todo etiqueta vacia*/
+{
+  background-color: tomato;
+  height: 30px;
+}
+<h1>tiene texto</h1>
+<h1></h1><!--este elemento esta vacio se aplica a este el :empty-->
+<h1>tiene texto</h1><br>
+
+/* ********selecciona en la url el target (objetivo) y le aplica los estilos*********** */
+:target
+{
+  background-color: rgb(192, 237, 157);
+  color: white;
+  font-size: 30px;
+  border:1px solid pink;
+}
+<nav>
+<ul>
+<li><a href="#home">home</a></li>
+<li><a href="#about">about</a></li>
+<li><a href="#clients">clients</a></li>
+</ul>
+</nav>
+<p id="home">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex e</p>
+<p id="about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+<p id="clients">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p><br>
+
+/* *****aplica estilo a todo menos a los elementos que indiquemos en los parentesis********* */
+.parrafoprueba:not(.parmtro)
+{
+  background-color: yellow;
+  color: white;
+}
+<p class="parrafoprueba">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex e</p>
+<p class="parmtro">este parrafo no es afectado porque esta siendo excluido</p>
+<p class="parrafoprueba">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+<p class="parrafoprueba">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+<p class="parrafoprueba">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p><br>
+
+/***********************estilo para formularios ******************************** */
+/*aplica estilo a los elementos que estan enable */
+:enabled
+{
+  background-color: rgb(10, 75, 58);
+  color: red;
+  font-size: 30px;
+}
+/*aplica estilo a los elementos que estan disabled en el html */
+:disabled
+{
+  background-color: rgb(78, 75, 0);
+  color: blue;
+  font-size: 10px;
+  cursor: no-drop;
+}
+/*aplica estilo a lss elementos que estan checked */
+:checked+label
+{
+  background-color: rgb(78, 75, 58);
+  border: 1px solid red;
+}
+<form action="">
+<div>
+<input type="text" name="nombre" placeholder="Nombre"></input>
+<input type="email" name="email" placeholder="nombre@gmail" disabled></input>
+</div>
+<div>
+<input type="radio" name="radio" id="radio-1"><label for="radio-1">opcion 1</label></input>
+<input type="radio" name="radio" id="radio-2"><label for="radio-2">opcion 2</label></input>
+<input type="radio" name="radio" id="radio-3"><label for="radio-3">opcion 3</label></input>
+</div>
+<div><textarea name="textarea" id="textarea" cols="20" rows="5" placeholder="comentarios"></textarea></div>
+</form><br>
+
+
+--------- pseud-classes, :valid y :invalid para validar input-------
+// input:invalid {
+//     border-color: red;
+// }
+// input,
+// input:valid {
+//     border-color: #ccc;
+// }
+/* *********************unidad de longitud absoluta******************************** */
+p
+{
+/*estas unidades se mantendran no importando el tamaño de la pantalla */
+  background-color: red;
+  /* comenta los demas elementos para probar los tamaños*/
+  width: 10cm;
+  width: 10mm;
+  width: 10in;
+  width: 10pc;
+  width: 10pt;
+  width: 10px;
+}
+<p>textotextotextotexto</p>
+
+/* ******************************************************************************* */
+/* em: equivale al tamaño de la fuente especificado en el elemento padre y si no
+especificamos un valor  el em valdra 16px por ser un standart en los navegadores  */
+body
+{
+  font-size: 40px;
+  background-color: black;
+}
+/*como el elemento padre tiene establecido
+un tamaño de 40px, 1em equivale ha ese tamaño */
+p
+{
+  text-align: center;
+  font-size: 1em;
+  background-color: yellow;
+  width: 1em;
+}
+/*1ex es la 1/2 del tamaño de 1em*/
+.unidad_ex
+{
+     font-size:1ex;
+}
+html
+{
+  font-size: 70px;
+}
+/*1rem: equivale al tamaño de fuente del elemento
+raiz del documento osea la etiqueta html*/
+.unidad_rem
+{
+  font-size: 1rem;
+  background-color: yellow;
+}
+div
+{
+  width: 50%;
+  height: 47px;
+  background-color: yellow;
+}
+/*toma el tamaño de su padre como un 100% */
+.unidad_porcentaje
+{
+  width: 25%;
+  background-color: red;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="documentoscss/pruebadetodo.css">
+  <title>CSS PRUEBA</title>
+</head>
+<body>
+  <p>M</p>
+  <p class="unidad_ex">x</p>
+  <p class="unidad_rem">R</p>
+  <div>
+  <p class="unidad_porcentaje">25%</p>
+  </div>
+</body>
+</html>
+
+/* ***************unidades de longitud viewport relativas******************************** */
+/* Que es Viewport: es la etiqueta que mejor representa la web en movilidad, ya que nos permite indicar
+cómo se verá un proyecto web en dispositivos móviles. Apple la creó para decirle al iPhone
+como debería renderizar el documento, convirtiéndose desde entonces en un estándar que ya está
+soportado por la mayoría de dispositivos.
+se debe de incluir esta etiqueta meta en el head */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0"> */
+/* vw = 1/100th de la anchura del viewport
+vh = 1/100th de la altura del viewport */
+p
+{
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 1em;/*el valor de un em es de 16px  defaul ya que no se ha
+  establecido un valor a la viñeta padre ni a ningun antecesor*/
+}
+.cls1
+{
+  background-color: tomato;
+  width: 100vw;
+  height: 50vh;
+  font-size: 4vw;
+}
+.cls2
+{
+  background-color: pink;
+  width: 100vw;
+  height: 50vh;
+  font-size: 4vw;
+}
+/*viewport ============> 1000px  X 700px (el tamaño de la pantalla de un dispositivo)*/
+/*1% del viewport osea    vmax     vmin*/
+<div>
+<p class="cls1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis itaque, eum ab modi </p>
+<p class="cls2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis itaque, eum ab modi </p>
+</div>
+
+/* ***********************************los colores******************************** */
+/* por keywords
+black silver gray white maroon red purple fuchsia green limeolive yellow navy bluRe teal aqua
+pudes encontrar mas en este enlace:
+https://www.w3.org/wiki/CSS3/Color/Extended_color_keywords
+
+ -R -G -B
+#F0 F8 FF(normal)
+# 0  8  F(abreviada) */
+
+rgb(89,300,1)
+/* r=rojo(valor de 0 a 255)
+g=verde(valor de 0 a 255)
+b=azul(valor de 0 a 255) */
+
+rgba(89,300,1,0.3)
+/* r=rojo(valor de 0 a 255)
+g=verde(valor de 0 a 255)
+b=azul(valor de 0 a 255)
+a=opacidad(un valor de 0.1 a 1) */
+
+hsl(180, 10% , 100%)
+/* h=tono o matiz(un valor de 0 a 360)
+s=saturacion(%)
+l=brillo(%) */
+
+hsla(180, 10%, 100%, 0.1)
+/*
+h=tono o matiz(un valor de 0 a 360)
+s=saturacion(%)
+l=brillo(%)
+a=opacidad(un valor de 0.1 a 1) */
+
+/* ***********************float y clear******************************** */
+.caja1,.caja2,.caja3,.caja4
+{
+  width: 90px;
+  height: 90px;
+  margin:10px;
+  padding: 10px;
+  text-align: center;
+  line-height: 90px;
+  background-color: red;;
+}
+.contenedor
+{
+  width: 600px;
+  background-color: blue;/*al flotar cada elemento se salen de su contenedor
+  y este pierde su altura y su ancho*/
+}
+div
+{
+  float:left;/*valores para son: inherit,none,left,right*/
+  /*flota el elemento  a su izquierda tomando encuenta el width de su padre*/
+}
+.caja3
+{
+  clear:left;/*valores son: left, right, both(ambos), none
+  clear rompe el flujo de el elemento */
+}
+
+<div class="contenedor">
+<div class="caja1">caja# 1</div>
+<div class="caja2">caja# 2</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae dolores nesciunt dolore iste minus quae perferendis esse expedita, ratione tempore unde commodi quas veniam earum, neque voluptas inventore quisquam cumque.</p>
+<div class="caja3">caja# 3</div>
+<div class="caja4">caja# 4</div>
+</div>
+
+/**********************propiedades position******************************** */
+.fixed,.relative,.absolute
+{
+  width: 90px;
+  height: 90px;
+  margin:0px;
+  border: 0px;
+  text-align: center;
+  background-color: red;
+}
+.contenedor
+{
+  background-color: green;
+  position: relative;
+}
+.fixed
+{
+  position: fixed;/*fixed esta fuera de el flujo  y se mantiene fija*/
+  left: 60%;
+}
+.relative
+{
+  position: relative;/*seposiciona tomando de base el lugar donde estaba*/
+  left: 25px;
+  top: 10px;
+}
+.absolute
+{
+  position: absolute;/*se posiciona tomando como base el elemento superior posicionado y pierde su flujo*/
+  top:0px;
+  right: 50px;
+}
+<div class="contenedor">
+<div class="fixed">fixed  haz la pantalla pequena</div>
+<div class="relative">relative</div>
+<div class="absolute">absolute</div>
+</div>
+
+/* *********************************z-index******************************** */
+.caja1,.caja2,.caja3
+{
+  width: 90px;
+  height: 90px;
+  margin:10px;
+  border: 0px;
+  text-align: center;
+  line-height: 100px;
+  background-color: red;
+  border:3px solid black;
+}
+.caja1
+{
+  position:relative;
+  z-index:2;
+}
+.caja2
+{
+  position: relative;
+  top:-27px ;
+  left:10px ;
+  z-index:3;
+}
+.caja3
+{
+  top:-60px ;
+  left:0px ;
+  position: relative;
+}
+div class="caja1">caja1</div>
+<div class="caja2">caja2</div>
+<div class="caja3">caja3</div>
+
+/* ***************border-radius y diferentes maneras de utilizarlo*********************** */
+div
+{
+  height: 500px;
+  width: 500px;
+  border:1px solid black;
+  margin: auto;
+  border-radius: 300px 50px 300px 50px;
+  /*valor corresponde a cada esquina comenzando l por la esquina superior izquierda,
+  esquina superior derecha, esquina inferior derecha, esquina inferior izquierda*/
+}
+div
+{
+  height: 500px;
+  width: 500px;
+  border:1px solid black;
+  margin: auto;
+  border-top-left-radius:500px 900px;/*tambien podemos aplicar a cada esquina un valor en el eje X y en el eje Y*/
+  border-top-right-radius:500px 900px;/*tambien podemos aplicar a cada esquina un valor en el eje X y en el eje Y*/
+  border-bottom-right-radius:500px 100px;/*tambien podemos aplicar a cada esquina un valor en el eje X y en el eje Y*/
+  border-bottom-left-radius:500px 100px;/*tambien podemos aplicar a cada esquina un valor en el eje X y en el eje Y*/
+}
+div
+{
+  height: 500px;
+  width: 500px;
+  border:1px solid black;
+  margin: auto;
+  border-radius:10px 10px 10px 10px / 10px 10px 10px 10px;
+  /*se le esta dando el valor a cada esquina en el eje de las X
+  despues del "/"(slash)
+  se le esta dando el valor a cada esquina en el eje de las Y*/
+}
+<div></div>
+
+/* **************************box-shadow******************************** */
+div
+{
+  background-image: url('chicabas.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 200px;
+  width: 150px;
+  border:1px solid black;
+  margin: auto;
+  -webkit-box-shadow:10px -10px 20px 3px black inset, 20px 20px 10px 0px gray  ;
+          box-shadow:10px -10px 20px 3px black inset, 20px 20px 10px 0px gray  ;
+  /*box-shadow: ejeX  ejeY blur(desenfoque) sprit(difucion) color interna*/
+}
+<div></div>
+
+/* ******************************border-image******************************** */
+div
+{
+  height: 500px;
+  width: 450px;
+  margin: auto;
+  border:30px solid;
+  background-color: green;
+  border-image-source:url(../imagenesprueba/tapiz.jpg);/*la imagen del borde*/
+  border-image-slice:10 10 10 10;/*rebana la imagen en 9 regiones*/
+  border-image-repeat:round ;/*stretch,no-repeat,round,space*/
+  border-image-width:30px ;/*el ancho de la imagen de fondo*/
+  border-image-outset:20px 30px 10px 50px ;/*alejar o acercar la imagen de el borde*/
+}
+<div></div>
+
+/* ********linear-gardients(degradados) diferentes maneras de utilizarlo********* */
+div
+{
+  height: 500px;
+  width: 450px;
+  margin: auto;
+  border:2px solid;
+  background: linear-gradient(orange 0px,red 160px,black 300px);
+  /*degradado lineal con color-stop(paradas de colores)*/
+}
+div
+{
+  height: 500px;
+  width: 450px;
+  margin: auto;
+  border:2px solid;
+  background: gradient(linear, right bottom, left top, from(orange),color-stop(red),to(black));
+  background: linear-gradient(to left top, orange,red,black);
+  /*degradado lineal con un punto de inicio*/
+}
+div
+{
+  height: 500px;
+  width: 450px;
+  margin: auto;
+  border:2px solid;
+  background: linear-gradient(30deg, orange,red,black);
+  /*degradado lineal inclinacion en grados*/
+}
+<div></div>
+
+/************************Radial-gardients(degradados)************************ */
+
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+
+Value			Description
+shape			Defines the shape of the gradient. Possible values:
+ellipse 			(default)
+circle
+size			Defines the size of the gradient. Possible values:
+farthest-corner 		(default)
+closest-side 	el degradado terminará en el lado más cercano al centro de la forma. Si dos lados coinciden con este criterio, entonces será distribuido uniformemente.
+closest-corner   Lo opuesto a la esquina más cercana, donde el gradiente termina en la esquina que se encuentra más alejada del centro de la forma
+farthest-side   (predeterminado): Lo opuesto al lado más cercano, donde el gradiente terminará en el lado más alejado del centro de la forma
+position			Defines the position of the gradient. Default is "center"
+start-color, ..., last-color	Color stops are the colors you want to render smooth transitions among. This value consists of a color value, followed by an optional stop position (a percentage between 0% and 100% or a length along the gradient axis).
+
+div
+{
+  border:2px solid;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(ellipse closest-corner at 45px 45px , #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%);
+  /* background-image: radial-gradient(tipo extent-keyword at posicion , color y parada, color-stop,color-stop); */
+  /*tipo: circle, ellipse  */
+  /*extent-keyword: closest-side, closest-corner, farthest-side, farthest-corner (estos parametros describen la longitud de la figura)*/
+  /*at posicion: 10px 10px*/
+  /*color y parada: unColor ParadaEn%*/
+}
+<div></div>
+
+
+/* ****Repeating-linear-gardients  y Repeating-radial-gardients  (degradados)diferentes maneras de utilizarlo****** */
+div
+{
+  height: 350px;
+  width: 500px;
+  margin: auto;
+  border:2px solid;
+  background:repeating-linear-gradient(180deg,red,orange 50%);
+  /*con el valor le indicamos hasta que punto se repetira nuevamente linealmente
+  podemos aplicar todos los valores anteriores*/
+}
+div
+{
+  height: 350px;
+  width: 500px;
+  margin: auto;
+  border:2px solid;
+  background:repeating-radial-gradient(red,orange 30%);
+  /*con el valor le indicamos hasta que punto se repetira nuevamente radialmente
+  podemos aplicar todos los valores anteriores*/
+}
+<div></div>
+
+/* ************************************flexbox******************************** */
+/*TODO LO SIGUIENTE SE APLICA A SUS CONTENEDORES Y SUS HIJOS TOMANDO ENCUENTA EL VIEWPORT*/
+.contenedor
+{
+  width: 90%;
+  height: 500px;
+  background: red;
+  padding: 10px;
+  border: 10px solid black;
+  margin-top: 20px;
+  /*estas propiedades solo son para el contenedor*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: ;
+          flex-direction: ;/*valores son: row(valor default),column,row-reverse,column-reverse*/
+  -ms-flex-wrap: ;
+      flex-wrap: ; /*los valores son: wrap(si la suma de las propiedades de los element-item como ancho relleno y borde
+  sobrepasa el ancho del contenedor este partira los item y los colocara abajo el otro),no-wrap(valor de fault), wrap-reverse*/
+  -ms-flex-flow: ;
+      flex-flow: ; /*este es un atajo de flex-direction y flex-wrap entonces esta propiedad utiliza los valores de estos*/
+  -webkit-box-pack: ;
+      -ms-flex-pack: ;
+          justify-content: ;/* sirve para posicionar los elementos horizontalmente ajustandolos al acho del viewport los valores son:; flex-star(valor defaul), flex-end, center, space-around, space-between*/
+  alig-items: ;/*sirve para posicionar una fila verticalmente los valores son: flex-star, center, stretch, baseline*/
+  -ms-flex-line-pack: ;
+      align-content: ;/*sirve para posicionar varias filas verticalmente con la diferencia que el valor wrap esta activo los valores son: flex-star, flex-end, center, space-around, space-between*/
+}
+.elemento
+{
+  color:green;
+  margin:5px;
+  background-color: pink;
+  width: 50px;
+  height: 50px;
+  /*estas propiedades solo son para los elementos*/
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;/*entre mayor el numero crecera el elemento*/
+}
+.elemento1
+{
+  background-color: yellow;
+  -webkit-box-flex:2;
+      -ms-flex-positive:2;
+          flex-grow:2;
+}
+.elemento2
+{
+  background-color: green;
+  width: 500px;
+  flex-shripk:1;/*reduce el ancho establecido  el valor indica en la proporcion que se reducira*/
+}
+/*El shorthand es:
+flex: flex-grow flex-shripk;
+
+ó tambien
+
+flex:1;
+flex-basis: ; (este es el width dinamico que afecta al hight tambien)
+*/
+
+.elemento3
+{
+  -webkit-box-ordinal-group:2;
+      -ms-flex-order:1;
+          order:1;/*cambia la posicion de el elemento sin cambiar el DOM(diagrama de jerarquia) del html*/
+}
+.elemento4
+{
+  -ms-flex-item-align:center;
+      align-self:center;/*sirve para alinear los elemento verticalmente si  flex-direction tiene el valor row ,
+  y horizontalmente si  flex-direction tiene el valor column
+  los valores son: flex-start,  flex-end, center, baseline*/
+}
+<div class="contenedor">
+<div href="#" class="elemento elemento1">1</div>
+<div href="#" class="elemento elemento2">2</div>
+<div href="#" class="elemento elemento3">3</div>
+<div href="#" class="elemento elemento4">4</div>
+</div>
+https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp
+
+/* *******************multi-column************************ */
+body
+{
+  margin-top: 0px;
+  padding: 0px;
+  font-family: arial;
+  font-size: 20px;
+}
+.contenedor
+{
+  background-color: lime;
+  border-radius: 10px;
+  width: 90%;
+  padding: 20px;
+  margin: 10% auto 0;
+  -webkit-box-shadow: 0px 3px 3px 3px #555, 0px -3px 0px #fff;
+          box-shadow: 0px 3px 3px 3px #555, 0px -3px 0px #fff;
+}
+.contenedor
+{
+  column-count:3;/*indicamos cuantas columnas tendra el contenedor*/
+  column-gap:30px;/*indicamos la separacion de las columnas entre si*/
+  column-width:300px;/*indicamos el ancho de cada columna*/
+  /*colocamos separadores entre columnas*/
+  column-rule-width:3px;/*ancho del separador*/
+  column-rule-style:dashed;/*estilo de el separador*/
+  column-rule-color:red;/*color del separador*/
+}
+
+  /* shorthand(ó taquigráfica) de lo anterior */
+
+.contenedor
+{
+  columns:3 30px;
+  column-rule:3px dashed red;/*shorthand de lo anterior*/
+}
+h1
+{
+  -webkit-column-span: all;
+          column-span: all;/*sacamos un elemento de el flujo de las columnas (no tiene soporte firefox)*/
+  text-align: center;
+}
+<section class="contenedor">
+<h1>Lorem ipsum dolor Lorem ipsum dolor</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum incidunt quaerat, at delectus illo quibusdam beatae
+error veniam facere ea enim a hic quam ad rem ipsam modi nobis inventore! Lorem ipsum dolor sit amet, consectetur
+adipisicing elit. Quibusdam reprehenderit et sit accusantium optio quos sequi pariatur quae nemo! Tempore repellat doloribus
+veniam quis quisquam possimus rem earum magnam pariatur?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum incidunt quaerat, at delectus illo quibusdam beatae
+error veniam facere ea enim a hic quam ad rem ipsam modi nobis inventore! Lorem ipsum dolor sit amet, consectetur
+adipisicing elit. Quibusdam reprehenderit et sit accusantium optio quos sequi pariatur quae nemo! Tempore repellat doloribus
+veniam quis quisquam possimus rem earum magnam pariatur?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum incidunt quaerat, at delectus illo quibusdam beatae
+error veniam facere ea enim a hic quam ad rem ipsam modi nobis inventore! Lorem ipsum dolor sit amet, consectetur
+adipisicing elit. Quibusdam reprehenderit et sit accusantium optio quos sequi pariatur quae nemo! Tempore repellat doloribus
+veniam quis quisquam possimus rem earum magnam pariatur?</p>
+</section>
+
+/* *****************web-fonts******************************** */
+p
+{
+  font-family: 'Akronim','Andale Mono', arial;
+  /*se utiliza el acronimo para llamar el tipo de fuente
+  y se colocan fuentes standart para los navegadores*/
+  font-size: 50px;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="documentoscss/pruebadetodo.css">
+  <link href="https://fonts.googleapis.com/css?family=Akronim" rel="stylesheet">/*se copia la url la fuente desde google fonts*/
+  <title>CSS PRUEBA</title>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vel eum libero voluptatem corporis eligendi hic, amet minima laboriosam explicabo sed doloribus dolor delectus possimus, obcaecati commodi, cupiditate minus corrupti.</p>
+</body>
+</html>
+
+/**************transiciones y sus propiedades************** */
+.contenedor
+{
+  margin: auto;
+  padding: 10px;
+  background-color: grey;
+  width: 600px;
+}
+
+.ejemplo
+{
+  width: 110px;
+  height: 150px;
+  margin: auto;
+  background:grey;
+  border: 2px dashed blue;
+  border-radius: 0px;
+  -webkit-transition-property: background, border-radius;
+  transition-property: background, border-radius;
+  /*se colocan las propiedades que seran afectadas con la transition-duration
+  si quiero que se aplique a todas las propiedades se usa la palabra (all)*/
+  -webkit-transition-duration: 5s, 2s;
+          transition-duration: 5s, 2s;
+  /*duracion de la transition se puede aplicar un tiempo diferente a cada propiedad
+  siguiendo el orden que hemos declarado en transition-property*/
+  -webkit-transition-delay:1s;
+          transition-delay:1s;/*retardo antes que la transition inicie*/
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;/*curva de velocidad los valores son:
+  ease, linear, ease-in, ease-out, ease-in-out, steps(numero, start), steps(numero, end),
+  cubic-bezier(numero,numero,numero,numero) esta herramienta nos ayuda  http://cubic-bezier.com/#.17,.67,.83,.67*/
+  /*metodo shorthand
+  transition:property duration delay timing-function;*/
+  /*transition: all 1s 0s ease-out;*/
+}
+.ejemplo:hover
+{
+  background: pink;
+  border-radius: 100% 100% 50% 50% / 100% 100% 30% 30%;
+}
+<div class="contenedor">
+  <div class="ejemplo"></div>
+</div>
+
+/* *******************transformaciones 2D***************** */
+.cont
+{
+  width: 300px;
+  height: 300px;
+  background-color:red;
+  margin: 300pxx;
+  border: 10px solid red;
+  border-radius:300px;
+  padding: 10px;
+}
+.circulo
+{
+  width: 200px;
+  height: 200px;
+  background:url(abeja.png);
+  margin: auto;
+  border: 10px solid red;
+  border-radius:300px;
+  padding: 10px;
+  -webkit-transition:all 3s 0s linear;
+  transition:all 3s 0s linear;
+}
+.circulo:hover
+{
+  /*rotate: valores son: 1 deg, 1turn, top right
+  scale: escala la imagen
+  skew: segar(inclinar) la imagen
+  translate: traslada la imagen*/
+  border: 40px solid yellow;
+  -webkit-transform: rotate(180deg) scale(2) skew(9deg) translate(10px, 10px);
+          transform: rotate(180deg) scale(2) skew(9deg) translate(10px, 10px);
+  -webkit-transform-origin: 100px 100px;
+          transform-origin: 100px 100px;/*el origen de la rotacion eje X y eje Y tomando encuenta el tamaño del div  el origen defaul es
+  al centro  pero podemos cambiar la coordenada 0 en X & 0 en Y son en la esquina superior izquierda de ahi parte*/
+}
+<div class="cont">
+<div class="circulo"></div>
+</div>
+
+/* *************transformaciones 3D*********************** */
+*
+{
+  margin: auto;
+  padding: 0px;
+}
+body
+{
+  -webkit-perspective:800px;
+          perspective:800px;/*nos crea un entorno de 3D y solo afectara a sus hijos directos
+  el valor en pixeles nos indica la distancia que tendra entre el canvas
+  y la vista de el usuario*/
+  -webkit-perspective-origin:bottom right;
+          perspective-origin:bottom right;/*punto de origen de la rotacion los
+  valores pueden ser tambien en pixeles */
+}
+.contenedor
+{
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 17px;
+  -webkit-box-shadow: 0 20px 10px 10px grey;
+          box-shadow: 0 20px 10px 10px grey;
+  background: url('https://sites.google.com/site/jokergil/asdepicas.PNG') no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition:all 1s 0s linear;
+  transition:all 1s 0s linear;
+  -webkit-transform-style:preserve-3d;
+          transform-style:preserve-3d;/*le estamos diciendo que el contenedor herede a sus hijos
+  la propiedad perspective que tiene el body */
+}
+.contenedor:hover
+{
+  -webkit-transform:rotate3D(1, 0, 0, 45deg) translate3D(-100px, 10px, 100px) ;
+          transform:rotate3D(1, 0, 0, 45deg) translate3D(-100px, 10px, 100px) ;
+  /*rotate3D(ejeX, ejeY, ejeZ, 45deg)
+  translate3D(ejeX, ejeY, ejeZ)*/
+}
+.cara1
+{
+  width: 100px;
+  height: 100px;
+  border: 20px solid green;
+  background: url('https://sites.google.com/site/jokergil/asdepicas.PNG') no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition:all 1s 0s linear;
+  transition:all 1s 0s linear;
+}
+.cara1:hover
+{
+  -webkit-transform: rotate3D(0, 0, 1, 180deg);
+          transform: rotate3D(0, 0, 1, 180deg);
+}
+<div class="contenedor">
+<div class="cara1"></div>
+<div class="cara2"></div>
+</div>
+
+/* ***********animaciones******************************** */
+.animacioncarro
+{
+  width: 300px;
+  height: 300px;
+  background-image: red;
+  border-radius: 300px;
+
+  -webkit-animation:carro;
+
+          animation:carro;/*nombre de la animacion*/
+  -webkit-animation-duration:2s;
+          animation-duration:2s;/*tiempo de la animacion*/
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;/**/
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;/*retardo de la animacion*/
+  -webkit-animation-iteration-count:infinite;
+          animation-iteration-count:infinite;/*cantidad de iteraciones*/
+  -webkit-animation-direction:alternate;
+          animation-direction:alternate;/*direccion de la animacion*/
+          /*animation: carro 2s 0s ease-in infinite alternate;*/
+}
+
+@-webkit-keyframes carro
+{
+ from
+  {
+    border-radius: 0px;
+  }
+  to
+  {
+    border-radius: 300px;
+  }
+}
+
+@keyframes carro
+{
+ from
+  {
+    border-radius: 0px;
+  }
+  to
+  {
+    border-radius: 300px;
+  }
+}
+<div class="animacioncarro"></div>
+
+/* ********concetos basico de Responsive Web Design****** */
+/* 1- viewport
+2- media query(como condicionales en css3)   investigar que es breakpoint(puntos de quiebre)
+3- modelo de caja
+4- medidas relativas %, em(relativo al padre), rem(relativo a la raiz)
+5- imagenes
+6- high density pixel(1px pantalla de el telefono la conforman 4px)
+7- grids(grillas o columnas) */
+
+
+/*******************media queries****************************/
+/* media queries: sirven para especificar por medio de breakpoint, el comportamiento de nuestra pagina web
+tomando en cuenta el tamaño de la pantalla de nuestro dispositivo la sintaxsis es : */
+
+/* @media  <mediatype> <operador logico>(){
+
+} */
+
+/*All: esta condición engloba a todos los medios.
+Braille: este es un medio especial para dispositivos táctiles adaptados para discapacitados visuales.
+Embossed: es usado para impresoras braile.
+handheld: es para dispositivos portátiles (con pantalla pequeña), como teléfonos móviles.
+print: es usado para medios impresos.
+projection: es usado para proyectores.
+screen: este es el usado comúnmente, que es para la pantalla del pc.
+speech: usado para sintetizadores de voz.("lee" la página en voz alta)
+tty: usado cuando se muestra la web en un terminal o consola (en modo texto).
+tv: Se usa cuando el medio es un televisor.
+
+operador logico los valores son: and, not, only, or. 
+
+Existe una lista de parámetros, pero los más importantes son los siguientes:
+Width y Height: también se pueden usar con max- y min-, tiene en cuenta el tamaño de pantalla para mostrar de una forma u otra el contenido.
+Aspect-ratio: tiene en cuenta la disposición de pantalla, por ejemplo panorámicas (16:9).
+Resolution: comprueba la resolución de la pantalla y la densidad de pixeles por pulgada, y es útil para crear webs especificas para pantallas de alta resolución.
+Color, Color-index y Monochrome: nos muestra el numero de bits de color o si es monocromática la pantalla, siendo útil para hacer un diseño especifico, por ejemplo, para E-books.
+EJEMPLO: @media screen and (max-width: 600px) and (min-width: 300px){   }
+
+Portrait: orientación vertical
+Landscape: orientación horizontal
+@media (orientation: landscape) {
+  <!-- Aquí van todos los estilos CSS -->
+}
+@media (orientation: Portrait) {
+  <!-- Aquí van todos los estilos CSS -->
+}
+En esta Media Querie que hemos definido, el atributo min-device-width se refiere a la resolución de la pantalla del dispositivo a la hora de cargar la hoja de estilos definida.
+
+El Viewport es el área visual donde se plasma el contenido del documento HTML de tu sitio web. Se podría traducir  como vista o ventana y nos sirve para definir qué área de pantalla está disponible al renderizar un documento, la escala/zoom que debe mostrar inicialmente. Todo ello, con parámetros que le damos a la propia etiqueta meta, separados por comas en caso de utilizar más de uno:
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ATRIBUTO	VALORES	DESCRIPCIÓN
+width	Valor integral (en pixels) o constante device-width	Define el ancho de la página.
+height	Valor integral (en pixels) o constante device-height	Define el alto de la página.
+Initial-scale	Cualquier número real de 0.1 en adelante.
+1 representa no escalable
+
+(1.0 para no tener zoom o 2.5 para tener un zoom del 2,5 de aumento, por ejemplo).
+
+La escala / zoom inicial del sitio Web.
+User-scale	“yes” / “no”	Define los permisos para que el usuario pueda o no hacer zoom.
+Minimun-scale	Cualquier número real de 0.1 en adelante. 1 representa no escalable	Define la escala / zoom mínimo que podemos hacer en la página.
+Maximun-scale	Cualquier número real de 0.1 en adelante. 1 representa no escalable	Define la escala / zoom máxima que podemos hacer en la página.*/
+
+
+body
+{
+  margin: 0;
+}
+.encabezado, .contenido, .contenido-lateral, .pie-pagina
+{
+  padding: 1em 2em;
+}
+
+.contenido, .contenido-lateral, .pie-pagina
+{
+  float: left;
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+}
+.encabezado
+{
+  background-color: rgb(247, 220, 22);
+  height: 130px;
+}
+.contenido
+{
+  width: 90%;
+}
+.contenido-lateral
+{
+  width: 10%;
+  background-color: rgb(263, 163, 113);
+  height: 500px;
+}
+
+.post
+{
+  background-color: rgba(117, 225, 26, 0.46);
+  height: 130px;
+  margin-bottom: 1em;
+}
+
+.pie-pagina
+{
+  width: 100%;
+  background-color: #000;
+  height: 50px;
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 720px){
+  .encabezado
+  {
+    background-color: red;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 719px) and (min-width: 480px){
+  .encabezado
+  {
+    background-color: blue;
+  }
+  .contenido
+  {
+    width: 85%;
+  }
+  .contenido-lateral
+  {
+    width: 10%;
+  }
+
+}
+
+@media screen and (max-width: 479px) and (min-width: 100px){
+  .encabezado
+  {
+    background-color: pink;
+  }
+  .contenido, .contenido-lateral
+  {
+    width: 100%;
+  }
+  .pie-pagina
+  {
+    color: white;
+    font-size: 15px;
+  }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="documentoscss/pruebadetodo.css">
+  <title>CSS PRUEBA</title>
+</head>
+<body>
+    <header class="encabezado"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quod eius, sequi ducimus. Voluptate ab esse maiores corporis. Soluta laborum dolorum ratione, reiciendis molestias, impedit repellat debitis odio autem maxime?</p></header>
+    <section class="contenido">
+      <article class="post"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quod eius, sequi ducimus. Voluptate ab esse maiores corporis. Soluta laborum dolorum ratione, reiciendis molestias, impedit repellat debitis odio autem maxime?</p></article>
+      <article class="post"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quod eius, sequi ducimus. Voluptate ab esse maiores corporis. Soluta laborum dolorum ratione, reiciendis molestias, impedit repellat debitis odio autem maxime?</p></article>
+    </section>
+    <aside class="contenido-lateral">
+    <a href="">link 1</a>
+    <a href="">link 2</a>
+    <a href="">link 3</a>
+    </aside>
+    <footer class="pie-pagina"><p>Lorem ipsum dolor sit amet</p></footer>
+</body>
+</html>
+
+
+
+/********** Media Query (consulta de medios) cambiar el tamaño de texto*********************  */
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.example {
+  background-color: lightgrey;
+  padding: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Change the font size of an element on different screen sizes</h2>
+
+<div class="example">Example DIV.</div>
+
+<p>When the browser's width is 600px wide or less, set the font-size of DIV to 30px. When it is 601px or wider, set the font-size to 80px. Resize the browser window to see the effect.</p>
+</body>
+</html>
+
+/* ***********diferentes imagenes para diferentes dispositivos******************** */
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* For width smaller than 400px: */
+body {
+    background-repeat: no-repeat;
+    background-image: url('img_smallflower.jpg');
+}
+
+/* For width 400px and larger: */
+@media only screen and (min-width: 400px) {
+    body {
+       background-image: url('img_flowers.jpg');
+    }
+}
+</style>
+</head>
+<body>
+<p style="margin-top:360px;">Resize the browser width and the background image will change at 400px.</p>
+</body>
+</html>
+
+/* ***********esta es otra manera diferentes imagenes para diferentes dispositivos************ */
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 400px)">
+  <source srcset="img_flowers.jpg">
+  <img src="img_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+<p>Resize the browser width and the background image will change at 400px.</p>
+
+</body>
+</html>
+
+/* **********************bordes con imagen******************************** */
+div
+{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(a.jpg) 10 round;
+}
+
+EJEMPLO: html----------
+ <div>
+    bus maiores eos asperiores, est? Distinctio corporis perferendis earum?
+ </div>
+
+/* **************especificar cómo se debe cambiar el tamaño de un <img> o <video>******* */
+.img
+{
+    width:100%;
+    height:300px;
+    background-image: url(a.jpg);
+    object-fit:cover;/*cortará los lados de la imagen, conservará la relación de aspecto y también rellenará el espacio*/
+}
+<img src="ruta de la imagen" alt="imagen">
+
+/* ***********************************columnas******************************** */
+.newspaper
+{
+column-count:3;  /*especifica el numero de columnas*/
+column-fill: balance; /*el balance de las columnas los valores son: auto, balance*/
+column-gap:40px;  /*El siguiente ejemplo especifica un espacio de 40 píxeles entre las columnas:*/
+column-rule-color:lightblue; /*propiedad especifica el color de linea que divide las columnas:*/
+column-rule-style:solid; /*propiedad especifica linea que divide las columnas:*/
+column-rule-width:3px; /*propiedad especifica el ancho de linea que divide las columnas:*/
+}
+h2
+{
+  column-span: all; /*especifica cuántas columnas debe abarcar un elemento.(no funciona)*/
+}
+<div class="newspaper">
+<h2>Lorem Ipsum Dolor Sit Amet</h2>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio amet expedita molestiae quisquam, illo qui excepturi, sint necessitatibus iure, enim illum. Voluptates quisquam voluptate vitae, est ullam fuga. Voluptas, eius.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae adipisci laboriosam quis, odit blanditiis quisquam, laborum omnis nesciunt voluptatum eum tenetur, molestias dolor labore accusantium voluptatibus non. Minima, assumenda, corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque atque exercitationem rerum dolores maxime fugiat, alias placeat error commodi unde eligendi nemo sapiente ducimus illo, quas quo deleniti iure!
+</div>
+
+/***************************interfaz de usuario******************************** */
+div
+{
+    resize: both;/*el usuario puede ajustar el alto y ancho de el contenedor de el texto los valores son: vertical, horizontal,both */
+    overflow: auto;
+    border: 1px solid black;
+}
+<div>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio amet expedita molestiae quisquam, illo qui excepturi, sint necessitatibus
+</div>
+
+/**************************GRID cuadricula****************************************/
+*{
+  border:3px dashed yellow;
+}
+div
+{
+background: red;
+border:3px solid black;
+font-size: 40px;
+}
+
+.contenedor
+{
+  display: grid;/*establece que es una cuadricula  */
+  grid-template-columns: repeat(3 , 1fr) ;/*establece la cantidad de columnas  */
+  grid-gap: 1px  5px;/*establece el espaci entre items  valor vertical y valor horizontal  */
+  justify-content:space-around;/* sirve para alinear los item horizontalmente los valores son space-evenly space-around space-between*/
+  align-content:space-around; /* sirve para alinear los item verticalmente los valores son space-evenly space-around space-between*/
+  /*grid-template-rows: ;*/
+}
+#cajaa
+{
+  grid-area:1/1/3/3 ;/*el item tomara el espacio que se le indique filainicia/ columnainicia/ filatermina/ columnatermina*/
+}
+#cajaf
+{
+  grid-area: 4/4/2/3 ;/*el item tomara el espacio que se le indique filainicia/ columnainicia/ filatermina/ columnatermina*/
+}
+  <span class="contenedor">
+  <div id="cajaa">1ducimus hic. Laudantium veniam repudiandae similique, pariatur eligendi!</div>
+  <div id="cajab">2spiciatis incidunt, quasi repudiandae quae expedita? Beatae dolorem incidunt asperiores, error.</div>
+  <div id="cajac">3chitecto expedita. Dolore repudiandae doloremque saepe optio!</div>
+  <div id="cajad">4aecati repudiandae, provident atque harum vel quod distinctio in.</div>
+  <div id="cajae">5dolore mollitia vitae quam consectetur vero dignissimos!</div>
+  <div id="cajaf">6ullam delectus assumenda alias corporis placeat temporibus quia inventore.</div>
+  </span>
+
+/* **************************************GRID AREA ***********************************/
+div
+{
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px;
+  font-size: 10px;
+}
+/* establecemos el nombre del area puede ser cualquiero-------------*/
+.item1 { grid-area: a; }
+.item2 { grid-area: b; }
+.item3 { grid-area: c; }
+.item4 { grid-area: d; }
+.item5 { grid-area: e; }
+.item6 { grid-area: f; }
+.item7 { grid-area: g; }
+
+
+.grid-container
+{
+  display: grid;
+  grid-template-areas:'a a a a a a'
+                      'b b c c c c'
+                      'd d c c c c'
+                      'f f g g g g'
+                      'f f e e e e';
+  grid-gap: 1px;
+  background-color: #2196F3;
+  padding: 1px;
+  height: 100vh;
+}
+<div class="grid-container">
+<div class="item1">contenido1</div>
+<div class="item2">contenido2</div>
+<div class="item3">contenido3</div>
+<div class="item4">contenido4</div>
+<div class="item5">contenido5</div>
+<div class="item6">contenido6</div>
+<div class="item7">contenido7</div>
+</div>
+
+/* *******************funciones en css******************************** */
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a:after
+{
+  content: " (" attr(href) ")";/*muestra el valor del atributo*/
+}
+
+div
+{
+  width: calc(100% - 100px);/*realiza el calculo indicado*/
+    background-color:red;
+}
+
+
+.div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);/*Un efecto de transición con velocidad variable de principio a fin*/
+}
+div:hover {
+    width:300px;
+}
+*{
+   --main-nombrevariable:blue;
+}
+
+.parr {
+    background-color: var(--main-nombrevariable);
+    padding: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>The attr() Function</h1>
+
+<p>Insert the value of the href attribute in parenthesis after each link:</p>
+
+<p><a href="https://www.w3schools.com">Visit W3Schools</a></p>
+<p><a href="https://www.w3schools.com/html/">Visit W3Schools' HTML tutorial</a></p>
+<div>h</div>
+<div class="div"></div>
+<p class="parr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+<br>
+
+<p class="parr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+</body>
+</html>
+
+/* ********************Create a and increase(contador)******************************** */
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    counter-reset: nombre-counter;
+}
+
+h2::before {
+    counter-increment: nombre-counter;
+    content: "Section " counter(nombre-counter) ". ";
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Bootstrap Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h2>PHP Tutorial</h2>
+
+</body>
+</html>
+
+/* ******************prefijos para navegadores*************************** */
+-webkit-	               Chrome, Safari, Android, iOs
+                         chromesafari
+-moz-	                   Firefox	firefox
+-o-	                     Opera
+/* video con html5 */
+
+/* ******************sprit*************************** */
+.ejemplo
+{
+    width: 100%;
+    height: 150px;
+    background-image: url(../portafolio_images/sprite.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    border-top: 1px solid;
+}
+<div class="ejemplo"></div>
+/* **************************************COUNTER***********************************/
+
+body
+{
+  counter-reset: primercontador; /* creamos el contador */
+}
+h1::before
+{
+  counter-increment: primercontador;/* incrementamos  el contador */
+  content: "opcion: " counter(primercontador) "- "; /* insertamos el conteo */
+}
+h1
+{
+  counter-reset: segundocontador;
+}
+h2::before
+{
+  counter-increment: segundocontador;
+  content: "opcion: " counter(primercontador) "- " counter(segundocontador);
+}
+
+
+/*--------------------------------------------------------------------------- */
+ol /* contador multiple */
+{
+  counter-reset: cuentamultiples; /* creamos el contador */
+  list-style-type: none; /* eliminamos las viñetas */
+}
+li::before
+{
+  counter-increment: cuentamultiples;/* incrementamos  el contador */
+  content: counters(cuentamultiples,"-") " ";/* insertamos el conteo */
+}
+
+<h1>texto
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+</h1>
+<h1>texto
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+  <h2>subtexto</h2>
+</h1>
+
+<ol>
+  <li>item</li>
+  <li>item
+    <ol>
+      <li>item</li>
+      <li>item</li>
+      <li>item
+      <ol>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+      </li>
+      <li>item</li>
+    </ol>
+  </li>
+  <li>item</li>
+  <li>item</li>
+</ol>
+/* **************************************DROPDOWN***********************************/
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {  
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+  <div class="dropdown"><!--  display: inline-block;  -->
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">  <!-- position: absolute; -->
+      <a href="#">Link 1</a><!--display: block; -->
+      <a href="#">Link 2</a><!--display: block; -->
+      <a href="#">Link 3</a><!--display: block; -->
+      </div>
+    </div>  
+    <div class="dropdown"><!--  display: inline-block;  -->
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">  <!-- position: absolute; -->
+      <a href="#">Link 1</a><!--display: block; -->
+      <a href="#">Link 2</a><!--display: block; -->
+      <a href="#">Link 3</a><!--display: block; -->
+      </div>
+    </div>
+--------------------------------------------------------------------------------------------
+nota:    un peta byte = a 1000 tera byte 
+
+
+	backface-visibility: hidden; /*oculta la cara trasera de un div  no funciono buscar mas inf*/
+
+
+---------------------------------------GIRA CARTAS 3D----------------------------------------------------------
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0;
+			display: flex;
+			min-height: 100vh;
+		}
+		
+		.contenedor{
+	width: 800px;
+	perspective: 700px; 
+	background-color: pink;
+	padding: 90px;
+	margin: auto;
+}
+
+.cubo{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	border: 1px dashed red;
+	transform-style: preserve-3d;
+	transform: rotateX(40deg);
+}
+
+.cara{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.uno{
+	background-color: green;
+	transform: translateZ(100px);		
+}
+.dos{
+	background-color: orange;
+	transform: translateX(-100px) rotateY(90deg);
+}
+.tres{
+	background-color: black;
+	transform: translateX(100px) rotateY(90deg);
+}
+.cuatro{
+	background-color: white;
+	transform: translateY(100px) rotateX(90deg);
+}
+
+	</style>
+</head>
+<body>
+	  <div class="contenedor">
+  	  <div class="cubo">
+    	<div class="cara uno">1</div>
+    	<div class="cara dos">2</div>
+    	<div class="cara tres">3</div>
+    	<div class="cara cuatro">4</div>
+    </div>
+  </div>
+</body>
+</html> -->

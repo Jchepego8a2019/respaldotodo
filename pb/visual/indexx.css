@@ -1,0 +1,350 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-size: 15px;  /* mediaquerys*/
+	text-align: center;
+	font-family: 'Fredoka One', cursive;
+}
+body
+{
+	position: relative;
+	background-color: black;
+}
+.fondocontenedor
+{
+	display: grid;
+	grid-template-columns: 1fr 0.5fr 1fr;
+	margin: 5% 5%;
+}
+.izquierdoarriba, .izquierdoabajo
+{
+	clip-path: polygon(0% 0%, 1% 50%, 10% 80%,50% 80%,70% 0%, 71% 80%, 100% 80%, 100% 100%,0% 100%);
+}
+.izquierdoarriba
+{
+	transform: rotateX(180deg);
+}
+.fondocontenedorcentro
+{
+	position: relative;
+}
+.formcomun
+{
+	display: grid;
+	vertical-align: space-between;
+	grid-gap: 0px 0px;        /* mediaquerys*/
+}
+.rombo
+{
+	width: 180px;   /* mediaquerys*/
+	height: 180px;  /* mediaquerys*/
+	margin: auto;
+	background: linear-gradient(135deg,#D328AF, blue, #D328AF);
+	position: absolute;
+	left: -108%;  /* mediaquerys*/ 
+	top: 20%;	/* mediaquerys*/
+	z-index: 999;
+	box-shadow: 15px 1px 25px grey, -15px 1px 25px grey, 1px -15px 25px grey, 1px 15px 25px grey;
+	animation: girar 1s linear 0s infinite;
+
+}
+@keyframes girar {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+.rombo1
+{
+	width: 180px;    /* mediaquerys*/
+	height: 180px;  /* mediaquerys*/
+	margin: auto;
+	background: linear-gradient(135deg,#D328AF, blue, #D328AF);
+	position: relative;
+	box-shadow: 15px 1px 25px grey, -15px 1px 25px grey, 1px -15px 25px grey, 1px 15px 25px grey;
+	animation: contrario 1s linear 0s infinite;
+	background-image: url("../imgproyectoingles/rotulo.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;	
+}
+@keyframes contrario {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(-360deg);}
+}
+.estcomun
+{
+	background: linear-gradient(135deg, #D328AF, orange, #D328AF);
+	height: 143px;
+	border-radius: 50%;
+}
+
+.derechoabajo, .derechoarriba
+{
+	clip-path: polygon(0% 0%, 1% 50%, 10% 80%,50% 80%,70% 0%, 71% 80%, 100% 80%, 100% 100%,0% 100%);
+	position: relative;
+	z-index: 998;	
+	transform: rotateY(180deg);
+}
+.derechoarriba
+{
+	transform: rotate3d(0,0,1,180deg);
+}
+.contiened
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	z-index: 10000;
+	top: -295px; 	 /* mediaquerys*/
+	grid-gap: 200px 100px;	 /* mediaquerys*/
+}
+.d
+{
+	width: 80%; /* mediaquerys*/
+	margin: auto;
+	background: linear-gradient(0deg,#D328AF, blue, #D328AF);
+	border-radius: 30%;
+	animation: camcolor 1s linear 0s infinite alternate;
+	animation-timing-function: ease-in-out;
+	color: white;
+}
+
+@keyframes camcolor {
+  0%   {background: linear-gradient(0deg,#D328AF, green, #D328AF);}
+  55% {background: linear-gradient(90deg,#D328AF, yellow, #D328AF);}
+  100% {color: transparent;}
+}
+
+.contiened:hover > .d
+{
+	animation: rotar 1s linear 0s infinite alternate;
+}
+
+nav
+{
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0% 3%;
+	margin: 10% 5%;
+	position: relative;
+	top: -250px; /* mediaquerys*/
+}
+nav div
+{
+	width: 10%;
+	height: 5px;		/* mediaquerys*/
+	background-color: yellow;
+	position: relative;	
+}
+
+nav div:nth-of-type(1)
+{
+	animation: anchodinamico 0.5s linear 0s infinite alternate;
+}
+nav div:nth-of-type(2)
+{
+	animation: anchodinamico 0.5s linear 0.3s infinite alternate;
+}
+nav div:nth-of-type(3)
+{
+	animation: anchodinamico 0.5s linear 0.6s infinite alternate;
+}
+nav div:nth-of-type(4)
+{
+	animation: anchodinamico 0.5s linear 0.9s infinite alternate;
+}
+nav div:nth-of-type(5)
+{
+	animation: anchodinamico 0.5s linear 1.2s infinite alternate;
+}
+nav div:nth-of-type(6)
+{
+	animation: anchodinamico 0.5s linear 1.5s infinite alternate;
+}
+nav div:nth-of-type(7)
+{
+	animation: anchodinamico 0.5s linear 1.8s infinite alternate;
+}
+nav div:nth-of-type(8)
+{
+	animation: anchodinamico 0.5s linear 2.1s infinite alternate;
+}
+nav div:nth-of-type(9)
+{
+	animation: anchodinamico 0.5s linear 2.4s infinite alternate;
+}
+
+@keyframes anchodinamico {
+  0%   {left: 0%;background-color: yellow}
+  50% {left: 80%;background-color: blue}
+  75% {left:20%;background-color: green}
+  100% {left:90%; background-color: pink;}
+}
+
+a
+{
+	margin-bottom: 20px;
+	font-size: 20px;    /* mediaquerys*/
+	text-decoration-line: none;
+	text-align: left;
+}
+
+a:hover
+{
+	color: black;
+	text-shadow: 0px 0px 30px white;
+}
+
+ul
+{
+	list-style-position: inside;
+}
+
+li
+{
+	margin-left: 5%;
+	text-align: left;
+}
+
+footer
+{
+	background-color: white;
+	color: purple;
+	position: relative;
+	top: -100px; 
+	margin-top: 10%;
+}
+
+@media all and (min-width: 320px){
+ 
+}
+@media all and (min-width: 375px){
+ 	.rombo
+	{
+		left: -84%;  /* mediaquerys*/ 
+	}
+	.contiened
+	{
+    	top: -282px;
+    }
+}
+@media all and (min-width: 425px){
+ 	.rombo
+	{
+		left: -70%;  /* mediaquerys*/ 
+	}
+}
+@media all and (min-width: 768px){
+	.rombo
+	{
+		left: -16%;  /* mediaquerys*/ 
+	}
+	*
+	{
+		font-size: 20px;  /* mediaquerys*/
+	}
+	.contiened
+	{
+    	top: -310px;
+    }
+    .d
+	{
+		width: 60%;
+	}
+}
+@media all and (min-width: 1024px){
+ 	.rombo
+	{
+		left: -31%;  /* mediaquerys*/ 
+		top: 6%;
+	}
+	*
+	{
+		font-size: 25px;  /* mediaquerys*/
+	}
+	.rombo, .rombo1
+	{
+		width: 300px;   /* mediaquerys*/
+		height: 250px;  /* mediaquerys*/
+	}
+	.contiened
+	{
+		top: -325px; 	 /* mediaquerys*/
+		grid-gap: 200px 100px;	 /* mediaquerys*/
+	}
+	.d
+	{
+		width: 50%;
+	}
+	a
+	{
+		font-size: 30px;
+	}
+}
+@media all and (min-width: 1440px){
+ 	.rombo
+	{
+		left: -17%;  /* mediaquerys*/ 
+		top: 2%;
+	}
+	*
+	{
+		font-size: 35px;  /* mediaquerys*/
+	}
+	.rombo, .rombo1
+	{
+		width: 350px;   /* mediaquerys*/
+		height: 310px;  /* mediaquerys*/
+	}
+	.contiened
+	{
+		top: -359px; 	 /* mediaquerys*/
+		grid-gap: 200px 100px;	 /* mediaquerys*/
+	}
+	.d
+	{
+		width: 40%;
+	}
+	a
+	{
+		font-size: 35px;
+	}
+}
+@media all and (min-width: 2560px){
+ 	.rombo
+	{
+		left: -10%;  /* mediaquerys*/ 
+		top: 1%;
+	}
+	*
+	{
+		font-size: 65px;  /* mediaquerys*/
+	}
+	.rombo, .rombo1
+	{
+		width: 550px;   /* mediaquerys*/
+		height: 450px;  /* mediaquerys*/
+	}
+	.contiened
+	{
+		top: -500px; 	 /* mediaquerys*/
+		grid-gap: 200px 100px;	 /* mediaquerys*/
+	}
+	.d
+	{
+		width: 60%;
+	}
+	a
+	{
+		font-size: 80px;
+	}
+	li
+	{
+		font-size: 70px;
+	}
+	.formcomun
+	{
+		grid-gap: 100px 0px;        /* mediaquerys*/
+	}
+}
+

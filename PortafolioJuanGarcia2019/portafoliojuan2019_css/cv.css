@@ -1,0 +1,150 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	/*background-image: linear-gradient(rgb(1, 243, 221), rgb(1, 213, 206), rgb(1, 181, 206));*/
+	background-image: url("../portafoliojuan2019_images/fondotexto.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 2%;
+	font-size: 16px;
+	font-family: 'Sriracha', cursive;
+}
+
+.btnDescargaHojaDeVida
+{
+	background-color: blue;
+	color: white;
+	width: 100%;
+	font-size: 20px;
+	border-radius: 0 0 50px 50px;
+	padding: 10px;
+	cursor: zoom-in;
+}
+
+.hojavida, .nombre, h3{
+	text-align: center;
+}
+
+h3{
+	text-decoration-line: underline;
+}
+
+.contienenombredireccion{
+	border-radius: 10px;
+	background-color: black;
+	color: white;
+	/*margin-bottom: 10px;*/
+}
+
+.contieneestudios{
+	/*background-color: rgba(1, 181, 206, 0.5);*/
+}
+
+table{
+	padding-left: 7px;
+	border-spacing: 0px 0px;
+}
+
+td{
+	padding: 5px;
+	padding-left: 5%;
+	/*border: 1px solid white;*/
+}
+
+ul{
+	/*border: 1px solid white;*/
+	list-style-type: square;
+	list-style-position: inside;
+	margin-bottom: 5%;
+	background-color: white;
+}
+
+li{
+	margin-left: 7%;
+}
+
+.idioma table tr td{
+	background-color: grey;
+	text-align: center;
+} 
+.idioma table tr + tr td{
+	background-color: white;
+	text-align: center;
+}
+
+.idioma table, .contenedorexperiencilaboral table, .referencias table, .contieneestudios table {
+	width: 100%;
+}
+
+.referencias table tr td:nth-of-type(1), .contenedorexperiencilaboral table tr td:nth-of-type(1), .contieneestudios tr td:nth-of-type(1){
+	background-color: grey;	
+	color: white;
+}
+.referencias table tr td:nth-of-type(2),.contenedorexperiencilaboral table tr td:nth-of-type(2), .contieneestudios tr td:nth-of-type(2){
+	background-color: white;	
+}
+
+/*============================RESPONSIVE=====================================*/
+@media (min-width: 756px){
+	.hojavida{
+		font-size: 45px;
+	}
+	.nombre{
+		font-size: 35px;
+	}
+    th, td, li, h3{
+		font-size: 23px;
+	}
+}
+
+
+@media (min-width: 1000px){
+	.hojavida{
+		font-size: 75px;
+	}
+	.nombre{
+		font-size: 50px;
+	}
+ 	th, td, li, h3{
+		font-size: 30px;
+	}
+	.btnDescargaHojaDeVida
+	{
+		font-size: 30px;
+	}
+}
+
+@media (min-width: 1400px){
+	.hojavida{
+		font-size: 85px;
+	}
+	.nombre{
+		font-size: 60px;
+	}
+ 	th, td, li, h3{
+		font-size: 35px;
+	}
+	.btnDescargaHojaDeVida
+	{
+		font-size: 40px;
+	}
+}
+
+@media (min-width: 2520px){
+  .hojavida{
+		font-size: 150px;
+	}
+	.nombre{
+		font-size: 95px;
+	}
+ 	th, td, li, h3{
+		font-size: 75px;
+	}
+	.btnDescargaHojaDeVida
+	{
+		font-size: 80px;
+	}
+}

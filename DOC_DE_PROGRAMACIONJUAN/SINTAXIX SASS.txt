@@ -1,0 +1,465 @@
+COMO CONVERTIR UN ARCHIVO  .SASS  A  .CSS
+1- isntalamos consola ruby
+2- tecla de windows y ponemos command 
+3- acceder a la ruta donde esta el archivo ejemplo: cd Dropbox\respaldojuanjose\formulario_completo\nombre_css
+4- escribir en consola:    sass main.sass:estilo.css
+si no queremos estar compilando el archivo a cada rato podemos usar:   sass --watch main.sass:estilo.css
+este comando estara pendiente de cualquiercambio en el documento .sass y cancelamos este comando presionando   Ctrl + C
+
+Vigilar todos los archivos 
+sass --watch carpetaorigen:carpetadestino
+
+
+cd Dropbox\respaldojuanjose\PortafolioJuanGarcia2019\portafoliojuan2019_css/
+--watch main.sass:estilos.css
+
+
+maneras de impresion a la hora de convertir de sass a css
+style (nested, expanded, compact, compressed).
+=================================================
+glosario
+& nos indica el elemento padre
+sass -v    nos indica la version de el sass
+=================================================
+
+VARIABLES EN SASS
+$red: rgb(228, 35, 23)
+$yellow: yellow
+
+p
+  color: $red
+
+a
+  color: $yellow
+
+// VARIABLE GLOBAL
+global
+$valor: 100px !global
+
+
+
+.parrafo
+  
+      font-size: $valor
+
+=================================================
+ANIDACION EN SASS
+header
+  color: red
+  nav
+    color: pink
+    // estilo para h1 y a
+    h1
+      font-size: 50px
+    a
+      color: green
+      //agregamos hover         
+      &:hover
+          font-size: 100px 
+
+=================================================
+TENER VARIOS DOCUMENTOS SASS Y IMPORTARLOS EN UN SOLO DOCUMENTO
+  
+en el docuumento principal.sass colocaremos el nombre de todos los documentos externos sass que tenemos ejemplo:
+comienzo con un  piso (underscore), de esta manera: _parcial.sass El piso (underscore) le dirá a Sass que el archivo es únicamente un parcial 
+
+documento maestro
+@import _head	   
+@import _nav           
+@import _body          
+
+parcial
+_head.sass
+
+parcial
+_nav.sass
+
+parcial
+_body.sass
+
+=================================================
+MIXIN
+
+// este es como si fuera una funcion
+=mixinPonerPrefijos($parametro, $color)
+  background-color: $color
+  border-radius: $parametro
+  -webkit-border-radius: $parametro
+  -moz-border-radius: $parametro
+
+a
+  +mixinPonerPrefijos(10px,yellow)
+
+p
+  +mixinPonerPrefijos(10px,yellow)
+
+
+=================================================
+EXTEND
+.base
+    background-color: pink
+    color: red
+    border: 10px solid green
+
+.parrafo
+    border-radius: 10px
+    @extend .base
+
+
+=================================================
+OPERACIONES +  -  *  /
+=operacion($parametro1, $parametro2)
+  font-size: $parametro1 + $parametro2
+
+p
+  +operacion(10, 100) 
+
+
+=================================================
+// #{} INTERPOLACION
+
+$attr: border
+
+$attr1: background-color
+
+
+
+
+p
+ 
+   #{$attr}: 3px dashed pink
+ 
+   #{$attr1}: red
+
+------------------------------------
+$className: 'parrafo'
+$propiedad: 'background-color'
+$value: 'red'
+
+.#{$className}
+  #{$propiedad}: #{$value}
+=================================================
+listas
+// una lista almacena valores
+
+$listauno: red, black, green
+
+$listados: (1,A) (2,B) (3,C)
+
+=================================================
+mapas
+
+$map: (col: red, col2: yellow, col3: pink)
+
+p
+ color: map-get($map, col)
+=================================================
+condicionales---------------------------------------
+IF
+$expresion: false
+@mixin example ()
+  @if $expresion == true
+    display: block
+  @else if $expresion == false
+    display: none
+  @else
+    display: flex
+
+p
+  +example()
+
+------------------------------
+FOR
+@for $i from 1 through 5
+  .some-selector#{$i}
+    width: 50%
+
+-------------------------------
+EACH
+$list: mario alejandro araque
+
+@each $var in $list
+  .name-#{$var}
+      display: block
+
+-----------------------------
+WHILE
+$count: 4
+@while $count > 0
+  .selector-#{$count}
+    display: block
+  $count: $count - 1
+
+=================================================
+=================================================
+=================================================
+=================================================
+Funciones para RGB-------------------------------------
+rgb($red, $green, $blue)
+Genera un color usando los valores red, green, y blue.
+
+rgba($red, $green, $blue, $alpha)
+Genera un color con transparencia usando los valores red, green, blue, y alpha.
+
+red($color)
+Obtiene el valor del componente red de un color.
+
+green($color)
+Obtiene el valor del componente green de un color.
+
+blue($color)
+Obtiene el valor del componente blue de un color.
+
+mix($color1, $color2, [$weight])
+Mezcla $color1 con $color2 al porcentaje dado en $weight.
+
+
+Funciones para HSL----------------------------------------
+hsl($hue, $saturation, $lightness)
+Genera un color usando valores hue, saturation, y lightness.
+
+hsla($hue, $saturation, $lightness, $alpha)
+Genera un color con transparencia usando valores hue, saturation, lightness, y alpha.
+
+hue($color)
+Obtiene el componente hue de un color.
+
+saturation($color)
+Obtiene el componente saturation de un color.
+
+lightness($color)
+Obtiene el componente lightness de un color.
+
+adjust-hue($color, $degrees)
+Cambia el hue de un color.
+
+lighten($color, $amount)
+Aclara un color.
+
+darken($color, $amount)
+Oscurece un color.
+
+saturate($color, $amount)
+Aumenta la saturación de un color.
+
+desaturate($color, $amount)
+Disminuye la saturación de un color.
+
+grayscale($color)
+Convierte un color a gris.
+
+complement($color)
+Devuelve el complemento de un color.
+
+invert($color)
+Devuelve el color opuesto.
+
+
+Funciones para transparencia----------------------------------------
+alpha($color) / opacity($color)
+Obtiene el componente alpha de un color (transparencia).
+
+rgba($color, $alpha)
+Cambia el componente alpha de un color (transparencia).
+
+opacify($color, $amount) / fade-in($color, $amount)
+Hace un color mas opaco (menos transparente).
+
+transparentize($color, $amount) / fade-out($color, $amount)
+Aumenta la transparencia.
+
+Otras Funciones de color----------------------------------------
+adjust-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha])
+Aumenta o disminuye uno o mas componentes de un color.
+
+scale-color($color, [$red], [$green], [$blue], [$saturation], [$lightness], [$alpha])
+Escala fluidamente una o más propiedades de un color.
+
+change-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha])
+Cambia una o más propiedades de un color.
+
+ie-hex-str($color)
+Convierte un color al formato entendido por filtros para IE.
+
+Funciones para cadenas----------------------------------------
+unquote($string)
+Remueve comillas de una cadena.
+
+quote($string)
+Agrega comillas a una cadena.
+
+str-length($string)
+Devuelve el número de caracteres en una cadena.
+
+str-insert($string, $insert, $index)
+Agrega $insert dentro de $string en la posición $index.
+
+str-index($string, $substring)
+Devuelve la posición de la primera ocurrencia de $substring dentro de $string.
+
+str-slice($string, $start-at, [$end-at])
+Extrae una sub-cadena de $string.
+
+to-upper-case($string)
+Convierte una cadena a mayúsculas.
+
+to-lower-case($string)
+Convierte una cadena a minúsculas.
+
+Funciones para números----------------------------------------
+percentage($number)
+Convierte un número sin unidad a un porcentaje.
+
+round($number)
+Redondea un número a un entero (sin decimales).
+
+ceil($number)
+Redondea un número al entero superior más cercano.
+
+floor($number)
+Redondea un número al entero inferior más cercano.
+
+abs($number)
+Devuelve el valor absoluto de un número.
+
+min($numbers…)
+Encuentra el valor menor de un grupo de números.
+
+max($numbers…)
+Encuentra el valor mayor de un grupo de números.
+
+random([$limit])
+Devuelve un número aleatorio (límite opcional).
+
+
+Funciones para listas----------------------------------------
+Las listas en Sass son inmutables (no se pueden modificar); todas las funciones para listas devuelver una nueva lista en vez de modificar la lista original.
+
+Todas las funciones para listas funcionan para mapas también, tratando sus valores como listas de dos valores.
+
+length($list)
+Devuelve la longitud de una lista.
+
+nth($list, $n)
+Devuelve el elemento en posición $n de una lista.
+
+set-nth($list, $n, $value)
+Reemplaza el elemento en posición $n con $value en una lista.
+
+join($list1, $list2, [$separator])
+Une dos listas en una sola.
+
+append($list1, $val, [$separator])
+Agrega un elemento al final de una lista (opcionalmente separado por $separator).
+
+zip($lists…)
+Combina multiples listas en una lista multidimensional.
+
+index($list, $value)
+Devuelve la posición de un elemento en una lista.
+
+list-separator($list)
+Devuelve el separador usado en una lista.
+
+
+Funciones para mapas----------------------------------------
+Los mapas en Sass son inmutables (no se pueden modificar); todas las funciones de mapas devuelven un mapa nuevo en vez de modificar el mapa original
+
+map-get($map, $key)
+Devuelve el valor asociado a $key de un mapa.
+
+map-merge($map1, $map2)
+Combina dos mapas en uno.
+
+map-remove($map, $keys…)
+Devuelve un nuevo mapa sin los elementos especificados en $keys.
+
+map-keys($map)
+Devuelve una lista de todos los keys en un mapa.
+
+map-values($map)
+Devuelve una lista de todos los valores en un mapa.
+
+map-has-key($map, $key)
+Devuelve verdadero o falso dependiendo de si $key existe en un mapa.
+
+keywords($args)
+Devuelve los keywords pasados a una función que acepta argumentos variables.
+
+
+Funciones para selectores----------------------------------------
+Las funciones para selectores son bastante liberales en los formatos que soportan en los argumentos para selectores.
+
+Cadenas sencillas como ".foo .bar, .baz .bang".
+Una lista de cadenas separadas por espacios (".foo" ".bar").
+Una lista de cadenas separadas por comas como (".foo .bar", ".baz .bang").
+Una lista separada por comas que contenga listas de cadenas como ((".foo" ".bar"), (".baz" ".bang")).
+En general, las funciones de selectores aceptan selectores placeholder (%foo) pero no aceptan selectores que se refieren al selector padre (&).
+
+selector-nest($selectors…)
+Anida un selector dentro de otro, como se anidarían en la hoja de estilos.
+
+selector-append($selectors…)
+Adjunta un selector a otro sin colocar un espacio entre ellos.
+
+selector-extend($selector, $extendee, $extender)
+Extiende $extendee con $extender dentro de $selector.
+
+selector-replace($selector, $original, $replacement)
+Reemplaza $original con $replacement dentro de $selector.
+
+selector-unify($selector1, $selector2)
+Une dos selectores para producir un selector que abarca elementos que coinciden con ambos.
+
+is-superselector($super, $sub)
+Devuelve verdadero o false si $super coincide con todos los elementos que $sub o posiblemente otros.
+
+simple-selectors($selector)
+Devuelve los selectores simples que componen un selector compuesto.
+
+selector-parse($selector)
+Parsea un selector en el formato devuelto por &.
+
+Funciones para instrospección----------------------------------------
+Estas funciones devuelven información acerca del código, de su contexto y entorno.
+
+feature-exists($feature)
+Devuelve verdadero o false si un feature existe en el tiempo de ejecución de Sass actual.
+
+variable-exists($name)
+Devuelve verdadero o falso si una variable con el nombre dado existe en el ámbito actual.
+
+global-variable-exists($name)
+Devuelve verdadero o falso si una variable con el nombre dado existe en el ámbito global.
+
+function-exists($name)
+Devuelve verdadero o falso si una función con el nombre dado existe.
+
+mixin-exists($name)
+Devuelve verdadero o falso si un mixin con el nombre dado existe.
+
+inspect($value)
+Devuelve la cadena que representa a un valor como sería interpretado en Sass.
+
+type-of($value)
+Devuelve el tipo de dato de un valor.
+
+unit($number)
+Devuelve el tipo de unidad asociada con un número.
+
+unitless($number)
+Devuelve verdadero o falso si un número tiene un tipo de unidad asociado.
+
+comparable($number1, $number2)
+Devuelve verdadero o falso si dos números pueden ser sumados, restados o comparados.
+
+call($name, $args…)
+Llama dinámicamente a una función de Sass.
+
+
+Funciones Miscelaneas----------------------------------------
+if($condition, $if-true, $if-false)
+Devuelve un valor u otro dependiendo de una condición.
+
+unique-id()
+Devuelve un identificador único de CSS.

@@ -1,0 +1,217 @@
+
+MODO LOCAL
+-------------------------------------------------------------------------------------------------------------
+git add .        			 (agregamos todo al stage = area de preparacion )        
+git add  [index.html]   		 (agregamos un archivo al stage)
+git add [nombreDeLaCarpeta]   	(agregamos una carpeta al stage)   
+------------------------------------------------------------------------------------------------------------
+git branch [nombreDeLaRama]    (crear una nueva rama)
+git branch -d [nombreDeLaRama]   (eliminar una rama)
+git branch --all      (muestra todas las ramas)
+------------------------------------------------------------------------------------------------------------
+git checkout [NombreDeLaRama]   (sirve para cambiar de rama)
+git checkout -b [nombreDeLaRama]   (es una variacion para crear una rama y que nos lleve directamente a ella)
+------------------------------------------------------------------------------------------------------------
+git config --global user.name "jgo8a"	(configurar nombre de usuario en git)
+git config --global user.email "j8asoul2014@gmail.com"	(configurar correo de usuario en git)
+git config --global alias.nombreApodo "comandoEjemplo_status"  (quieres ponerle alias o apodos a los comandos)
+git config --global -l	    (para saber los valores de usuario se usuario)
+------------------------------------------------------------------------------------------------------------
+git commit -m "mensaje"     (confirmamos que los archivos fueron enviados a la rama principal)
+git commit --amend -m "nuevo mensaje"      (si solo queremos cambiar el mensaje de confirmacion de el commit que acabamos de crear)
+-----------------------------------------------------------------------------------------------------------
+git diff     (muestra sólo los cambios que no todavia no hemos agregado el stage osea despues de l modificar un archivo escribe esto en consola git diff)
+git diff –-cached  [nombre carpeta o documento]    (Ese comando compara lo que hay en tu directorio de trabajo(working directory) con lo que hay en tu área de preparación (staging area. o stage) El resultado te indica los cambios que has hecho) 
+git diff –-staged   (Ese comando compara lo que hay en tu directorio de trabajo con lo que hay en tu área de preparación. El resultado te indica los cambios que has hecho) 
+------------------------------------------------------------------------------------------------------------
+git help [nombreComando]    (ayuda de los comandos)
+----------------------------------------------------------------------------------------------------------
+CUANDO QUIERAS CREAR RESPALDO DE UNA CARPETA  DOCUMENTO O PROYECTO POR PRIMERA VEZ HAY QUE USAR ESTE COMANDO
+git init       (inicializa un repositorio o documento que esta oculto)
+-------------------------------------------------------------------------------------------------------------
+gitk  ( herramienta más gráfica para visualizar el histórico de confirmaciones)
+-------------------------------------------------------------------------------------------------------------
+git log      (ver lista de cambios, los puntos o hitos en el tiempo)
+git log  --oneline --decorate --all --graph     (para ver el log resumido de esta rama)
+git log -p     (muestra las diferencias introducidas en cada confirmación)
+git log -2      (hace que se muestren únicamente las dos últimas entradas del histórico)
+------------------------------------------------------------------------------------------------------------
+git mv nombreArchivo.extencion  nuevoNombreDoc.extencion      (cambiar el nombre del archivo que esta commit)
+------------------------------------------------------------------------------------------------------------
+git merge [LaRamaprincipal]   (primero debemos estar en la rama principal(master) y asi podemos unir la rama secundaria con la principal)
+(primer tipo de rama merge o fast forwork(trabajo rapido)  funciona: siempre y cuando el contenido de esta rama no interfiera con el contenido de la rama principal)
+----------------------------------------------------------------------------------------------------------
+git push [origin] [master]  (Este comando funciona únicamente si has clonado de un servidor en el que tienes permiso de escritura, y nadie ha enviado información mientras tanto. Si tú y otra persona clonais a la vez, y él envía su información y luego envías tú la tuya, tu envío será rechazado. Tendrás que bajarte primero su trabajo e incorporarlo en el tuyo para que se te permita hacer un envío.)
+----------------------------------------------------------------------------------------------------------
+git reflog  (sirve para verificar el historico mas detallado)
+----------------------------------------------------------------------------------------------------------
+git remote -v  (Para ver qué repositorios remotos tienes configurados)
+
+git remote add [remote-name] [url]      (agregamos el repocitorio remota  que esta en github donde estaremos enviando los cambios de nuestro proyecto se envian haciendo un push
+ejemplo:git remote add myalias https://github.com/Jchepego8a2019/proyectoweb2019.git   (podemos agregar tantos repositorios remotos  como necesitemos cada uno con su alias)
+
+git remote show [remote-name]      (información detallada de un repositorio remoto)
+----------------------------------------------------------------------------------------------------------
+git reset nombreDelArchivo.extencion    (para quitar un elemento del stage)
+git reset nombreDeCarpeta/*.extencion     (para quitar por filtrado varios elementos  del stage)
+git reset --soft numeroDelCommit      (sirve para dar un paso atras del ultimo commit pero no recupera el documento simplemente se esta ubicando en un punto o hito en el tiempo)
+git reset --hard [numeroDelCommitADondeQueremosRegresar]     (con este comando nos ubicamos en el commit que deseamos y nuestro archivos seran los que guardamos en ese commit para saber a que punto queremos ir podemos utilizar git reflog ver el codigo en la columna izquierda)           
+******IMPORTANTISIMO ASI RECUPERAMOS UNA VERSION ANTERIOR************************
+git reset --mixed numeroDelCommitADondeQueremosRegresar(nos regresara hasta este hito o punto y los commit que se hicieron de ese punto en adelante no existiran pero el documento conservara los cambios realizados en estos)    
+----------------------------------------------------------------------------------------------------------
+git rm [nombreDoc.extencion]    (sirve para eliminar un documento que ya esta commit o confirmado)
+git rm --cached [readme.txt]   (puede que ya llevas un control de un documento o carpeta.  pero quieres interrumpir su seguimiento por parte de Git.)
+----------------------------------------------------------------------------------------------------------
+git status	      (saber el estado de los archivos que no esta llevando un control de cambios)
+git status [*.extencion]       (tambien podemos ver el estado filtrando por medio de la extencion)
+
+git show [nombreDelTag]         (podemos ver el dettalle de lo que contiene ese commit)
+git show [numero_commit]       (muestra el detalle del commit o SHA-1)
+------------------------------------------------------------------------------------------------------------
+git tag [nombreDeEtiqueta]            (sirve para crear etiquetas para un commit)
+git tag                     (consultar el nombre de nuestra etiqueta)
+git tag -d [nombreDeEtiqueta]      (sirve para borrar la etiqueta)
+--------------------------------------------------------------------------------------------------------------
+git --version      (para saver la version de git en la terminal o git bash)
+----------------------------------------------------------------------------------------------------------
+.gitignore      (para decirle a git que ignore documentos o carpetas se crea un documento sinNombre.gitignore y este debe de estar a la altura de la carpeta  .git  dentro de este documento pondremos las extenciones o carpetas que no queremos que se lleve un control de version)
+------------------------------------------------------------------------------------------------------------    
+q    (con esta letra salimos del menu de git log)
+----------------------------------------------------------------------------------------------------------
+
+
+
+GITHUB
+nombre de usuario:  Jchepego8a2019
+email:    j8asoul2014@gmail.com
+contraseña:   Soul$oul2017
+----------------------------------------------------------------------------------------------------------
+COMO AGREGAR REPOSITORIOS REMOTOS (estos repositorios estan creados en github)
+1- nos ubicamos a la altura de la carpeta o archivos que llevamos el control de version local
+2- git remote add [alias o apodo] [url]         ejemplo(git add respRpesitorio https://github.com/Jchepego8a2019/prueba.git)
+3- git add .       (agregamos los documentos o carpetas  al stage)
+4- git commit -m "msj commit"        (confirmamos los archivos)
+5 - git push [alias o apodo] [rama donde estamos]        ejemplo(git push respRpesitorio master)
+----------------------------------------------------------------------------------------------------------
+PARA CREAR UN REPOSITORIO EN GITHUB Y LLEVAR EL CONTROL DE UN DOCUMENTO
+QUE ESTA EN NUESTRA PC POR PRIMERA VEZ 
+1-ingresas a https://github.com/Jchepego8a2019
+2-buscas la opcion Nuevo repositorio y le pones un nombre
+3-buscas los archivos que quieres llevar un control         
+4-con la consola cmd o gitbash dirigete a la ubicacion de tus archivos   ejemplo:( cd Users\michi\Dropbox\respaldojuanjose\PortafolioJuanGarcia2019 )
+5-git init    (para iniciar un repositorio local)
+6-git add .        (agregas los archivos o carpetas)                                                               
+7-git commit -m "mensajeReferenteAloqueestamosGuardando"       (conmirmas los archivos o la carpeta)
+8-git remote add [alias o apodo] https://github.com/Jchepego8a2019/portafolio13junio19.git                    (esta direccion es la que nos aparece en git hub cuando creamos el repositorio)
+9-git push -u [alias o apodo] master            (master es nombre de la rama donde estamos)
+10-pide las credeciales de github  (nombre de usuario:  Jchepego8a2019   y  contraseña:   Soul$oul2017)
+11-regresamos a nuestro perfil en github y podemos ver ya nuesto documento  si realizamos cambios en los documentos o agregamos nuevos haremos lo siguiente
+--------------------------------------------------------------------------------------------------------------------------------------
+CLONAR UN REPOSITORIO EN OTRA PC O EN OTRA CARPETA
+1- abrimos la carpeta donde queremos clonar nuestro repositorio
+2- en github le damos click al repositorio que queremos clonar  y buscamos un boton que dice "clone or donwload"
+3-copiamos la ruta que aparece ahi ejemplo: https://github.com/Jchepego8a2019/REPOSITORIO2.git
+4-en nuestra consola y escribimos   git clone [url]      ejemplo(git clone https://github.com/Jchepego8a2019/REPOSITORIO2.git)
+5-y el repositorio se clonara
+---------------------------------------------------------------------------------------------------------------------------------------
+GUARDAS LOS CAMBIOS DE UN REPOSITORIO QUE CLONAMOS EN OTRA PC  Y LUEGO  ENVIARLO A GITHUB 
+1-con la consola nos ubicamos en la carpeta que contiene el documento que le hemos hecho el cambio
+2-git status (al ejecutar este comamdo devemos de estar a la altura del repositorio(carpeta) que clonamos)
+3-git add . 
+4-git status
+5-git commit -m "mensajeReferenteAloqueestamosGuardando"
+6-git push origin master(nombre de la rama donde estamos)
+7-pide las credeciales de github  (nombre de usuario:  Jchepego8a2019   y  contraseña:   Soul$oul2017)
+8-regresamos a nuestro perfil en github y podemos ver ya nuesto documento modificado
+--------------------------------------------------------------------------------------------------------------------------------------
+USAR GIT PULL  
+1-ingresas a https://github.com/Jchepego8a2019
+2-buscamos el repositorio y damos click
+3-click en create new file y colocamos nombre.ext,  la sintaxis del codigo,  nombre del commit, etc  y aceptar
+4-en la consola buscamos la ubicacion donde queremos que agrege ese documento siempre y cuando pertenezca al directorio
+5-git pull
+6-listo
+-----------------------------------------------------------------------------
+COPIAR UN REPOSITORIO DE TERCEROS EN MI PERFIL DE GITHUB
+1-busca el repositorio que te interese
+2.-en tu perfil de github en la esquina superior derecha aparece esta opcion FORK(tenedor)  dale click
+-----------------------------------------------------------------------------
+COMO HACER TRABAJO COLABORATIVO USANDO NEW PULL REQUEST
+1-hacemos un fork al repositorio donde queremos aportar 
+2-clonamos ese repositorio en nuestar pc 
+3-realizamos los cambios  a el o los documentos que queremos mejorar 
+4-guardamos esos cambios en el repositorio que esta en github
+5-presionamos el boton new pull request
+6-dar click en el boton crear solicitud de extraccion
+----------------------------------------------------------------------------
+COMO ENMENDAR UN COMMIT OSEA  AGREGAR ALGO DE ESE COMMIT
+1- git add .
+2- git commit -m 'initial commit       (en este punto nos dimos cuenta que nos falto agregar un archivo a este commit)
+3- git add documentoOcarpetaolvidado.extencion         (agregamos el documento o carpeta)
+4- git commit --amend   (despues de escribir este comando nos aparecera una pantalla)
+5- (en esta pantalla presionamos la tecla scape y luego damos click en la parte inferior izquierda y escribimos lo siguiente   :wq  y enter  y ya esta enmendado el commit)
+----------------------------------------------------------------------------
+PROCESO PARA HACER UN MERGE
+1- ya se le esta haciendo seguimiento al documento en la rama master(principal)
+2- creamos una rama llamada fast forwork con el comando  git checkout -b nombreDeLaRama
+3- ya estando en la rama secundaria realizamos los cambios al documento  y  le hacemos un commit 
+4-regresamos a la rama master(principal)
+5-ahora ejecutamos el comando   git merge nombreDeLaRama y asi integraremos los cambios realizados en la rama secundaria pasaran al documento que esta en la rama principal  
+6-nos dara un mensaje dice: Al ready up-to-date
+----------------------------------------------------------------------------
+COMO HACER UN FETCH Y UN MERGE
+1- clonamos un repositorio de github ya sea nuestro o de terceros
+2- git remote -v   (vemos el remote-name)
+3- git fetch [remote-name]    (extraer los cambios que tu o otra persona haga al  repositorio que esta en github)  ejemplo(git fetch origin) 
+4- git merge [rama]       (unimos la rama remota a la rama master)  ejemplo(git merge origin)
+
+TAMBIEN PODEMOS USAR PULL
+1- clonamos un repositorio de github ya sea nuestro o de terceros
+2- git remote -v   (vemos el remote-name)
+3- git pull [remote-name]   (con este comando busca los cambio en el repositorio remoto y hace merge de una sola vez simplifica lo que hicimos anteriormente)
+----------------------------------------------------------------------------
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+APRENDE SOBRE CMD
+dir  (ver los directorios)
+cls  (limpiar pantalla)
+cd nombre_de_carpeta  (cambiamos de directorio)
+cd .. (sirve para regresar un directorio)
+cd / (regresa al dsco c)
+---------------------------------------------------------------------------
+APRENDE GIT BASH
+ls (vemos el contenido de un directorio)
+mkdir (crear un directorio o carpeta)
+git  (podremos ver todos los comandos de git)
+git help [comando]   (ejemplo:  git help push)
+git commit  (nos ingresa a una pantalla donde podemos escribir el mensaje del commit     damos click en la parte inferior izquierda de la pantalla y escribimos loesiguiente   :wq)
+git --version
+para salir de el menu de edicion de git bash se ocupa letra "q"  tambien tecla "scape"  guardar los cambios cuando  estamos en modo edicion en git bash se usa := :wq 
+El mecanismo que usa Git para generar esta suma de comprobación se conoce como hash SHA-1. Se trata de una cadena de 40 caracteres hexadecimales (0-9 y a-f)
+24b9da6552252987aa493b52f8696cd6d3b00373
+
+Git tiene tres estados principales en los que se pueden encontrar tus archivos: confirmado (committed), modificado (modified), y preparado (staged). 
+
+Confirmado significa que los datos están almacenados de manera segura en tu base de datos local. Modificado significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos. Preparado significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima confirmación.
+
+Esto nos lleva a las tres secciones principales de un proyecto de Git: el directorio de Git (Git directory), el directorio de trabajo (working directory), y el área de preparación (staging area).
+
+al usar git bash escribimos:     cd "carpeta nueva1"            (para cambiarnos de directorio  si la carpeta tiene un nombre separado)         
+
+al usar git bash escribimos:      cd --       (te regresa al inicio de todos los archivos)
+
+al usar git bash escribimos:   clear  (limpia la pantalla)
+
+al usar git bash escribimos:   ls    (muestra el contenido del directorio)

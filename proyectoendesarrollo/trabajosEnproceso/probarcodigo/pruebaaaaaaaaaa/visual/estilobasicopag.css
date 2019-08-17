@@ -1,0 +1,51 @@
+
+		*{border: 1px solid red;}
+		.item1 { grid-area: div1; }
+		.item2 { grid-area: div2; }
+		.item3 { grid-area: div3; }
+		.item4 { grid-area: div4; }
+		.item5 { grid-area: div5; }
+		.item6 { grid-area: div6; }
+		.item7 { grid-area: div7; }
+		.item8 { grid-area: div8; }
+		.item9 { grid-area: div9; }
+		.item10 { grid-area: div10; }
+		.item11 { grid-area: div11; }
+		.item12 { grid-area: div12; }
+		.item13 { grid-area: div13; }
+		.item14 { grid-area: div14; }
+		.item15 { grid-area: div15; }
+		.item16 { grid-area: div16; }
+		.item17 { grid-area: div17; }
+		.item18 { grid-area: div18; }
+		.item19 { grid-area: div19; }
+		.item20 { grid-area: div20; }
+		.item21 { grid-area: div21; }
+		.item22 { grid-area: div22; }
+		.item23 { grid-area: div23; }
+		.item24 { grid-area: div24; }
+		.item25 { grid-area: div25; }
+		.item26 { grid-area: div26; }
+		.item27 { grid-area: div27; }
+		.item28 { grid-area: div28; }
+		.item29 { grid-area: div29; }
+		.item30 { grid-area: div30; }
+		.item31 { grid-area: div31; }
+		.item32 { grid-area: div32; }
+		.item33 { grid-area: div33; }
+		.item34 { grid-area: div34; }
+		.item35 { grid-area: div35; }
+		.item36 { grid-area: div36; }
+		.item37 { grid-area: div37; }
+		.item38 { grid-area: div38; }
+		.item39 { grid-area: div39; }
+		.item40 { grid-area: div40; }
+		
+		
+		.grid-container
+		{
+			display: grid;
+			grid-template-areas:  'div1 div1 div1 div1 div1 div1 div2 div2 div2 div2 div2 div2 div2';
+			grid-gap: 1px  1px;
+		}
+	

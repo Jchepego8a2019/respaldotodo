@@ -1,0 +1,39 @@
+EN WINDOWS
+configurar xamp para ver tu servidor local desde otro dispositivo conectado ayu misma red 
+1- cmd  escribir     ipconfig
+2- saldra lo siguiente
+	Sufijo DNS específico para la conexión. . : hitronhub.home
+   	Vínculo: dirección IPv6 local. . . : fe80::8dea:6a8b:c834:c24f%8
+  	 Dirección IPv4. . . . . . . . . . . . . . : 192.168.0.11
+   	Máscara de subred . . . . . . . . . . . . : 255.255.255.0
+  	 Puerta de enlace predeterminada . . . . . : 192.168.0.1
+3- en un navegador ponemos la ip de puerta de enlace y usuario y contraseña de nuestro rauter
+4- ahi buscaremos la opcion de configurar servidor DHCP (se encarga de asignarles las ip automaticamente)
+podermos ver en que rangos esta asignando ip automaticas y no sotros utilizaremos ip por debajo de ese rango
+4- copiamos la ip de nuestro servidor DNS (se encarga de saber a que ip coresponde ese dominio osea el nombre de la web)
+5- configurar conexiones de red 
+	5-a) click en configuracion ipv4 
+	5-b) ponerla en manual y asignamos la ip fija que sera por debajo de el rango que otorga el DHCP
+	5-c) ponemos la mascara de subred
+	5-d) ponemos la ip del DNS que copiamos en el paso 4
+
+	Información de la WAN
+	DNS Server	179.51.50.203
+			179.51.50.202
+	
+	IP inicial del DHCP	
+	192.168.0.10
+	IP final del DHCP	
+	192.168.0.199
+6- reiniciar la pc
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EN XAMPP
+0- buscar en google  abrir acceso por red a xampp
+1- abrimos xampp
+2- damos click en "config" en el servidor de apache
+3- en el submenu buscamos "apacheatth xampp confg"
+4- casi al final del documento
+5-remplazamos los archivos que estan en la url:  ( https://web.tecnodus.com/desarrollo-web/apache/abrir-acceso-por-red-a-xampp )
+
+

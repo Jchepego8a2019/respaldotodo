@@ -1,0 +1,205 @@
+<!-- actualizado 20/07 11:40 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Michelangelo</title>
+	<style>
+.body
+{
+	margin: auto;
+	padding: 0;
+	--main-tmno: 300px;/* cambiar tamaño se ajusta todo los demas aotomaticamente    */
+	--mover-ojo-X: 0%; /* cambiar direccion en x y se ajusta todo los demas aotomaticamente    */
+	--mover-ojo-Y: 0%;/* cambiar direccion en y se ajusta todo los demas aotomaticamente    */
+	background-color: orange;	
+	border: 1px solid red;
+	border-radius: 20%;
+}
+.contieneojo1, .contieneojo2  
+{
+	width: var(--main-tmno);
+	height: calc(var(--main-tmno) - 150px);
+	background-color: white;
+	display: inline-block;
+	border-radius: 100%;
+	margin: 1% 6%;
+	overflow: hidden;
+	position: relative;	
+}
+.parpado1, .parpado2
+{
+	width: 100%;
+	height: 0%;
+	background-color: #CFFCDC;
+	position: absolute;
+	z-index: 99;						
+	margin: auto;
+}
+.parpadeoautomatico
+{
+	animation: parpadear 0.5s;
+}
+@-webkit-keyframes parpadear
+{
+  0%
+  {
+    height: 0%;
+  }
+  50%
+  {
+    height: 100%;
+  }
+  100%
+  {
+  	height: 0%;
+  }
+
+}
+.critalino1, .critalino2
+{
+	width: 50%;
+	height: 50%;
+	background-color: black;
+	border-radius: 50%;
+	margin: auto;
+	position: relative;
+	left: var(--mover-ojo-X);
+	top: var(--mover-ojo-Y);
+	z-index: 2;
+}
+.iris1, .iris2
+{
+	width: 20%;
+	height: 10%;
+	margin: auto;
+	background-color: white;
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	left: var(--mover-ojo-X);
+	top: calc(var(--mover-ojo-Y) - 10%);
+}
+.tortuga
+{
+	width: 600px;
+	height: 600px;
+	background-image: url("tm.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+input
+{
+	width: 25%;
+	height: 25%;
+}
+h1, a
+{
+	font-size: 55px;
+	color: orange;
+}
+</style>
+</head>
+<body>
+<a href="../principalinicio.html">regresar</a>
+<h1>Michelangelo</h1>
+<div class="body" id="bdy">
+	<div class="contieneojo1" id="oo">
+		<div class="parpado1" id="par1"></div>
+		<div class="critalino1">
+			<div class="iris1"></div>
+		</div>
+	</div>
+	<div class="contieneojo2">
+		<div class="parpado2" id="par2"></div>
+		<div class="critalino2">
+			<div class="iris2"></div>
+		</div>
+	</div>
+</div>
+<input type="range" name="tamano" min="300" max="900" id="rang" value="300" step="1">
+<div class="tortuga"></div>
+</body>
+<script>
+	//-------------------------PARPADEAR-------------------------------------
+	  var v;
+	  var ceja1 = document.getElementById('par1');
+	  var ceja2 = document.getElementById('par2');
+	  cont = 0;
+	  setInterval( function()
+	  {
+	  	if (cont == 2) 
+		{
+			cont = 0;
+			ceja1.className = "parpado1";
+			ceja2.className = "parpado1";
+		}
+	  	 var v = Math.floor(Math.random() * 5000) + 1000; // regresaun numero aleatorio entre 0 y 10
+	     setTimeout(function()
+		{		
+		  ceja1.className = "parpado1 parpadeoautomatico";
+		  ceja2.className = "parpado1 parpadeoautomatico";
+		}, v);
+	    cont++;
+	  }, 5000);
+
+     //----------------------MOVER OJOS-----------------------------------------
+    var bdy = document.getElementById('bdy'); //obtenemos el contenedor
+    var ojo = document.getElementById('oo');  //obtenemos el forma el ojo 
+
+    document.addEventListener("touchmove",tchprb);
+	function tchprb(evt) 
+	{
+		var m = evt.touches[0];
+		movimiento(m);
+	}
+
+	document.addEventListener("mousemove", movimiento);//evento de movimiento de mause
+	bdy.style.setProperty('--mover-ojo-X', "0%"); //accedemos a la variable centramos el iris
+	bdy.style.setProperty('--mover-ojo-Y', "0%");//accedemos a la variable centramos el iris
+	function movimiento(e)
+	{	
+	  var ojow = ojo.clientWidth / 11;//obtenemos el ancho dividido 11 porciones
+	  var ojowneg = -Math.abs(ojow); //solo convertimos ojow a negativo
+	  var ojoh = ojo.clientHeight / 3; //obtenemos el alto dividido en 3 partes
+	  var ojohneg = -Math.abs(ojoh); //solo convertimos ojoh a negativo
+	  var w = bdy.clientWidth / 2;//obtenemos la mitad del ancho del elemento
+	  var h = bdy.clientHeight / 2;//obtenemos la mitad de la altura del elemento
+	  var x = e.pageX - w;
+	  var y = e.pageY - h;
+	  //--------------------------------------------
+	  if (x > 0 && x < ojow) 
+	  {
+	  	console.log("limite derecha");
+	  	bdy.style.setProperty('--mover-ojo-X', x + "%");
+	  }
+	  if (x < 0 && x > ojowneg)
+	  {
+	  	console.log("limite izquierda");
+	  	bdy.style.setProperty('--mover-ojo-X', x + "%");	
+	  }
+     //-----------------------------------------------
+	  if (y > 0 && y < ojoh) 
+	  {
+	  	console.log("limite abajo");
+  	  	bdy.style.setProperty('--mover-ojo-Y', y + "%");
+	  }
+	  if (y < 0 && y < ojohneg)
+	  {
+	  	console.log("limite arriba");
+	  	bdy.style.setProperty('--mover-ojo-Y', y + "%");	
+	  }
+	}
+
+	//-------------------------AJUSTAR TAMAÑO----------------------------------
+	var rango = document.getElementById("rang");
+	rango.addEventListener('change',cambiatamano);
+
+	function cambiatamano()
+	{
+		var Tmno = document.getElementById('rang').value;
+		console.log(Tmno);
+		bdy.style.setProperty('--main-tmno', Tmno + "px");	
+	}
+</script>
+</html>

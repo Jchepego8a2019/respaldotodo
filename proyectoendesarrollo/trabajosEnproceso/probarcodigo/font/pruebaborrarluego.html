@@ -1,0 +1,351 @@
+﻿<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin: 0;
+			display: flex;
+			min-height: 100vh;
+		}
+		
+		.contenedor{
+	width: 800px;
+	perspective: 700px; 
+	background-color: pink;
+	padding: 90px;
+	margin: auto;
+}
+
+.cubo{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	border: 1px dashed red;
+	transform-style: preserve-3d;
+	transform: rotateX(40deg);
+}
+
+.cara{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.uno{
+	background-color: green;
+	transform: translateZ(100px);		
+}
+.dos{
+	background-color: orange;
+	transform: translateX(-100px) rotateY(90deg);
+}
+.tres{
+	background-color: black;
+	transform: translateX(100px) rotateY(90deg);
+}
+.cuatro{
+	background-color: white;
+	transform: translateY(100px) rotateX(90deg);
+}
+
+	</style>
+</head>
+<body>
+	  <div class="contenedor">
+  	  <div class="cubo">
+    	<div class="cara uno">1</div>
+    	<div class="cara dos">2</div>
+    	<div class="cara tres">3</div>
+    	<div class="cara cuatro">4</div>
+    </div>
+  </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload="startDB();">
+	<input type="text" id="dni" placeholder="enterdni">
+	<input type="text" id="name" placeholder="enter name">
+	<input type="text" id="apelldo" placeholder="enter apellido">
+	<button type="button" onclick="add();">save</button><hr>
+	<div class="elemnts">
+	<button type="button" onclick="loadAll();">obtener los datos por el id</button>
+	<button type="button" onclick="ordenar();">ordenar por nombre</button>
+
+	<script>
+	//pasos
+	//1- crear la DB 
+		//a- usando atributos indexedDB
+		//b- metodo open
+	//2- crear el objeto
+		//a- usando createObjectStore
+	//3- crear transacciones
+		//a- metodo transaction
+	//4- agregar elementos
+		//a- metodo add
+	//5- mostrar elementos 
+		//a- abrir el cursor con el metodo openCursor
+
+
+		//se crea el objeto indexedDB segun en el navegador donde estamos 
+		var base_indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB|| window.msIndexedDB;//paso1
+
+		var dataBase = null;
+
+		function startDB()
+		{
+			//abre la base de datos y si no existe la crea el primer parametro es el nombre y el segundo es la version de almacen
+			dataBase = base_indexedDB.open("nombrebasededatos_object", 1); //paso2
+
+			// este es parametro del objeto indexedDB solo se ejecuta si se crea por primera vez la base de datos o si cambiamos la version del almacen solo asi se ejecutara onupgradeneeded
+			dataBase.onupgradeneeded = function(e)  //paso3
+			{
+			 	alert("secreo o cambio base de datos o se cambio version");
+			 	//creamos un objeto donde por obligacion tiene que llevar estos dos prametrso que no son más que la llave primaria 
+			 	var options = { 
+			 		keyPath : 'id', //keyprimary
+			 		autoIncrement : true  //se auto incremente
+			 	};
+			 	//con esta sentencia obtenemos la conexion activa a la base de datos      (nota:  en el almacen se almacenan objetos)
+			 	var active = dataBase.result;    //paso4
+			 	//creamos el almacen primer parametro es el nombre y el segundo un objeto que lleva las especificaciones del almacen
+			 	var object = active.createObjectStore('peaple', options); //paso4
+			 	// crea un indice by_name y un name donde la propiedad unique false indica que no es unico y se podra epetir
+			 	object.createIndex('by_apellido', 'apellido', { unique : false });  //paso5
+			 	object.createIndex('by_name', 'name', { unique : false });  //paso5
+			 	// crea un indice by_dni y un dni donde la propiedad unique true indica que si es unico y no se  podra epetir
+			 	object.createIndex('by_dni', 'dni', { unique : true }); //paso5
+		    };
+
+		    //si se crea la base de datos y no hay un error se ejecutara onsuccess
+		    dataBase.onsuccess = function(e)
+		    {
+		    	alert("se creo el almacen con su index");
+		    };
+
+		    //si no se  crea la base de datos y  hay  errores se ejecutara onerror
+		    dataBase.onerror = function(e)  //paso6
+		    {
+		    	alert("no se cargo base de datos");
+		    };
+		}
+
+		//---------------------------INGRESAR DATOS --------------
+		function add()
+		{
+			//obtenemos el resultado de la base de datos
+			var active = dataBase.result;//paso1
+			//creamos la transaccion para ingresar los datos, los modos so:  readonly(lectura),  readwrite(lectura y escritura)      ["peaple"] este parametro es un array
+			var data = active.transaction(["peaple"], "readwrite"); //paso2
+			//vamos a darle instruciones
+			var objetc_instruccion = data.objectStore('peaple'); //paso3
+			//un put es la actualizacion de datos
+    		var request_ = objetc_instruccion.put({  //paso4
+    			dni : document.querySelector('#dni').value,
+    			name : document.querySelector('#name').value,
+    			apellido : document.querySelector('#apelldo').value
+    		});
+    		
+    		request_.onerror = function(e)
+    		{
+    			alert(request_.error.name + '/n/n' + request_.error.massage);
+    		};
+
+    		data.oncomplete = function(e)
+    		{
+    			document.querySelector('#dni').value = '';
+    			document.querySelector('#name').value = '';
+    			document.querySelector('#apelldo').value = '';
+    			alert('se completo todas las instruciones');
+    		};
+		}
+		
+		//----------------------------------EXTRAER LOS DATOS DE LA BASE DE DATOS----------------------------------------------		
+		function loadAll()
+		{
+			var active = dataBase.result;
+			var data = active.transaction(['peaple'], 'readonly');
+			var object = data.objectStore('peaple');
+			var elements = [];
+			//ejecutamos un metodo de indexedDB y abre el almacen peaple y coloca el puntero en la posicion inicial que es 0
+			object.openCursor().onsuccess = function(e)
+			{
+
+				//asignamos el resultado del evento que es el un objeto IDBCursorWithValue ose la posicion del cursor
+				var result = e.target.result;
+				//este if controla un bug que se genera cuando result es null
+				if (result === null) 
+				{
+					return;
+				}
+				//para extraer los objetos que estan almacenados en result y los guardaremos en un arrys
+				elements.push(result.value);
+				//el cursor continua
+				result.continue();
+			};
+
+			data.oncomplete = function()
+			{
+				for (var key in elements)
+				{
+					console.log(elements[key].dni+ "  " +elements[key].name+ "  " +elements[key].apellido);					
+				}
+			}
+		}
+
+
+		function ordenar()
+		{
+			var active = dataBase.result;
+			var data = active.transaction(['peaple'], 'readonly');
+			var object = data.objectStore('peaple');
+			//con este codigo estamos accediendo a una especie de subindice y se obtienen ordenadolo los datos apartir de ahi
+			var subindice = object.index('by_apellido');//podemos usar el indice que necesitamos 'by_name' 'by_apellido'
+			var elements = [];
+			subindice.openCursor().onsuccess = function(e)
+			{
+
+				//asignamos el resultado del evento que es el un objeto IDBCursorWithValue ose la posicion del cursor
+				var result = e.target.result;
+				//este if controla un bug que se genera cuando result es null
+				if (result === null) 
+				{
+					return;
+				}
+				//para extraer los objetos que estan almacenados en result y los guardaremos en un arrys
+				elements.push(result.value);
+				//el cursor continua
+				result.continue();
+			};
+
+			data.oncomplete = function()
+			{
+				for (var key in elements)
+				{			
+					console.log(elements[key].dni+ "  " +elements[key].name+ "  " +elements[key].apellido);					
+				}
+			}
+		}
+	</script>
+</body>
+</html>
+
+ -->
+<!--  <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<link href="https://file.myfontastic.com/x675ByACzNkatzsL2WUMgV/icons.css" rel="stylesheet"> 	
+ 	<link rel="stylesheet" href="fontastic/styles.css">
+ 	<title>Document</title>
+ 	<style>
+ 		div
+ 		{
+ 			font-size: 100px;
+ 			color: white;
+ 			background-color: red;
+ 			display: inline-block;
+ 		}
+ 	</style>
+ </head>
+ <header>
+ </header>
+ <body>
+ 	<div class="icon-full"></div>
+ 	<div class="icon-500px"></div>
+ </body>
+ </html> -->
+<!--  <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ 	<style>
+ 		#h
+ 		{
+ 			width: 600px;
+ 			height: 600px;
+ 			background-color: red;
+ 		}
+ 		#mostrar
+ 		{
+ 			width: 100px;
+ 			height: 100px;
+ 			background-color: yellow;
+ 		}
+ 	</style>
+ </head>
+ <body>
+
+ 	<div id="h">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero totam fuga minus, repudiandae itaque amet sunt esse, ipsa nisi laudantium distinctio. Libero neque iure, ex inventore ullam facilis quibusdam magnam?
+ 	<div id="mostrar">ppppppppppp</div>
+ 	</div>
+ 	
+
+
+<script>
+	var gt = document.getElementById("h");
+	var most = document.getElementById("mostrar");
+		gt.addEventListener("touchmove",tochprueba);
+		function tochprueba(evt) 
+		{
+			var m = evt.touches[0];
+			most.innerHTML = m.pageX;
+		}
+</script>
+ 	
+ </body>
+ </html> -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Document</title>
+ 	<style>
+ 		img
+ 		{
+ 			height: 700px;
+ 			width: 700px;
+ 			padding: 0;
+ 			margin: 0;
+ 			clip-path: polygon(12px 49px, 148px 51px, 148px 6px, 215px 53px, 281px 53px, 147px 255px);
+ 		}
+
+ 							/*clip-path: fill-box;
+							clip-path: stroke-box;
+							clip-path: view-box;
+							clip-path: margin-box;
+							clip-path: border-box;
+							clip-path: padding-box;
+							clip-path: content-box;
+							
+							inset() = inset( arriba derecha abajo izquierda )
+							clip-path: inset(100px 50px 0 0);
+
+
+							circle(radio  at  x  y )
+							clip-path: circle(50px at 0 100px);
+
+							circle(radio radio  at  x  y )
+							clip-path: ellipse(50px 80px at 0 100px);
+
+							polygon(x y, x y, x y, x y, x y)
+							clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+							clip-path: polygon(12px 49px, 148px 51px, 148px 6px, 215px 53px, 281px 53px, 147px 255px);*/
+ 	</style>
+ </head>
+ <body>
+ 	<div class="contenedortodo">
+ 		<img src="m.jpg" alt="spiderman">
+ 	</div>
+ </body>
+ </html>

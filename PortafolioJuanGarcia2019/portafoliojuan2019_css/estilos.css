@@ -1,0 +1,269 @@
+/*actualizado 20/07 11:40*/
+/*=========================ESTILOS COMUNES====================================*/
+*{
+  margin: 0;
+  padding: 0; 
+  color: white;   
+}
+aside a
+{
+  display: inline-block;
+  text-decoration-line: none;
+  text-shadow: 5px 5px 5px red;
+  animation: cambiacolor 1s linear 0s infinite alternate;
+}
+
+/*========================MAQUETACION PRINCIPAL=====================================*/
+header { grid-area: header; }
+.contieneNavIframe { grid-area: contieneNavIframe; }
+
+body{
+  background-color: black;
+  background-image: url("../portafoliojuan2019_images/fondobody.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 200vh;
+  padding: 6px;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'contieneNavIframe'
+    'infprueba';
+  grid-gap: 0px;
+}
+
+/*========================MAQUETACION DE HEADER=====================================*/
+.abremenuparpadea { grid-area: abremenuparpadea; }
+.contenido_header_izquierdo { grid-area: contenido_header_izquierdo; }
+.contenido_header_derecho { grid-area: contenido_header_derecho; }
+
+header{
+  padding: 3px;
+  display: grid;
+  grid-template-areas:
+    'abremenuparpadea abremenuparpadea'
+    'contenido_header_izquierdo contenido_header_derecho';
+  grid-gap: 10px;
+}
+  
+h5{
+  margin-left: 1%;
+  margin-top: 2%;
+}
+ video {
+    border-radius: 50%;
+    border: 0.1px solid pink;
+    margin-right: 5px;
+  } 
+/* ========================MENU PRINCIPAL============================== */
+
+ul{
+  background-image: linear-gradient(rgba(159, 146, 98, 0.92), rgba(159, 146, 98, 0.20),rgba(159, 146, 98, 0.92));
+  display: none;
+}
+
+.contul{
+  position: relative;
+}
+
+.indicadorul{
+  position: fixed; 
+  top: 5%;
+}
+
+.cerrarmodalclass{
+  padding: 0 0 0 90%;   
+  cursor:pointer;
+}
+
+li{
+  margin: 2%;
+  padding-left: 5px;
+  display: block;
+  cursor: pointer;
+}
+
+li:hover{
+  color: yellow;
+}
+
+.abremenuparpadea{
+  cursor:pointer;
+  animation: cambiacolor 1s linear 0s infinite alternate;
+  position: fixed; 
+  }
+  @keyframes cambiacolor
+  {
+   from{color: yellow;}
+    to{color: black;}
+  } 
+/*===========================IFRAME=================================*/
+iframe{
+  margin-bottom: 0;
+  width: 100%;
+  height: 85vh;  /*cambiar luego a 100vh*/
+  background-image: url(../portafoliojuan2019_images/tortuga.gif), url(../portafoliojuan2019_images/pezderecha.gif), url(../portafoliojuan2019_images/pecerastop.gif);
+  background-repeat:   no-repeat, no-repeat, no-repeat;
+  background-position: center center, -100% 0%, center center;
+  background-size: 100% 100%, 25% 20%, 100% 100%;
+
+  transition: background-position 2s 0s ease-out;
+  animation: muevepez 10s 0s ease-in infinite;
+}
+
+  @keyframes muevepez
+  {
+   0%{background-position: center center, -100% 30%, center center;}
+    100%{background-position: center center, 200% 90%, center center}
+  } 
+
+
+.contenedordebomba{
+  margin: 0;
+  width: 30%;
+  height: 20VH;
+  background-image: url(../portafoliojuan2019_images/bombaapagada.gif);
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.buttonbomba{
+  width: 50%;
+  background-color: green; 
+  position: absolute;
+  top: 35%;
+  right: 1%;  
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/*=====================RESPONSIVE========================================*/
+@media (min-width: 320px) {
+  video {
+    width: 90px;
+    height: auto;
+  } 
+  .abremenuparpadea{
+  font-size: 15px;
+  }
+  
+  h5{
+  font-size: 15px;
+  }
+  li{
+    font-size: 25px;  
+  }
+  .cerrarmodalclass{
+  font-size: 15px;
+  }
+   aside a{
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  video{
+    width: 190px;
+    height: auto;
+  } 
+  .abremenuparpadea{
+  font-size: 30px;
+  }
+  
+  h5{
+  font-size: 30px;
+  }
+  li{
+    font-size: 30px;  
+  }
+  .cerrarmodalclass{
+  font-size: 20px;
+  }
+  .contenedordebomba{
+    height: 30vh;
+  }
+  .buttonbomba{
+    font-size: 20px;
+  }
+   aside a{
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  video{
+    width: 290px;
+    height: auto;
+  } 
+  .abremenuparpadea{
+  font-size: 50px;
+  }
+  
+  h5{
+  font-size: 45px;
+  }
+  li{
+    font-size: 40px;  
+  }
+  .cerrarmodalclass{
+  font-size: 30px;
+  }
+  .buttonbomba{
+    font-size: 25px;
+  }
+   aside a{
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1366px) {
+  video{
+    width: 230px;
+    height: auto;
+  } 
+  .abremenuparpadea{
+  font-size: 50px;
+  }
+  
+  h5{
+  font-size: 45px;
+  }
+  li{
+    font-size: 40px;  
+  }
+  .cerrarmodalclass{
+  font-size: 30px;
+  }
+  .buttonbomba{
+    font-size: 25px;
+  }
+   aside a{
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 2560px) {
+  video{
+    width: 440px;
+    height: auto;
+  } 
+  .abremenuparpadea{
+  font-size: 70px;
+  }
+  
+  h5{
+  font-size: 90px;
+  }
+  li{
+    font-size: 95px;  
+  }
+  .cerrarmodalclass{
+  font-size: 50px;
+  }
+  .buttonbomba{
+    font-size: 50px;
+  }
+  aside a
+  {    
+    font-size: 90px;
+  }
+}

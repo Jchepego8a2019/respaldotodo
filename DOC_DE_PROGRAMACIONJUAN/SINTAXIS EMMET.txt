@@ -1,0 +1,11 @@
+nav>span>ul>li*5>a:link
+section.miclase#miid
+a:link
+img
+section{contenido}
+section[title="valor_"]{texto}
+div{numero $}*3
+meta:vp
+link:css
+link:favicon
+.container>.col12>h2+p

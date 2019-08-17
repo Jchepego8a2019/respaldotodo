@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 4px;
+}
+
+body{ 
+	padding: 0;
+	background: ;
+	font-family: 'Kaushan Script', cursive;
+}
+
+ul{
+  margin: 1px;
+}
+
+li{
+  list-style:none;
+  text-align: center;
+}
+
+.hermano{
+   width: 98%;
+   height: 200px;
+   background-color: black;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.hermano1{background-image: url(../portafoliojuan2019_images/baloncesto.jpg);}
+.hermano2{background-image: url(../portafoliojuan2019_images/dibuja.jpg);}
+.hermano3{background-image: url(../portafoliojuan2019_images/guitarra.jpg);}
+.hermano4{background-image: url(../portafoliojuan2019_images/juego.jpg);}
+.hermano5{background-image: url(../portafoliojuan2019_images/reparar.jpg);}
+.hermano6{background-image: url(../portafoliojuan2019_images/ajedrez.jpg);}
+.hermano7{background-image: url(../portafoliojuan2019_images/caminar.jpg);background-size: 100% 100%;}
+
+.hermano1:hover{
+   background-image: url(../portafoliojuan2019_images/baloncesto.gif);
+}
+.hermano2:hover{
+   background-image: url(../portafoliojuan2019_images/dibuja.gif);
+}
+.hermano3:hover{
+   background-image: url(../portafoliojuan2019_images/guitarra.gif);
+}
+.hermano4:hover{
+   background-image: url(../portafoliojuan2019_images/juego.gif);
+}
+.hermano5:hover{
+   background-image: url(../portafoliojuan2019_images/reparar.gif);
+}
+.hermano6:hover{
+   background-image: url(../portafoliojuan2019_images/ajedrez.gif);
+}
+.hermano7:hover{
+   background-image: url(../portafoliojuan2019_images/caminar.gif);
+   background-size: 100% 100%;
+}
+
+/*=====================RESPONSIVE========================================*/
+@media (min-width: 310px) {
+  body {
+    font-size: 0.5em;
+  }
+}
+@media (min-width: 350px){
+  body {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 405px){
+  body {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 728px){
+  body {
+    font-size: 1.7em;
+  }
+  .hermano{
+   height: 450px;
+  }
+}
+
+@media (min-width: 1000px){
+  body {
+    font-size: 2.1em;
+  }
+}
+@media (min-width: 1400px){
+  body {
+    font-size: 2.1em;
+  }
+  .hermano{
+   height: 550px;
+  }
+}
+
+@media (min-width: 2520px){
+  body {
+    font-size: 3.5em;
+  }
+  .hermano{
+   height: 1000px;
+  }
+}

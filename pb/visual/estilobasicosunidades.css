@@ -1,0 +1,569 @@
+*
+{
+	font-size: 15px;
+	padding: 0.5%;
+}
+body
+{
+	background-color:white;
+	border: 5px double orange;
+}
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+.item6 { grid-area: item6; }
+.item7 { grid-area: item7; }
+.item8 { grid-area: item8; }
+.item9 { grid-area: item9; }
+.item10 { grid-area: item10; }
+.item11 { grid-area: item11; }
+.item12 { grid-area: item12; }
+.item13 { grid-area: item13; }
+.item14 { grid-area: item14; }
+.item15 { grid-area: item15; }
+.item16 { grid-area: item16; }
+.item17 { grid-area: item17; }
+.item18 { grid-area: item18; }
+.item19 { grid-area: item19; }
+.item20 { grid-area: item20; }
+.item21 { grid-area: item21; }
+.item22 { grid-area: item22; }
+.item23 { grid-area: item23; }
+.item24 { grid-area: item24; }
+.item25 { grid-area: item25; }
+.item26 { grid-area: item26; }
+.item27 { grid-area: item27; }
+.item28 { grid-area: item28; }
+.item29 { grid-area: item29; }
+.item30 { grid-area: item30; }
+.item31 { grid-area: item31; }
+.item32 { grid-area: item32; }
+.item33 { grid-area: item33; }
+.item34 { grid-area: item34; }
+.item35 { grid-area: item35; }
+.item36 { grid-area: item36; }
+.item37 { grid-area: item37; }
+.item38 { grid-area: item38; }
+.item39 { grid-area: item39; }
+.item40 { grid-area: item40; }
+.item41 { grid-area: item41; }
+.item42 { grid-area: item42; }
+.item43 { grid-area: item43; }
+.item44 { grid-area: item44; }
+.item45 { grid-area: item45; }
+.item46 { grid-area: item46; }
+.item47 { grid-area: item47; }
+.item48 { grid-area: item48; }
+.item49 { grid-area: item49; }
+.item50 { grid-area: item50; }
+.item51 { grid-area: item51; }
+.item52 { grid-area: item52; }
+.item53 { grid-area: item53; }
+.item54 { grid-area: item54; }
+.item55 { grid-area: item55; }
+.item56 { grid-area: item56; }
+.item57 { grid-area: item57; }
+.item58 { grid-area: item58; }
+.item59 { grid-area: item59; }
+.item60 { grid-area: item60; }
+.item61 { grid-area: item61; }
+.item62 { grid-area: item62; }
+.item63 { grid-area: item63; }
+.item64 { grid-area: item64; }
+.item65 { grid-area: item65; }
+.item66 { grid-area: item66; }
+.item67 { grid-area: item67; }
+.item68 { grid-area: item68; }
+.item69 { grid-area: item69; }
+.item70 { grid-area: item70; }
+.item71 { grid-area: item71; }
+.item72 { grid-area: item72; }
+.item73 { grid-area: item73; }
+.item74 { grid-area: item74; }
+.item75 { grid-area: item75; }
+.item76 { grid-area: item76; }
+.item77 { grid-area: item77; }
+.item78 { grid-area: item78; }
+.item79 { grid-area: item79; }
+.item80 { grid-area: item80; }
+.item81 { grid-area: item81; }
+.item82 { grid-area: item82; }
+.item83 { grid-area: item83; }
+.item84 { grid-area: item84; }
+.item85 { grid-area: item85; }
+.item86 { grid-area: item86; }
+.item87 { grid-area: item87; }
+.item88 { grid-area: item88; }
+.item89 { grid-area: item89; }
+.item90 { grid-area: item90; }
+.item91 { grid-area: item91; }
+.item92 { grid-area: item92; }
+.item93 { grid-area: item93; }
+.item94 { grid-area: item94; }
+.item95 { grid-area: item95; }
+.item96 { grid-area: item96; }
+.item97 { grid-area: item97; }
+.item98 { grid-area: item98; }
+.item99 { grid-area: item99; }
+.item100 { grid-area: item100; }
+.item101 { grid-area: item101; }
+.item102 { grid-area: item102; }
+.item103 { grid-area: item103; }
+.item104 { grid-area: item104; }
+.item105 { grid-area: item105; }
+.item106 { grid-area: item106; }
+.item107 { grid-area: item107; }
+.item108 { grid-area: item108; }
+.item109 { grid-area: item109; }
+.item110 { grid-area: item110; }
+.item111 { grid-area: item111; }
+.item112 { grid-area: item112; }
+.item113 { grid-area: item113; }
+.item114 { grid-area: item114; }
+.item115 { grid-area: item115; }
+.item116 { grid-area: item116; }
+.item117 { grid-area: item117; }
+.item118 { grid-area: item118; }
+.item119 { grid-area: item119; }
+.item120 { grid-area: item120; }
+.item121 { grid-area: item121; }
+.item122 { grid-area: item122; }
+.item123 { grid-area: item123; }
+.item124 { grid-area: item124; }
+.item125 { grid-area: item125; }
+.item126 { grid-area: item126; }
+.item127 { grid-area: item127; }
+.item128 { grid-area: item128; }
+.item129 { grid-area: item129; }
+.item130 { grid-area: item130; }
+.item131 { grid-area: item131; }
+.item132 { grid-area: item132; }
+.item133 { grid-area: item133; }
+.item134 { grid-area: item134; }
+.item135 { grid-area: item135; }
+.item136 { grid-area: item136; }
+.item137 { grid-area: item137; }
+.item138 { grid-area: item138; }
+.item139 { grid-area: item139; }
+.item140 { grid-area: item140; }
+.item141 { grid-area: item141; }
+.item142 { grid-area: item142; }
+.item143 { grid-area: item143; }
+.item144 { grid-area: item144; }
+.item145 { grid-area: item145; }
+.item146 { grid-area: item146; }
+.item147 { grid-area: item147; }
+.item148 { grid-area: item148; }
+.item149 { grid-area: item149; }
+.item150 { grid-area: item150; }
+.item151 { grid-area: item151; }
+
+.itemizq { grid-area: itemizq; }
+.itemhome { grid-area: itemhome; }
+.itemder { grid-area: itemder; }
+
+
+.unidaduno
+{
+	display: grid;
+	grid-template-areas:  'item1 item1 item2 item2 item3 item3'
+
+						  'item4 item4 item4 item4 item4 item4'
+
+						  'item5 item5 item5 item6 item6 item6'
+						  'item7 item7 item7 item8 item8 item8'
+						  'item9 item9 item9 item10 item10 item10'
+						  'item11 item11 item11 item12 item12 item12'
+						  'item13 item13 item13 item14 item14 item14'
+						  'item15 item15 item15 item16 item16 item16'
+						  'item17 item17 item17 item18 item18 item18'
+						  'item19 item19 item19 item20 item20 item20'
+						  'item21 item21 item21 item22 item22 item22'
+						  'item23 item23 item23 item24 item24 item24'
+						  'item25 item25 item25 item26 item26 item26'
+						  'item27 item27 item27 item28 item28 item28'
+						  'item29 item29 item29 item30 item30 item30'
+						  'item31 item31 item31 item32 item32 item32'
+						  'item33 item33 item33 item34 item34 item34'
+						  'item35 item35 item35 item36 item36 item36'
+						  'item37 item37 item37 item38 item38 item38'
+						  'item39 item39 item39 item40 item40 item40'
+						  'item41 item41 item41 item42 item42 item42'
+						  'item43 item43 item43 item44 item44 item44'
+						  'item45 item45 item45 item46 item46 item46'
+						  'item47 item47 item47 item48 item48 item48'
+						  'item49 item49 item49 item50 item50 item50'
+						  'item51 item51 item51 item52 item52 item52'
+						  'item53 item53 item53 item54 item54 item54'
+						  'item55 item55 item55 item56 item56 item56'
+
+						  'item57 item57 item57 item57 item57 item57'
+
+						  'item58 item58 item59 item59 item60 item60'
+						  'item61 item61 item62 item62 item63 item63'
+						  'item64 item64 item65 item65 item66 item66'
+						  'item67 item67 item68 item68 item69 item69'
+						  'item70 item70 item71 item71 item72 item72'
+						  'item73 item73 item74 item74 item75 item75'
+						  'item76 item76 item77 item77 item78 item78'
+						  'item79 item79 item80 item80 item81 item81'
+						  'item82 item82 item83 item83 item84 item84'
+						  'item85 item85 item86 item86 item87 item87'
+						  'item88 item88 item89 item89 item90 item90'
+						  'item91 item91 item92 item92 item93 item93'
+						  'item94 item94 item95 item95 item96 item96'
+						  'item97 item97 item98 item98 item99 item99'
+						  'item100 item100 item101 item101 item102 item102'
+						  'item103 item103 item104 item104 item105 item105'
+						  'item106 item106 item107 item107 item108 item108'
+						  'item109 item109 item110 item110 item111 item111'
+						  'item112 item112 item113 item113 item114 item114'
+						  'item115 item115 item116 item116 item117 item117'
+						  'item118 item118 item119 item119 item120 item120'
+						  'item121 item121 item122 item122 item123 item123'
+						  'item124 item124 item125 item125 item126 item126'						 
+						  'item127 item127 item128 item128 item129 item129'						 
+						  'item130 item130 item131 item131 item132 item132'						 
+						  'item133 item133 item134 item134 item135 item135'						 
+						  'item136 item136 item137 item137 item138 item138'						 
+						  'item139 item139 item140 item140 item141 item141'						 
+						  'item142 item142 item143 item143 item144 item144'						 
+						  'item145 item145 item146 item146 item147 item147'						 
+						  'item148 item148 item149 item149 item150 item150'	
+
+						  'item151 item151 item151 item151 item151 item151'						 
+
+						  'itemizq itemizq itemhome itemhome itemder itemder';
+	grid-gap: 0px 0px;
+	justify-content:space-around;
+  	align-content:space-between;
+  	text-align: center;
+}
+
+.unidos, .unidadTres, .unidadcinco
+{
+	display: grid;
+	grid-template-areas:  'item1 item1 item2 item2 item3 item3'
+
+						  'item4 item4 item4 item4 item4 item4'
+
+						  'item5 item5 item6 item6 item7 item7'
+						  'item8 item8 item9 item9 item10 item10'
+						  'item11 item11 item12 item12 item13 item13'
+						  'item14 item14 item15 item15 item16 item16'
+						  'item17 item17 item18 item18 item19 item19'
+						  'item20 item20 item21 item21 item22 item22'
+						  'item23 item23 item24 item24 item25 item25'
+						  'item26 item26 item27 item27 item28 item28'
+						  'item29 item29 item30 item30 item31 item31'
+						  'item32 item32 item33 item33 item34 item34'
+						  'item35 item35 item36 item36 item37 item37'
+						  'item38 item38 item39 item39 item40 item40'
+						  'item41 item41 item42 item42 item43 item43'
+
+						  'item57 item57 item57 item57 item57 item57'
+
+						  'item58 item58 item59 item59 item60 item60'
+						  'item61 item61 item62 item62 item63 item63'
+						  'item64 item64 item65 item65 item66 item66'
+						  'item67 item67 item68 item68 item69 item69'
+						  'item70 item70 item71 item71 item72 item72'
+						  'item73 item73 item74 item74 item75 item75'
+						  'item76 item76 item77 item77 item78 item78'
+						  'item79 item79 item80 item80 item81 item81'
+						  'item82 item82 item83 item83 item84 item84'
+						  'item85 item85 item86 item86 item87 item87'
+						  'item88 item88 item89 item89 item90 item90'
+						  'item91 item91 item92 item92 item93 item93'
+						  'item94 item94 item95 item95 item96 item96'
+						  'item97 item97 item98 item98 item99 item99'
+						  'item100 item100 item101 item101 item102 item102'
+						  'item103 item103 item104 item104 item105 item105'
+						  'item106 item106 item107 item107 item108 item108'
+						  'item109 item109 item110 item110 item111 item111'
+						  'item112 item112 item113 item113 item114 item114'
+						  'item115 item115 item116 item116 item117 item117'
+						  'item118 item118 item119 item119 item120 item120'
+						  'item121 item121 item122 item122 item123 item123'
+						  'item124 item124 item125 item125 item126 item126'						 
+						  'item127 item127 item128 item128 item129 item129'						 
+						  'item130 item130 item131 item131 item132 item132'						 
+						  'item133 item133 item134 item134 item135 item135'						 
+						  'item136 item136 item137 item137 item138 item138'						 
+						  'item139 item139 item140 item140 item141 item141'						 
+						  'item142 item142 item143 item143 item144 item144'						 
+						  'item145 item145 item146 item146 item147 item147'						 
+						  'item148 item148 item149 item149 item150 item150'	
+
+						  'item151 item151 item151 item151 item151 item151'						 
+
+						  'itemizq itemizq itemhome itemhome itemder itemder';
+	grid-gap: 0px 0px;
+	justify-content:space-around;
+  	align-content:space-between;
+  	text-align: center;
+}
+
+.unidadcuatro		
+{
+	display: grid;
+	grid-template-areas:  'item1 item1 item2 item2 item3 item3'
+
+						  'item4 item4 item4 item4 item4 item4'
+						  'item5 item5 item5 item5 item5 item5'
+						  'item6 item6 item6 item6 item6 item6'
+						  'item7 item7 item7 item7 item7 item7'
+						  'item8 item8 item8 item8 item8 item8'
+						  'item9 item9 item9 item9 item9 item9'
+						  'item10 item10 item10 item10 item10 item10'
+						  'item11 item11 item11 item11 item11 item11'
+						  'item12 item12 item12 item12 item12 item12'
+						  'item13 item13 item13 item13 item13 item13'
+						  'item14 item14 item14 item14 item14 item14'
+						  'item15 item15 item15 item15 item15 item15'
+						  'item16 item16 item16 item16 item16 item16'
+						  'item17 item17 item17 item17 item17 item17'
+						  'item18 item18 item18 item18 item18 item18'
+						  'item19 item19 item19 item19 item19 item19'
+						  'item20 item20 item20 item20 item20 item20'
+						  'item21 item21 item21 item21 item21 item21'
+						  'item22 item22 item22 item22 item22 item22'
+						  'item23 item23 item23 item23 item23 item23'
+						  'item24 item24 item24 item24 item24 item24'
+						  'item25 item25 item25 item25 item25 item25'
+						  'item26 item26 item26 item26 item26 item26'
+						  'item27 item27 item27 item27 item27 item27'
+						  'item28 item28 item28 item28 item28 item28'
+						  'item29 item29 item29 item29 item29 item29'
+						  'item30 item30 item30 item30 item30 item30'
+						  'item31 item31 item31 item31 item31 item31'
+						  'item32 item32 item32 item32 item32 item32'
+						  'item33 item33 item33 item33 item33 item33'
+						  'item34 item34 item34 item34 item34 item34'
+						  'item35 item35 item35 item35 item35 item35'
+						  'item36 item36 item36 item36 item36 item36'
+						 
+
+						  'item151 item151 item151 item151 item151 item151'						 
+
+						  'itemizq itemizq itemhome itemhome itemder itemder';
+	grid-gap: 0px 0px;
+	justify-content:space-around;
+  	align-content:space-between;
+  	text-align: center;
+}
+
+.unidadcinco
+{
+	display: grid;
+	grid-template-areas:  'item1 item2 item3'
+
+						  'item4 item4 item4'
+
+						  'item5 item6 item7'
+						  'item8 item9 item10'
+						  'item11 item12 item13'
+						  'item14 item15 item16'
+						  'item17 item18 item19'
+						  'item20 item21 item22'
+						  'item23 item24 item25'
+						  'item26 item27 item28'
+						  'item29 item30 item31'
+
+						  'item32 item32 item32'
+
+						  'item33 item34 item35'
+						  'item36 item37 item38'
+						  'item39 item40 item41'
+						  'item42 item43 item44'
+						  'item45 item46 item47'
+						  'item48 item49 item50'
+						  'item51 item52 item53'
+						  'item54 item55 item56'
+						  'item57 item58 item59'
+
+						  'item60 item60 item60'
+
+						  'item61 item62 item63'
+						  'item64 item65 item66'
+						  'item67 item68 item69'
+						  'item70 item71 item72'
+						  'item73 item74 item75'
+						  'item76 item77 item78'
+						  'item79 item80 item81'
+						  'item82 item83 item84'
+						  'item85 item86 item87'
+
+						  'item88 item88 item88'
+
+						  'item89 item90 item91'
+						  'item92 item93 item94'
+						  'item95 item96 item97'
+						  'item98 item99 item100'
+						  'item101 item102 item103'
+						  'item104 item105 item106'
+						  'item107 item108 item109'
+						  'item110 item111 item112'
+						  'item113 item114 item115'
+						 
+						  'item151 item151 item151'						 
+
+						  'itemizq itemhome itemder';
+	grid-gap: 0px 0px;
+	justify-content:space-around;
+  	align-content:space-between;
+  	text-align: center;
+}
+
+h1
+{
+	text-align: center;
+	color: blue;
+	text-shadow: 0px -60px 50px yellow, 0px 60px 50px orange;
+}
+
+
+.unidaduno div, .unidos div, .unidadTres div, .unidadcuatro div, .unidadcinco div
+{
+	color: black;
+	background: linear-gradient( 90deg, #F7E37F, #48D7FA, #F7E37F );
+	border: 0.1px solid #8AFEFF;
+	/*word-break: break-all;*/
+}
+
+
+.unidaduno .separador, .unidos .separador, .unidadTres .separador, .unidadcuatro .separador, .unidadcinco .separador
+{
+	animation: barra 20s 0s ease-in infinite ;
+	margin: auto;
+}
+
+ul
+{
+	list-style:none;
+}
+@keyframes barra 
+{
+	0%{
+		width: 100%;
+		transform: rotateX(0deg);
+	}
+	50%{
+		width: 0%;
+		background: linear-gradient(0deg, #04B6BC, white, #04B6BC);
+		transform: rotateX(180deg);
+	}
+	100%{
+		width: 100%;
+		background: linear-gradient( 0deg, #F7E37F, #48D7FA, #F7E37F);
+		transform: rotateX(0deg);
+	}
+}
+
+.unidaduno .hover:hover, .unidos .hover:hover, .unidadTres .hover:hover, .unidadcinco .hover:hover
+{
+	background: black; 
+	color: white;
+	font-size: 20px;
+}
+
+.unidaduno .cabeceras,  .unidos .cabeceras, .unidadTres .cabeceras, .unidadcinco .cabeceras
+{
+	color: #FF00CC;
+}
+
+.unidadcuatro .nm
+{
+	filter: opacity(0);
+	overflow: hidden;
+	height: 0px;
+	/*border: 0px solid yellow;*/
+	padding: 3%;
+	text-align: left;
+}
+.unidadcuatro .Answer
+{
+	color: red;
+	/*border: 0px solid yellow;*/
+}
+.unidadcuatro .Question
+{
+	color: #8228F1;
+	/*border: 0px solid yellow;*/
+	padding: 1%;
+	text-align: left;
+}
+.unidadcuatro .Answer::after
+{
+	content: "\025bc";
+	position: relative;
+}
+.unidadcuatro .Answer:hover > .nm
+{
+	background: linear-gradient( 90deg, #F7E37F, #48D7FA, #F7E37F );
+	transition: all 1.5s 0s linear;
+	filter: opacity(1);
+	height: auto;
+}
+.unidadcuatro .Answer:hover::after
+{
+	content: "";
+}
+
+.aregreso::after
+{
+	content: url(../imgproyectoingles/regresar.jpg);
+}
+.asiguiente::after
+{
+	content: url(../imgproyectoingles/siguiente.jpg);
+}
+.home:after
+{
+	content: url(../imgproyectoingles/h.png);
+}
+
+
+
+@media (width: 768px) {
+	*{
+		font-size: 20px;
+	}
+	.unidaduno .hover:hover, .unidos .hover:hover, .unidadTres .hover:hover, .unidadcinco .hover:hover
+	{
+		font-size: 35px;
+	}
+}
+@media (width: 1024px) {
+	*{
+		font-size: 25px;
+	}
+	.unidaduno .hover:hover, .unidos .hover:hover, .unidadTres .hover:hover, .unidadcinco .hover:hover
+	{
+		font-size: 35px;
+	}
+}
+@media (width: 1440px) {
+	*
+	{
+		font-size: 35px;
+	} 
+	.unidaduno .hover:hover, .unidos .hover:hover, .unidadTres .hover:hover, .unidadcinco .hover:hover
+	{
+		font-size: 45px;
+	}
+}
+@media (width: 2560px) {
+	*
+	{
+		font-size: 75px;
+	}
+	.unidaduno .hover:hover, .unidos .hover:hover, .unidadTres .hover:hover, .unidadcinco .hover:hover
+	{
+		font-size: 100px;
+	} 
+}

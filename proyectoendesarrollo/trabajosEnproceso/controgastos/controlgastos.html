@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="estilotes/diseñoprincipal.css">
+	<title>Control de hogar</title>
+</head>
+<body>
+ 	<a href="ojo.html">Michelangelo</a>	 
+	<input type="button" class="borrar" value="borrar todos los datos" id="borraalmacenes">
+	<div class="contenedorPerpectiva">
+    	<div class="contenedortodo">
+				    	
+	    	<header> 
+				<div>Control Ingresos/Egresos</div>		
+			</header>
+
+
+
+		    <div class="contenedorIngresos" id="contingre">
+		    	<h2 class="elemento" id="h2ingreso">Ingresos</h2> 
+		    	<label class="botoningresar" id="openIngresar">open</label> 
+		    	<label for="producto" class="elemento1" id="elemento1">Producto</label>
+			   	<select name="tipoingreso" id="producto" class="elemento2">
+				  <option></option>
+				  <option value="sueldo">sueldo</option>
+				  <option value="remesa">remesa</option>
+				  <option value="venta">venta</option>
+				  <option value="prestamo">prestamo</option>
+				</select>
+				<label for="cantidadingreso" class="elemento3">Cantidad $</label>
+				</b><input type="text" id="cantidadingreso" class="elemento4">
+				<label for="fechaingreso" class="elemento5">Fecha</label>
+				<input type="date" id="fechaingreso" class="elemento6">
+				<label for="observacioningreso" class="elemento7">observacion:</label>
+				<input type="text" id="observacioningreso" class="elemento8"></input>
+				<input type="button" class="bntingresar elemento9" value="Agregar +" id="enviaringreso">
+		    </div>
+
+
+		    <div class="contenedorEgresos" id="contEngre">
+				<h2 class="elemento"id="h2egreso">Compras</h2>
+				<label class="botonEgresar" id="openEgresar">open</label> 
+			 	<label for="productocomprado" class="elemento1">Producto</label>
+			   	<select name="tipoingreso" id="productocomprado" class="elemento2">
+			   		  <option></option>
+				   	  <option value="recibo agua">recibo agua</option>
+					  <option value="recibo luz">recibo luz</option>
+					  <option value="recibo internet">recibo internet</option>
+					  <option value="recibo telefono">recibo telefono</option>
+					  <option value="compra de gas">compra de gas</option>
+					  <option value="pago casa comercial">pago casa comercial</option>
+					  <option value="compra de agua embotellada">compra de agua embotellada</option>
+					  <option value="pago de empleada domestica">pago de empleada domestica</option>
+					  <option value="pago transporte escolar">pago transporte escolar</option>
+					  <option value="pago tarjeta de credito">pago tarjeta de credito</option>
+					  <option value="pago alquiler de casa">pago alquiler de casa</option>
+					  <option value="otros pagos">otros pagos</option>
+				</select>
+				<label for="cantidadegreso" class="elemento3">Cantidad $</label>
+				</b><input type="text" id="cantidadegreso" class="elemento4">
+				<label for="fechaengreso" class="elemento5">Fecha</label>
+				<input type="date" id="fechaengreso" class="elemento6">
+				<label for="observacionengreso" class="elemento7">observacion:</label>
+				<input type="text" id="observacionengreso" class="elemento8"></input>
+				<input type="button" class="bntegresar elemento9" value="Descargar -" id="enviaregreso">
+		    </div>			
+    	</div>			
+    </div>
+   <div class="contenedormostrardatos">
+   	 	<div class="car-holder">
+			<div class="card" id="card">
+				<div class="front">
+					<nav class="contenedorMostarDatos"><input type="button" value="Girar tabla" id="iraegresos"></nav>
+					<div class="tabla">
+						<h3>I   N   G  R  E  S  O  S</h3>
+						<div id="contenidoingreso"></div>
+						<div id="subtotalingresos"></div>
+					</div>
+				</div>
+				<div class="back">
+					<nav class="contenedorMostarDatos"><input type="button" value="Girar tabla" id="iraingresos"></nav>
+					<div class="tabla">
+						<h3>E  G  R  E  S  O  S</h3>
+						<div id="contenidoegreso"></div>
+						<div id="subtotalegresos"></div>
+					</div>
+				</div>
+			</div>
+	  	</div>
+   </div>
+    <br><br><br><br><br>
+  	<script src="script/main.js"></script>
+</body>
+</html>

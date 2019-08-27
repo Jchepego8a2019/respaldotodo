@@ -1,0 +1,12 @@
+QVGA: (quarter video grafic array)320x240 píxeles
+VGA: (video grafic array) 640X480 píxeles
+WQVGA (Wide QVGA) 800 x 480 píxeles
+XGA: (Extended Graphics Array) 1024 x 768 píxeles
+HD: (High Definition) 1280 x 720 píxeles pantallas widescreen (16:9)
+Full HD: (full High Definition) 1920 x 1080 píxeles, relación de aspecto de 16:9.
+4K: 3840 x 2160 píxeles.
+
+
+Una resolución de 1920 x 1080 píxeles, indica que la pantalla es capaz de mostrar 1920 píxeles por fila y 1080 por columna. Es como una matriz. Por regla general, el primer número hace referencia a la anchura; el segundo, a la altura de la pantalla.
+
+buscar tambien formato de pantallas 4:3 etc.

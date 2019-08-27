@@ -644,3 +644,7 @@ function mostrarot2()
 {
 	res2.innerHTML = "answer one: <br>" + respuesta7 + "<br>" + "answer two: <br>" + respuesta8 + "<br>" + "answer three: <br>" + respuesta9 + "<br>" + "answer four: <br>" + respuesta10 + "<br>" + "answer five: <br>" + respuesta11 + "<br>" + "answer six: <br>" +respuesta12;
 }
+
+
+
+var oraciones = ["I'm studying for the test","you're my best friend","he's boarding the bus","She's putting on makeup","it's very dirty"]
